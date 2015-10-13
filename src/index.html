@@ -13,17 +13,17 @@
   <header class="page-header">
     <div class="page-header__inner clearfix">
       <div class="logo">
-        <a href="index.html" class="logo__link">
+        <a href="#top" class="logo__link">
           <img src="img/logo.png" alt="" class="logo__image">
         </a>
       </div>
       <nav class="header-navigation">
         <ul class="header-navigation__list">
           <li class="header-navigation__list-item">
-            <a href="#" class="header-navigation__link">Питомцы</a>
+            <a href="#pets" class="header-navigation__link header-navigation__link--pets">Питомцы</a>
           </li>
           <li class="header-navigation__list-item">
-            <a href="#" class="header-navigation__link">Группы</a>
+            <a href="#groups" class="header-navigation__link header-navigation__link--groups">Группы</a>
           </li>
         </ul>
       </nav>
@@ -50,8 +50,8 @@
     </div>
   </header>
   <!-- первый экран, растягивается на полную высоту и центрирует контент -->
-  <section class="screen-1">
-    <div class="vCenter">
+  <section class="screen-1" id="top">
+    <div class="v-center">
       <div class="container">
         <p class="screen-1__description">Расскажите о своем питомце, ведите его биографию, получите доступ ко всей информации о питомцах сети!</p>
         <a href="#" class="btn btn--white">Простая регистрация</a>
@@ -59,7 +59,7 @@
     </div>
   </section>
   <!-- основной контент -->
-  <div class="main">
+  <div class="main" id="pets">
     <div class="container">
       <!-- плашка с навигацией и хлебными крошками -->
       <div class="navigation-block">
@@ -83,7 +83,7 @@
             </li>
           </ul>
         </nav>
-        <nav class="breadcrumbs-navigation clearfix">
+        <nav class="breadcrumbs-navigation clearfix" id="groups">
           <ul class="breadcrumbs-navigation__list">
             <li class="breadcrumbs-navigation__list-item">
               <a href="#" class="breadcrumbs-navigation__link">Группы</a>
@@ -192,6 +192,7 @@
 
   <script src="js/vendors/jquery.js"></script>
   <script src="js/script.js"></script>
+
 </body>
 </html>
 

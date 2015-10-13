@@ -16,4 +16,24 @@ $(function() {
     event.preventDefault();
     $(".breadcrumbs-navigation__left").removeClass("opened");
   })
+
+  // переключение состояний элементов по скроллу к питомцам (главная)
+  $(".header-navigation__link--pets").on("click", function(event){
+    $(".header-navigation__link--pets").addClass("current");
+    $(".page-header").addClass("nested");
+    $(".navigation-block").addClass("nested");
+    $(".main").addClass("nested");
+  })
+
+  // скролл до якоря
+  $(document).ready(function(){
+    $('a[href*=#]').bind("click", function(e){
+      var anchor = $(this);
+      $('html, body').stop().animate({
+        scrollTop: $(anchor.attr('href')).offset().top
+      }, 1000);
+        e.preventDefault();
+    });
+    return false;
+  });
 });
