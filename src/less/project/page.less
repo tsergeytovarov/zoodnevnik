@@ -1,0 +1,112 @@
+.page{
+  margin-top: 55px;
+
+  &__title{
+    font-family: @pfd;
+    font-size: 16px;
+    line-height: 25px;
+    color: #878787;
+    border-bottom: 1px solid #dfdfdf;
+    margin-bottom: 35px;
+    padding-bottom: 10px;
+  }
+
+  &__image{
+    margin: 0;
+    margin-bottom: 30px;
+
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__text{
+    font-family: @pfd-l;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  &__list{
+    padding: 0;
+    margin: 0;
+    counter-reset: item;
+    list-style: none;
+
+    li{
+      position: relative;
+      min-height: 200px;
+      font-family: @pfd-l;
+      font-size: 20px;
+      line-height: 30px;
+
+      &:before{
+        content: counter(item);
+        counter-increment: item;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        font-family: @pfd-c-b;
+        font-size: 200px;
+        line-height: 200px;
+        color: #878787;
+        opacity: .2;
+        z-index: -1;
+      }
+    }
+  }
+}
+
+.sorting-row{
+  margin-bottom: 20px;
+
+  label{
+    font-family: @pfd-c-m;
+    font-size: 16px;
+    line-height: 40px;
+    text-transform: uppercase;
+    color: #878787;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px;
+  }
+
+  select{
+    border: 2px solid #e7e7e7;
+    border-radius: 100px;
+    padding: 0 15px;
+    height: 40px;
+    font-family: @pfd-c;
+    line-height: 16px;
+    font-size: 17px;
+    color: #000;
+    width: 510px;
+    box-sizing: border-box;
+    background: transparent;
+    -webkit-appearance: none;
+    appearance: none;
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    background: url(../img/rectangle.png) no-repeat 97% center;
+  }
+}
+
+.ok{
+  font-family: @pfd-c-b;
+  text-transform: uppercase;
+  line-height: 40px;
+  font-size: 18px;
+  color: #878787;
+  padding-left: 30px;
+  background: url(../img/ico-ok.png) no-repeat left 7px;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 40px;
+  text-decoration: none;
+
+  &:hover{
+    opacity: .7;
+  }
+}
