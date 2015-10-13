@@ -83,12 +83,19 @@
             </li>
           </ul>
         </nav>
-        <nav class="breadcrumbs-navigation">
+        <nav class="breadcrumbs-navigation clearfix">
           <ul class="breadcrumbs-navigation__list">
             <li class="breadcrumbs-navigation__list-item">
               <a href="#" class="breadcrumbs-navigation__link">Группы</a>
             </li>
           </ul>
+          <div class="breadcrumbs-navigation__left clearfix">
+            <button type="button" class="breadcrumbs-navigation__search-button js-search-open">Искать</button>
+            <form action="#" method="post">
+              <button type="button" class="breadcrumbs-navigation__left-close js-search-close">Скрыть</button>
+              <input type="text" id="breadcrumbs-search" class="breadcrumbs-search-input" placeholder="Поиск">
+            </form>
+          </div>
         </nav>
       </div>
     </div>
