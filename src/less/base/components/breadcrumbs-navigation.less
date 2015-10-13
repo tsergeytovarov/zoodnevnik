@@ -1,0 +1,45 @@
+.breadcrumbs-navigation {
+  padding-left: 22px;
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    list-style: none;
+  }
+
+  &__list-item {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    margin-right: 12px;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 50px;
+    color: #bfbfbf;
+
+    &:after {
+      content: "/";
+      position: absolute;
+      top: 0;
+      right: -6px;
+      font-size: 12px;
+      line-height: 50px;
+    }
+
+    &:last-child {
+
+      &:after {
+        display: none;
+      }
+    }
+
+    &:hover {
+      color: @green;
+    }
+  }
+}

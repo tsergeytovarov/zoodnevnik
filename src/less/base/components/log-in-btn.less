@@ -1,0 +1,30 @@
+.log-in-btn {
+  position: relative;
+	float: right;
+  display: block;
+  padding-left: 53px;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 55px;
+  color: #fff;
+  opacity: .8;
+
+  &:before {
+    content: "\e800";
+    position: absolute;
+    top: 0;
+    left: 18px;
+    font-family: @icon;
+    font-size: 21px;
+    line-height: 55px;
+  }
+
+  &:hover {
+    opacity: .7;
+
+    &:before {
+      opacity: .8;
+    }
+  }
+}
+

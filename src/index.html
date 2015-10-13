@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body сlass="main-page">
+  <!-- основной хедер. пока без модификаторов -->
   <header class="page-header">
     <div class="page-header__inner clearfix">
       <div class="logo">
@@ -16,8 +17,63 @@
           <img src="img/logo.png" alt="" class="logo__image">
         </a>
       </div>
+      <nav class="header-navigation">
+        <ul class="header-navigation__list">
+          <li class="header-navigation__list-item">
+            <a href="#" class="header-navigation__link">Питомцы</a>
+          </li>
+          <li class="header-navigation__list-item">
+            <a href="#" class="header-navigation__link">Группы</a>
+          </li>
+        </ul>
+      </nav>
+      <a href="#" class="log-in-btn"></span>Вход</a>
     </div>
   </header>
+  <!-- первый экран, растягивается на полную высоту и центрирует контент -->
+  <section class="screen-1">
+    <div class="vCenter">
+      <div class="container">
+        <p class="screen-1__description">Расскажите о своем питомце, ведите его биографию, получите доступ ко всей информации о питомцах сети!</p>
+        <a href="#" class="btn btn--white">Простая регистрация</a>
+      </div>
+    </div>
+  </section>
+  <!-- основной контент -->
+  <div class="main">
+    <div class="container">
+      <!-- плашка с навигацией и хлебными крошками -->
+      <div class="navigation-block">
+        <!-- основная навигация -->
+        <nav class="page-navigation">
+          <ul class="page-navigation__list">
+            <li class="page-navigation__list-item">
+              <a href="#" class="page-navigation__link page-navigation__link--dog active">Собаки</a>
+            </li>
+            <li class="page-navigation__list-item">
+              <a href="#" class="page-navigation__link page-navigation__link--cat">Кошки</a>
+            </li>
+            <li class="page-navigation__list-item">
+              <a href="#" class="page-navigation__link page-navigation__link--bird">Птицы</a>
+            </li>
+            <li class="page-navigation__list-item">
+              <a href="#" class="page-navigation__link page-navigation__link--fish">Рыбы</a>
+            </li>
+            <li class="page-navigation__list-item">
+              <a href="#" class="page-navigation__link page-navigation__link--mouse">Грызуны</a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="breadcrumbs-navigation">
+          <ul class="breadcrumbs-navigation__list">
+            <li class="breadcrumbs-navigation__list-item">
+              <a href="#" class="breadcrumbs-navigation__link">Группы</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
 
 
   <script src="js/vendors/jquery.js"></script>
