@@ -27,7 +27,26 @@
           </li>
         </ul>
       </nav>
-      <a href="#" class="log-in-btn"></span>Вход</a>
+      <div class="tooltip-container">
+        <a href="#" class="log-in-btn js-tooltip-toggle"></span>Вход</a>
+        <div class="tooltip-content">
+          <div class="tooltip-content__social">
+            <div class="tooltip-content__social-title">Войти через:</div>
+            <div class="tooltip-content__social-wrapper">
+              <a href="#" class="btn btn--social btn--fb">Facebook</a>
+              <a href="#" class="btn btn--social btn--vk">Вконтакте</a>
+              <a href="#" class="btn btn--social btn--ok">Одноклассники</a>
+            </div>
+          </div>
+          <div class="tooltip-content__form-wrapper">
+            <form action="#" method="post">
+              <input type="text" id="email" name="email" placeholder="Email">
+              <input type="password" id="password" name="password" placeholder="Пароль">
+              <button type="submit" class="btn btn--green btn--login">Зарегистрироваться</button>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
   <!-- первый экран, растягивается на полную высоту и центрирует контент -->
@@ -77,6 +96,6 @@
 
 
   <script src="js/vendors/jquery.js"></script>
-  <script src="js/script.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

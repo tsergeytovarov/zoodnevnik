@@ -13,14 +13,109 @@
   background-color: #fff;
   border-radius: 2px;
   box-shadow: 0 6px 8px rgba(25,26,25,.14);
+  border: none;
+  outline: none;
 
   &:hover,
   &--hover{
     opacity: .9;
+    box-shadow: 0 2px 8px rgba(25,26,25,.14);
   }
 
   &:active,
   &--active{
-    opacity: .7;
+    box-shadow: none;
+  }
+
+  &--social {
+    position: relative;
+    margin-right: 18px;
+    margin-bottom: 20px;
+    padding: 0;
+    width: 62px;
+    height: 62px;
+    text-align: center;
+    font-size: 0;
+    border: 1px solid @green;
+    border-radius: 50%;
+    box-shadow: none;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      box-shadow: none;
+    }
+
+    &:before {
+      position: absolute;
+      font-family: "fontello";
+      font-size: 34px;
+      line-height: 60px;
+      color: @green;
+    }
+  }
+
+  &--fb {
+
+    &:before {
+      content: "\e802";
+      top: 1px;
+      left: 20px;
+    }
+
+    &:hover {
+      border: 1px solid #2c55b9;
+      background-color: #2c55b9;
+
+      &:before {
+        color: #fff;
+      }
+    }
+  }
+
+  &--vk {
+
+    &:before {
+      content: "\e803";
+      left: 10px;
+    }
+
+    &:hover {
+      border: 1px solid #4c84b6;
+      background-color: #4c84b6;
+
+      &:before {
+        color: #fff;
+      }
+    }
+  }
+
+  &--ok {
+
+    &:before {
+      content: "\e804";
+      left: 20px;
+    }
+
+    &:hover {
+      border: 1px solid #fe770b;
+      background-color: #fe770b;
+
+      &:before {
+        color: #fff;
+      }
+    }
+  }
+
+  &--green {
+    color: #fff;
+    background-color: @green;
+  }
+
+  &--login {
+    padding: 0;
+    width: 230px;
   }
 }
