@@ -1,0 +1,83 @@
+.pet-card {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 22px;
+  margin-bottom: 22px;
+  width: 294px;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgba(25,26,25,.1);
+  overflow: hidden;
+
+  &__image-wrapper {
+    float: left;
+    width: 80px;
+    height: 100px;
+    overflow: hidden;
+  }
+
+  &__image {
+    display: block;
+    height: 100%;
+  }
+
+  &__info-wrapper {
+    position: relative;
+    float: right;
+    padding-top: 10px;
+    padding-bottom: 3px;
+    width: 214px;
+  }
+
+  &__rating {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    font-size: 12px;
+    color: #ddd;
+    cursor: pointer;
+
+    &:hover {
+      color: @green;
+    }
+  }
+
+  &__name {
+    display: block;
+    padding-left: 18px;
+    padding-right: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: #656565;
+  }
+
+  &__age {
+    text-transform: none;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #bfbfbf;
+  }
+
+  &__text {
+    padding-bottom: 5px;
+    padding-left: 18px;
+    padding-right: 18px;
+    font-size: 12px;
+    line-height: 18px;
+    color: #bfbfbf;
+    border-bottom: 1px solid #eee;
+  }
+
+  &__breed {
+    padding-top: 3px;
+    padding-left: 18px;
+    padding-right: 18px;
+    font-size: 12px;
+    line-height: 14px;
+    color: #656565;
+  }
+}
