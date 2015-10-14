@@ -37,6 +37,7 @@ $(function() {
     $(".main").addClass("nested");
   })
 
+  //переключение выпадающего меню
   $(".menu-toggle").on("click", function(){
     $(".menu-container").toggleClass("active");
     return false;
