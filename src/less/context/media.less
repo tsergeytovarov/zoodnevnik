@@ -38,6 +38,23 @@
       width: 322px;
     }
   }
+
+  .breed-item {
+    width: 342px;
+
+    &__image-wrapper {
+      width: 139px;
+      height: 105px;
+    }
+
+    &__info-wrapper {
+      width: 203px;
+    }
+
+    &__pets {
+      padding-top: 7px;
+    }
+  }
 }
 
 
@@ -178,6 +195,46 @@
   .avatar-wrapper {
     display: none;
   }
+
+  .groups-container {
+
+    &--breeds {
+      margin-right: 0;
+    }
+  }
+
+  .breed-item {
+    margin-right: 0;
+    width: 450px;
+
+    &__image-wrapper {
+      width: 208px;
+      height: 157px;
+    }
+
+    &__info-wrapper {
+      padding-top: 20px;
+      width: 242px;
+    }
+
+    &__rating {
+      font-size: 14px;
+    }
+
+    &__breed {
+      padding-left: 20px;
+      min-height: 98px;
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    &__pets {
+      padding-top: 7px;
+      padding-left: 20px;
+      font-size: 13px;
+      line-height: 17px;
+    }
+  }
 }
 
 @media (max-width: 479px) {
@@ -190,6 +247,11 @@
   .container {
     padding: 0 20px;
     width: 280px;
+
+    &--wide {
+      padding: 13px;
+      width: 294px;
+    }
   }
 
   .tooltip-container {
@@ -238,6 +300,29 @@
   }
 
   .breadcrumbs-navigation {
+    position: relative;
+    padding-left: 10px;
+
+    &__link {
+      margin-right: 8px;
+    }
+
+    &__list-item {
+
+      &:after {
+        right: 2px;
+      }
+
+      &:last-child {
+
+        .breadcrumbs-navigation {
+
+          &__link {
+            margin-right: 0;
+          }
+        }
+      }
+    }
 
     .breadcrumbs-search-input {
       padding-left: 0;
@@ -254,6 +339,9 @@
 
       &.opened {
         position: absolute;
+        right: 0;
+        width: 100%;
+        background-color: #fff;
       }
     }
   }
@@ -309,6 +397,38 @@
       .log-in-btn {
         border-left: none;
       }
+    }
+  }
+
+  .breed-item {
+    width: 294px;
+
+    &__image-wrapper {
+      width: 139px;
+      height: 105px;
+    }
+
+    &__info-wrapper {
+      padding-top: 15px;
+      width: 155px;
+    }
+
+    &__rating {
+      font-size: 12px;
+    }
+
+    &__breed {
+      min-height: 53px;
+      padding-left: 18px;
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    &__pets {
+      padding-left: 18px;
+      font-size: 12px;
+      line-height: 16px;
+      padding-top: 7px;
     }
   }
 }
