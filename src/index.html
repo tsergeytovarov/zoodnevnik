@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body сlass="main-page">
-  <!-- основной хедер. пока без модификаторов -->
+  <!-- основной хедер. по классу logged-in переключается на состояние для залогиненного пользователя, по классу nested - состояние для незалогиненного пользователя с разделителями -->
   <header class="page-header">
     <div class="page-header__inner clearfix">
       <div class="logo">
@@ -19,6 +19,9 @@
       </div>
       <nav class="header-navigation">
         <ul class="header-navigation__list">
+          <li class="header-navigation__list-item">
+            <a href="#" class="header-navigation__link header-navigation__link--news">Новости</a>
+          </li>
           <li class="header-navigation__list-item">
             <a href="#pets" class="header-navigation__link header-navigation__link--pets">Питомцы</a>
           </li>
@@ -45,6 +48,54 @@
               <button type="submit" class="btn btn--green btn--login">Зарегистрироваться</button>
             </form>
           </div>
+        </div>
+      </div>
+      <div class="user-options">
+        <div class="user-options__search clearfix">
+          <button type="button" class="user-options__search-button js-search-open-2">Искать</button>
+          <form action="#" method="post">
+            <button type="button" class="user-options__search-close js-search-close-2">Скрыть</button>
+            <input type="text" id="useroptions-search" class="useroptions-search-input" placeholder="Напишите">
+          </form>
+        </div>
+        <div class="user-options__btn">
+          <a href="#" class="user-options__messages has-new-items">Сообщения</a>
+          <span class="user-options__new-items">5</span>
+        </div>
+        <div class="user-options__btn">
+          <a href="#" class="user-options__notifications">Уведомления</a>
+          <span class="user-options__new-items">5</span>
+        </div>
+        <div class="menu-container">
+          <a href="#" class="avatar-wrapper">
+            <img src="img/avatar.jpg" alt="" class="avatar">
+          </a>
+          <a href="#" class="menu-toggle">Меню</a>
+          <nav class="menu-tooltip">
+            <ul class="menu-tooltip__list">
+              <li class="menu-tooltip__list-item">
+                <a href="#" class="menu-tooltip__link">Моя страница</a>
+              </li>
+              <li class="menu-tooltip__list-item">
+                <a href="#" class="menu-tooltip__link">Мои Питомцы</a>
+              </li>
+              <li class="menu-tooltip__list-item">
+                <a href="#" class="menu-tooltip__link">Мои группы</a>
+              </li>
+              <li class="menu-tooltip__list-item">
+                <a href="#" class="menu-tooltip__link">Избранное</a>
+              </li>
+              <li class="menu-tooltip__list-item">
+                <a href="#" class="menu-tooltip__link">Друзья</a>
+              </li>
+              <li class="menu-tooltip__list-item">
+                <a href="#" class="menu-tooltip__link">Настройки</a>
+              </li>
+              <li class="menu-tooltip__list-item">
+                <a href="#" class="menu-tooltip__link">Выход</a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
     </div>
