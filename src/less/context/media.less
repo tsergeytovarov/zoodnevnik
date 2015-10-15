@@ -151,9 +151,23 @@
 
       &.opened {
         position: absolute;
-        right: 61px;
-        width: 400px;
+        right: 0;
+        box-sizing: border-box;
+        width: 100%;
         z-index: 200;
+
+        .useroptions-search-input {
+          width: 100%;
+        }
+
+        .user-options {
+
+          &__search-button {
+            position: absolute;
+            top: 0;
+            right: 0;
+          }
+        }
       }
     }
 
@@ -320,19 +334,6 @@
   }
 
   .user-options {
-
-    &__search {
-
-      &.opened {
-        right: 0;
-        box-sizing: border-box;
-        width: 100%;
-
-        .useroptions-search-input {
-          width: 100%;
-        }
-      }
-    }
   }
 
   .screen-1 {
