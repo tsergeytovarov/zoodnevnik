@@ -1,0 +1,130 @@
+.sorting-tooltip {
+  position: absolute;
+  right: -3px;
+  top: 47px;
+  display: none;
+  padding-top: 7px;
+  padding-bottom: 4px;
+  width: 153px;
+  background-color: rgba(0,0,0,.8);
+  border-radius: 2px;
+  z-index: 500;
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    right: 15px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 6px 10px;
+    border-color: transparent transparent rgba(0,0,0,.8);
+  }
+
+  &__title {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 12px;
+    line-height: 30px;
+    color: #fff;
+  }
+}
+
+.sorting-container {
+  position: relative;
+  margin-bottom: 18px;
+  border-radius: 2px;
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgba(25,26,25,.1);
+
+  &__title {
+    padding: 5px 25px;
+    padding-right: 18px;
+    font-size: 14px;
+    line-height: 40px;
+    color: @green;
+  }
+
+  &.active {
+
+    .sorting-tooltip {
+      display: block;
+    }
+  }
+}
+
+.sorting-toggle {
+  position: absolute;
+  display: block;
+  padding: 0;
+  top: 22.5px;
+  right: 18px;
+  width: 5px;
+  height: 5px;
+  font-size: 0;
+  background-color: #ddd;
+  border: none;
+  outline: none;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 0;
+    width: 5px;
+    height: 5px;
+    background-color: #ddd;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 5px;
+    height: 5px;
+    background-color: #ddd;
+  }
+
+  &:hover {
+    opacity: .8;
+  }
+}
+
+.sorting-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    border-top: 1px solid #515151;
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 30px;
+    color: #fff;
+
+    &:hover {
+      color: @green;
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 13px;
+        right: 9px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 4px 3.5px 0 3.5px;
+        border-color: @green transparent transparent transparent;
+      }
+    }
+  }
+}

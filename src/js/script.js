@@ -5,6 +5,12 @@ $(function() {
     $(this).parents(".tooltip-container").toggleClass("active");
   })
 
+  // открытие списка сортировки
+  $(".sorting-toggle").on("click", function(event){
+    event.preventDefault();
+    $(this).parents(".sorting-container").toggleClass("active");
+  })
+
   // открытие поля поиска в хлебных крошках
   $(".js-search-open").on("click", function(event){
     event.preventDefault();
