@@ -17,6 +17,11 @@ $(function() {
     $(".breadcrumbs-navigation__left").toggleClass("opened");
   })
 
+  // звездочка
+  $(".icon-star").click(function(){
+    $(this).parents(".star-wrapper").toggleClass("active");
+  });
+
   // закрытие поля поиска в хлебных крошках
   $(".js-search-close").on("click", function(event){
     event.preventDefault();
@@ -51,10 +56,10 @@ $(function() {
 
   // скролл до якоря
   $(document).ready(function(){
-    $('a[href*=#]').bind("click", function(e){
+    $("a[href*=#]").bind("click", function(e){
       var anchor = $(this);
-      $('html, body').stop().animate({
-        scrollTop: $(anchor.attr('href')).offset().top
+      $("html, body").stop().animate({
+        scrollTop: $(anchor.attr("href")).offset().top
       }, 1000);
         e.preventDefault();
     });
