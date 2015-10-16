@@ -393,17 +393,31 @@
     }
 
     &__list-item {
+      display: none;
 
       &:after {
         right: 2px;
       }
 
       &:last-child {
+        display: block;
+        padding-left: 15px;
 
         .breadcrumbs-navigation {
 
           &__link {
+            position: relative;
             margin-right: 0;
+
+            &:before {
+              content: "\e81b";
+              position: absolute;
+              top: 0;
+              left: -15px;
+              font-family: @icon;
+              font-size: 12px;
+              color: #e5e5e5;
+            }
           }
         }
       }
