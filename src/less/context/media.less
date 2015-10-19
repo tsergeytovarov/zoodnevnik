@@ -70,7 +70,7 @@
     }
   }
 
-  .friend-card {
+  .owner-card {
     width: 342px;
 
     &__image-wrapper {
@@ -85,6 +85,19 @@
     &__bio {
       padding-top: 6px;
       padding-bottom: 6px;
+    }
+  }
+
+  .community-card {
+    width: 342px;
+
+    &__image-wrapper {
+      width: 90px;
+      height: 105px;
+    }
+
+    &__info-wrapper {
+      width: 252px;
     }
   }
 
@@ -199,6 +212,13 @@
       }
     }
 
+    &__link {
+
+      &--active {
+        border-right: 3px solid transparent;
+      }
+    }
+
     &.opened {
       position: absolute;
       top: 0;
@@ -240,6 +260,10 @@
           &:hover {
             color: #000;
           }
+
+          &--active {
+            border-right: 3px solid @green;
+          }
         }
       }
     }
@@ -253,6 +277,16 @@
 
     &__text {
       max-width: 540px;
+    }
+  }
+
+  .search-container {
+    margin-bottom: 0;
+    border-bottom: 1px solid #eee;
+    border-radius: 2px 2px 0 0;
+
+    input[type="text"] {
+      width: 657px;
     }
   }
 }
@@ -469,13 +503,26 @@
     }
   }
 
-  .friend-card {
+  .owner-card {
     margin-right: 0;
     width: 450px;
 
     &__info-wrapper {
       width: 360px;
     }
+  }
+
+  .community-card {
+    margin-right: 0;
+    width: 450px;
+
+    &__info-wrapper {
+      width: 360px;
+    }
+  }
+
+  .results-container {
+    margin-right: 0;
   }
 
   .breadcrumbs-navigation {
@@ -492,6 +539,20 @@
 
     &__text {
       max-width: 380px;
+    }
+
+    &__social-link {
+
+      &--public {
+        display: none;
+      }
+    }
+  }
+
+  .search-container {
+
+    input[type="text"] {
+      width: 401px;
     }
   }
 }
@@ -697,7 +758,15 @@
     }
   }
 
-  .friend-card {
+  .owner-card {
+    width: 294px;
+
+    &__info-wrapper {
+      width: 204px;
+    }
+  }
+
+  .community-card {
     width: 294px;
 
     &__info-wrapper {
@@ -753,6 +822,24 @@
       &:last-child {
         margin-right: 0;
       }
+
+      &:nth-child(3) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .search-container {
+
+    input[type="text"] {
+      width: 245px;
+    }
+  }
+
+  .results-info {
+
+    &__link {
+      font-size: 0;
     }
   }
 }

@@ -40,6 +40,24 @@ $(function() {
     $(".user-options__search").removeClass("opened");
   })
 
+  // открытие поля поиска тип 2
+  $(".js-search-open-3").on("click", function(event){
+    event.preventDefault();
+    $(".search-container").toggleClass("opened");
+  })
+
+  // закрытие поля поиска тип 2
+  $(".js-search-close-3").on("click", function(event){
+    event.preventDefault();
+    $(".search-container").removeClass("opened");
+  })
+
+  // открытие выпадающего списка на странице поиска
+  $(".list-toggle").click(function(event){
+    event.preventDefault();
+    $(this).parents(".filters-container__list-item").toggleClass("unfolded");
+  });
+
   // переключение состояний элементов по скроллу к питомцам (главная)
   $(".header-navigation__link--pets").on("click", function(event){
     $(".header-navigation__link--pets").addClass("current");
