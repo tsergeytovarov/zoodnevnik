@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width">
   <meta name="robots" content="noindex, nofollow">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
-  <title>Friends</title>
+  <title>News</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
-<body сlass="friends">
+<body сlass="news">
   <!-- основной хедер. по классу logged-in переключается на состояние для залогиненного пользователя, по классу nested - состояние для незалогиненного пользователя с разделителями -->
   <header class="page-header logged-in type-3">
     <div class="page-header__inner clearfix">
@@ -21,7 +21,7 @@
       <nav class="header-navigation">
         <ul class="header-navigation__list">
           <li class="header-navigation__list-item">
-            <a href="#" class="header-navigation__link header-navigation__link--news">Новости</a>
+            <a href="#" class="header-navigation__link header-navigation__link--news current">Новости</a>
           </li>
           <li class="header-navigation__list-item">
             <a href="#pets" class="header-navigation__link header-navigation__link--pets">Питомцы</a>
@@ -113,123 +113,72 @@
     </div>
   </header>
   <!-- основной контент -->
-  <div class="main type-3">
-    <div class="container">
-      <div class="sorting-container">
-        <div class="sorting-container__title">Друзья</div>
-        <button type="button" class="sorting-toggle"></button>
-        <div class="sorting-tooltip">
-          <div class="sorting-tooltip__title">Упорядочить:</div>
-          <ul class="sorting-list">
-            <li class="sorting-list__item">
-              <a href="#" class="sorting-list__link">По популярности</a>
-            </li>
-            <li class="sorting-list__item">
-              <a href="#" class="sorting-list__link">по дате создания</a>
-            </li>
-            <li class="sorting-list__item">
-              <a href="#" class="sorting-list__link">по дате добавления</a>
-            </li>
-            <li class="sorting-list__item">
-              <a href="#" class="sorting-list__link">по титулованности</a>
-            </li>
-            <li class="sorting-list__item">
-              <a href="#" class="sorting-list__link">по старшинству</a>
-            </li>
-          </ul>
+  <div class="main type-2">
+    <div class="container clearfix">
+      <div class="left-col">
+        <div class="filters-outer filters-outer--first">
+          <div class="filters-container">
+            <div class="filters-container__title">Тип сообщения</div>
+            <ul class="filters-container__list">
+              <li class="filters-container__list-item filter-toggle">
+                <a href="#" class="filters-container__link filters-container__link--active">Все</a>
+              </li>
+              <li class="filters-container__list-item">
+                <a href="#" class="filters-container__link">Потомства</a>
+              </li>
+              <li class="filters-container__list-item">
+                <a href="#" class="filters-container__link">События</a>
+              </li>
+              <li class="filters-container__list-item">
+                <a href="#" class="filters-container__link">Выставки</a>
+              </li>
+              <li class="filters-container__list-item">
+                <a href="#" class="filters-container__link">Состязания</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="filters-outer filters-outer--second">
+          <div class="filters-container">
+            <div class="filters-container__title">Животные</div>
+            <ul class="filters-container__list">
+              <li class="filters-container__list-item filter-toggle">
+                <a href="#" class="filters-container__link">Собаки</a>
+              </li>
+              <li class="filters-container__list-item">
+                <a href="#" class="filters-container__link">Кошки</a>
+              </li>
+              <li class="filters-container__list-item">
+                <a href="#" class="filters-container__link">Птицы</a>
+              </li>
+              <li class="filters-container__list-item">
+                <a href="#" class="filters-container__link">Рыбы</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div class="groups-container">
-        <div class="friend-card clearfix">
-          <div class="friend-card__image-wrapper">
-            <img src="img/friend-photo-01.jpg" alt="" class="friend-card__image">
-          </div>
-          <div class="friend-card__info-wrapper">
-            <div class="friend-card__info">
-              <a href="#" class="friend-card__name">Михаил Перегудов</a>
-              <span class="friend-card__location">г. Москва</span>
+      <div class="main-content">
+        <article class="news-item">
+          <div class="news-item__information-row">
+            <a href="#" class="news-item__avatar-wrapper">
+              <img src="img/pet-avatar.jpg" alt="" class="news-item__avatar">
+            </a>
+            <div class="news-item__text-wrapper">
+              <div class="news-item__title">Простоквашино</div>
+              <div class="news-item__info">Питомец  / 22.12.11  /  12:30  /  <span class="news-item__info--bold">Потомство</span></div>
             </div>
-            <p class="friend-card__bio">Люблю двортерьеров</p>
           </div>
-          <div class="friend-card__message-box">
-            <a href="#" class="friend-card__link">Написать сообщение</a>
+          <div class="news-item__image-container">
+            <img src="img/article-img-news.jpg" alt="" class="news-item__image">
           </div>
-        </div>
-        <div class="friend-card clearfix">
-          <div class="friend-card__image-wrapper">
-            <img src="img/friend-photo-02.jpg" alt="" class="friend-card__image">
+          <p class="news-item__text">Текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения,</p>
+          <div class="news-item__social-row">
+            <a href="#" class="news-item__social-link news-item__social-link--like">Нравится</a>
+            <a href="#" class="news-item__social-link news-item__social-link--comment">Комментарий</a>
+            <a href="#" class="news-item__social-link news-item__social-link--share">Поделиться</a>
           </div>
-          <div class="friend-card__info-wrapper">
-            <div class="friend-card__info">
-              <a href="#" class="friend-card__name">Александр Мамин-Сибиряк</a>
-              <span class="friend-card__location">г. Москва</span>
-            </div>
-            <p class="friend-card__bio">Заводчик собак, владелец питомника “Простоквашино”</p>
-          </div>
-          <div class="friend-card__message-box">
-            <a href="#" class="friend-card__link">Написать сообщение</a>
-          </div>
-        </div>
-        <div class="friend-card clearfix">
-          <div class="friend-card__image-wrapper">
-            <img src="img/friend-photo-01.jpg" alt="" class="friend-card__image">
-          </div>
-          <div class="friend-card__info-wrapper">
-            <div class="friend-card__info">
-              <a href="#" class="friend-card__name">Михаил Перегудов</a>
-              <span class="friend-card__location">г. Москва</span>
-            </div>
-            <p class="friend-card__bio">Люблю двортерьеров</p>
-          </div>
-          <div class="friend-card__message-box">
-            <a href="#" class="friend-card__link">Написать сообщение</a>
-          </div>
-        </div>
-        <div class="friend-card clearfix">
-          <div class="friend-card__image-wrapper">
-            <img src="img/friend-photo-02.jpg" alt="" class="friend-card__image">
-          </div>
-          <div class="friend-card__info-wrapper">
-            <div class="friend-card__info">
-              <a href="#" class="friend-card__name">Александр Мамин-Сибиряк</a>
-              <span class="friend-card__location">г. Москва</span>
-            </div>
-            <p class="friend-card__bio">Заводчик собак, владелец питомника “Простоквашино”</p>
-          </div>
-          <div class="friend-card__message-box">
-            <a href="#" class="friend-card__link">Написать сообщение</a>
-          </div>
-        </div>
-        <div class="friend-card clearfix">
-          <div class="friend-card__image-wrapper">
-            <img src="img/friend-photo-01.jpg" alt="" class="friend-card__image">
-          </div>
-          <div class="friend-card__info-wrapper">
-            <div class="friend-card__info">
-              <a href="#" class="friend-card__name">Михаил Перегудов</a>
-              <span class="friend-card__location">г. Москва</span>
-            </div>
-            <p class="friend-card__bio">Люблю двортерьеров</p>
-          </div>
-          <div class="friend-card__message-box">
-            <a href="#" class="friend-card__link">Написать сообщение</a>
-          </div>
-        </div>
-        <div class="friend-card clearfix">
-          <div class="friend-card__image-wrapper">
-            <img src="img/friend-photo-02.jpg" alt="" class="friend-card__image">
-          </div>
-          <div class="friend-card__info-wrapper">
-            <div class="friend-card__info">
-              <a href="#" class="friend-card__name">Александр Мамин-Сибиряк</a>
-              <span class="friend-card__location">г. Москва</span>
-            </div>
-            <p class="friend-card__bio">Заводчик собак, владелец питомника “Простоквашино”</p>
-          </div>
-          <div class="friend-card__message-box">
-            <a href="#" class="friend-card__link">Написать сообщение</a>
-          </div>
-        </div>
+        </article>
       </div>
     </div>
   </div>

@@ -54,6 +54,11 @@ $(function() {
     return false;
   })
 
+  //переключение выпадающих фильтров (тип 2)
+  $(".filter-toggle").click(function(){
+    $(this).parents(".filters-container").toggleClass("opened");
+  });
+
   // скролл до якоря
   $(document).ready(function(){
     $("a[href*=#]").bind("click", function(e){
