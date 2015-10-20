@@ -1,0 +1,152 @@
+.messages-timeline {
+  padding-right: 20px;
+  padding-top: 20px;
+  max-height: 472px;
+  overflow-y: scroll;
+	border-radius: 2px 2px 0 0;
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgba(25,26,25,.1);
+
+  &__day-messages {
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    border-top: 1px solid #eee;
+  }
+
+  &__date {
+    position: absolute;
+    top: -9px;
+    right: 0;
+    width: 95px;
+    text-align: right;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #bfbfbf;
+    background-color: #fff;
+  }
+}
+
+.message-item {
+  padding-left: 14px;
+  padding-top: 12px;
+
+  &__avatar-wrapper {
+    float: left;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: #d5d5d5;
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  &__avatar {
+    display: block;
+    width: 100%;
+  }
+
+  &__content-wrapper {
+    float: left;
+    margin-left: 14px;
+    max-width: 475px;
+  }
+
+  &__time {
+    float: right;
+    font-size: 10px;
+    line-height: 15px;
+    color: #bfbfbf;
+  }
+
+  &__name {
+    display: block;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    color: @green;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.new-message-block {
+  position: relative;
+  padding: 19px;
+  padding-top: 21px;
+  padding-bottom: 17px;
+  border-top: 1px solid #eee;
+  border-radius: 0 0 2px 2px;
+  background-color: #f7f7f7;
+  box-shadow: 0 1px 2px rgba(25,26,25,.1);
+
+  &__textarea {
+    max-height: 67px;
+    background-color: #fff;
+  }
+
+  &__upload-container {
+    float: left;
+  }
+
+  .btn {
+
+    &--green {
+      float: right;
+      padding: 0;
+      width: 127px;
+    }
+  }
+
+  &__upload-container {
+    position: absolute;
+    left: 19px;
+    bottom: 25px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  &__select-link {
+    position: relative;
+    display: block;
+    font-size: 0;
+    cursor: pointer;
+
+    &:after {
+      content: "\e811";
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-family: @icon;
+      font-size: 18px;
+      color: #bfbfbf;
+      cursor: pointer;
+    }
+  }
+
+  input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 100;
+
+    &:hover {
+
+      & + .new-message-block__select-link {
+        opacity: .7;
+      }
+    }
+  }
+}

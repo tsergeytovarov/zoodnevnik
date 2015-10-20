@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="robots" content="noindex, nofollow">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+  <title>Messages</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+  <!-- основной хедер. по классу logged-in переключается на состояние для залогиненного пользователя, по классу nested - состояние для незалогиненного пользователя с разделителями -->
+  <header class="page-header logged-in type-3">
+    <div class="page-header__inner clearfix">
+      <div class="logo">
+        <a href="#top" class="logo__link">
+          <img src="img/logo.png" alt="" class="logo__image">
+          <img src="img/logo-small.png" alt="" class="logo__image logo__image--small">
+        </a>
+      </div>
+      <nav class="header-navigation">
+        <ul class="header-navigation__list">
+          <li class="header-navigation__list-item">
+            <a href="#" class="header-navigation__link header-navigation__link--news">Новости</a>
+          </li>
+          <li class="header-navigation__list-item">
+            <a href="#pets" class="header-navigation__link header-navigation__link--pets">Питомцы</a>
+          </li>
+          <li class="header-navigation__list-item">
+            <a href="#groups" class="header-navigation__link header-navigation__link--groups">Группы</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="tooltip-container">
+        <a href="#" class="log-in-btn js-tooltip-toggle">Вход</a>
+        <div class="tooltip-content">
+          <div class="tooltip-content__social">
+            <div class="tooltip-content__social-title">Войти через:</div>
+            <div class="tooltip-content__social-wrapper">
+              <a href="#" class="btn btn--social btn--fb">Facebook</a>
+              <a href="#" class="btn btn--social btn--vk">Вконтакте</a>
+              <a href="#" class="btn btn--social btn--ok">Одноклассники</a>
+            </div>
+          </div>
+          <div class="tooltip-content__form-wrapper">
+            <form action="#" method="post">
+              <input type="text" id="email" name="email" placeholder="Email">
+              <input type="password" id="password" name="password" placeholder="Пароль">
+              <button type="submit" class="btn btn--green btn--login">Зарегистрироваться</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="user-options">
+        <div class="user-options__search clearfix">
+          <button type="button" class="user-options__search-button js-search-open-2">Искать</button>
+          <form action="#" method="post">
+            <button type="button" class="user-options__search-close js-search-close-2">Скрыть</button>
+            <input type="text" id="useroptions-search" class="useroptions-search-input" placeholder="Напишите">
+          </form>
+        </div>
+        <div class="user-options__btn">
+          <a href="#" class="user-options__messages has-new-items">Сообщения</a>
+          <span class="user-options__new-items">5</span>
+        </div>
+        <div class="user-options__btn">
+          <a href="#" class="user-options__notifications">Уведомления</a>
+          <span class="user-options__new-items">5</span>
+        </div>
+        <div class="menu-container">
+          <a href="#" class="avatar-wrapper">
+            <img src="img/avatar.jpg" alt="" class="avatar">
+          </a>
+          <a href="#" class="menu-toggle">Меню</a>
+          <nav class="menu-tooltip">
+            <ul class="menu-tooltip__mobile-list">
+              <li class="menu-tooltip__mobile-item">
+                <a href="#" class="menu-tooltip__mobile-link">Новости</a>
+              </li>
+              <li class="menu-tooltip__mobile-item">
+                <a href="#" class="menu-tooltip__mobile-link">Питомцы</a>
+              </li>
+              <li class="menu-tooltip__mobile-item">
+                <a href="#" class="menu-tooltip__mobile-link">Группы</a>
+              </li>
+            </ul>
+            <ul class="menu-tooltip__list">
+              <li class="menu-tooltip__list-item">
+                <a href="#" class="menu-tooltip__link">Моя страница</a>
+              </li>
+              <li class="menu-tooltip__list-item">
+                <a href="#" class="menu-tooltip__link">Мои Питомцы</a>
+              </li>
+              <li class="menu-tooltip__list-item">
+                <a href="#" class="menu-tooltip__link">Мои группы</a>
+              </li>
+              <li class="menu-tooltip__list-item">
+                <a href="#" class="menu-tooltip__link">Избранное</a>
+              </li>
+              <li class="menu-tooltip__list-item">
+                <a href="#" class="menu-tooltip__link">Друзья</a>
+              </li>
+              <li class="menu-tooltip__list-item">
+                <a href="#" class="menu-tooltip__link">Настройки</a>
+              </li>
+              <li class="menu-tooltip__list-item">
+                <a href="#" class="menu-tooltip__link">Выход</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- основной контент -->
+  <div class="main type-2">
+    <div class="container clearfix tabs">
+      <div class="left-col">
+        <div class="search-container clearfix">
+          <button type="button" class="search-container__search-button js-search-open-3">Искать</button>
+          <form action="#" method="post">
+            <input type="text" id="search" class="search-input" placeholder="Поиск">
+            <button type="button" class="search-container__close-button js-search-close-3">Скрыть</button>
+          </form>
+        </div>
+        <a href="#" class="compose-a-message">Написать сообщение</a>
+        <div class="tab-toggles">
+          <ul class="tab-toggles__list">
+            <li class="tab-toggle active clearfix">
+              <span class="tab-toggle__close">Закрыть</span>
+              <span class="tab-toggle__avatar-wrapper">
+                <img src="img/owner-avatar.jpg" alt="" class="tab-toggle__avatar">
+              </span>
+              <span class="tab-toggle__text-wrapper">
+                <span class="tab-toggle__message-author">Дядя Федор</span>
+                <span class="tab-toggle__message-text">Привет, какие новости?</span>
+              </span>
+              <span class="tab-toggle__date"><span class="tab-toggle__time">21:55</span></span>
+            </li>
+            <li class="tab-toggle clearfix">
+              <span class="tab-toggle__close">Закрыть</span>
+              <span class="tab-toggle__avatar-wrapper">
+              </span>
+              <span class="tab-toggle__text-wrapper">
+                <span class="tab-toggle__message-author">Петр Ивановиович</span>
+                <span class="tab-toggle__message-text">Привет, какие какие какие ...</span>
+              </span>
+              <span class="tab-toggle__date">10.09.2015<span class="tab-toggle__time"></span></span>
+            </li>
+            <li class="tab-toggle clearfix">
+              <span class="tab-toggle__close">Закрыть</span>
+              <span class="tab-toggle__avatar-wrapper">
+              </span>
+              <span class="tab-toggle__text-wrapper">
+                <span class="tab-toggle__message-author">Петр Ивановиич</span>
+                <span class="tab-toggle__message-text">Привет, какие какие какие ...</span>
+              </span>
+              <span class="tab-toggle__date">10.09.2015<span class="tab-toggle__time"></span></span>
+            </li>
+            <li class="tab-toggle clearfix">
+              <span class="tab-toggle__close">Закрыть</span>
+              <span class="tab-toggle__avatar-wrapper">
+                <img src="img/owner-avatar.jpg" alt="" class="tab-toggle__avatar">
+              </span>
+              <span class="tab-toggle__text-wrapper">
+                <span class="tab-toggle__message-author">Дядя Федор</span>
+                <span class="tab-toggle__message-text">Привет, какие новости?</span>
+              </span>
+              <span class="tab-toggle__date"><span class="tab-toggle__time">21:55</span></span>
+            </li>
+            <li class="tab-toggle clearfix">
+              <span class="tab-toggle__close">Закрыть</span>
+              <span class="tab-toggle__avatar-wrapper">
+              </span>
+              <span class="tab-toggle__text-wrapper">
+                <span class="tab-toggle__message-author">Петр Ивановиович</span>
+                <span class="tab-toggle__message-text">Привет, какие какие какие ...</span>
+              </span>
+              <span class="tab-toggle__date">10.09.2015<span class="tab-toggle__time"></span></span>
+            </li>
+            <li class="tab-toggle clearfix">
+              <span class="tab-toggle__close">Закрыть</span>
+              <span class="tab-toggle__avatar-wrapper">
+              </span>
+              <span class="tab-toggle__text-wrapper">
+                <span class="tab-toggle__message-author">Петр Ивановиич</span>
+                <span class="tab-toggle__message-text">Привет, какие какие какие ...</span>
+              </span>
+              <span class="tab-toggle__date">10.09.2015<span class="tab-toggle__time"></span></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="main-content">
+        <div class="new-message-container">
+          <div class="new-message-container__receiver-field clearfix">
+            <label for="receiver" class="new-message-container__label">Кому:</label>
+            <div class="new-message-container__input-wrapper">
+              <input type="text" id="receiver">
+            </div>
+          </div>
+          <div class="new-message-block">
+            <form action="#" method="post">
+              <textarea class="new-message-block__textarea" name="new-message" rows="4">Написать сообщение ...</textarea>
+              <div class="new-message-block__btns-row clearfix">
+                <div class="new-message-block__upload-container">
+                  <input type="file" id="upload-photo-2">
+                  <div class="new-message-block__select-link">Загрузить фотографию</div>
+                </div>
+                <button type="submit" class="btn btn--green">Отправить</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="tabs-container">
+          <div class="tab-content active">
+            <div class="messages-timeline">
+              <div class="messages-timeline__day-messages">
+                <div class="messages-timeline__date">23 сентября</div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Иван Петров</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                    <img src="img/owner-avatar.jpg" alt="" class="message-item__avatar">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Дядя Федор</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Иван Петров</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                    <img src="img/owner-avatar.jpg" alt="" class="message-item__avatar">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Дядя Федор</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+              </div>
+              <div class="messages-timeline__day-messages">
+                <div class="messages-timeline__date">23 сентября</div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Иван Петров</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                    <img src="img/owner-avatar.jpg" alt="" class="message-item__avatar">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Дядя Федор</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Иван Петров</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                    <img src="img/owner-avatar.jpg" alt="" class="message-item__avatar">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Дядя Федор</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+              </div>
+              <div class="messages-timeline__day-messages">
+                <div class="messages-timeline__date">23 сентября</div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                    <img src="img/owner-avatar.jpg" alt="" class="message-item__avatar">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Дядя Федор</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+              </div>
+              <div class="messages-timeline__day-messages">
+                <div class="messages-timeline__date">23 сентября</div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Иван Петров</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                    <img src="img/owner-avatar.jpg" alt="" class="message-item__avatar">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Дядя Федор</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper"></a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Иван Петров</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                    <img src="img/owner-avatar.jpg" alt="" class="message-item__avatar">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Дядя Федор</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+              </div>
+              <div class="messages-timeline__day-messages">
+                <div class="messages-timeline__date">Сегодня</div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                    <img src="img/owner-avatar.jpg" alt="" class="message-item__avatar">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Дядя Федор</a>
+                    <div class="message-item__text">Привет, какие новости?</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+              </div>
+            </div>
+            <div class="new-message-block">
+              <form action="#" method="post">
+                <textarea class="new-message-block__textarea" name="new-message" rows="4"></textarea>
+                <div class="new-message-block__btns-row clearfix">
+                  <div class="new-message-block__upload-container">
+                    <input type="file" name="upload-photo">
+                    <div class="new-message-block__select-link">Загрузить фотографию</div>
+                  </div>
+                  <button type="submit" class="btn btn--green">Отправить</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="tab-content">
+            <div class="messages-timeline">
+              <div class="messages-timeline__day-messages">
+                <div class="messages-timeline__date">23 сентября</div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                    <img src="img/owner-avatar.jpg" alt="" class="message-item__avatar">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Дядя Федор</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+              </div>
+              <div class="messages-timeline__day-messages">
+                <div class="messages-timeline__date">23 сентября</div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Иван Петров</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                    <img src="img/owner-avatar.jpg" alt="" class="message-item__avatar">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Дядя Федор</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Иван Петров</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                    <img src="img/owner-avatar.jpg" alt="" class="message-item__avatar">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Дядя Федор</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+              </div>
+              <div class="messages-timeline__day-messages">
+                <div class="messages-timeline__date">Сегодня</div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                    <img src="img/owner-avatar.jpg" alt="" class="message-item__avatar">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Дядя Федор</a>
+                    <div class="message-item__text">Привет, какие новости?</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+              </div>
+            </div>
+            <div class="new-message-block">
+              <form action="#" method="post">
+                <textarea class="new-message-block__textarea" name="new-message" rows="4"></textarea>
+                <div class="new-message-block__btns-row clearfix">
+                  <div class="new-message-block__upload-container">
+                    <input type="file" name="upload-photo">
+                    <div class="new-message-block__select-link">Загрузить фотографию</div>
+                  </div>
+                  <button type="submit" class="btn btn--green">Отправить</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="tab-content">
+            <div class="messages-timeline">
+              <div class="messages-timeline__day-messages">
+                <div class="messages-timeline__date">23 сентября</div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Иван Петров</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                    <img src="img/owner-avatar.jpg" alt="" class="message-item__avatar">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Дядя Федор</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Иван Петров</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                    <img src="img/owner-avatar.jpg" alt="" class="message-item__avatar">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Дядя Федор</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+              </div>
+              <div class="messages-timeline__day-messages">
+                <div class="messages-timeline__date">23 сентября</div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Иван Петров</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                    <img src="img/owner-avatar.jpg" alt="" class="message-item__avatar">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Дядя Федор</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Иван Петров</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                    <img src="img/owner-avatar.jpg" alt="" class="message-item__avatar">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Дядя Федор</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+              </div>
+              <div class="messages-timeline__day-messages">
+                <div class="messages-timeline__date">23 сентября</div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                    <img src="img/owner-avatar.jpg" alt="" class="message-item__avatar">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Дядя Федор</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+              </div>
+              <div class="messages-timeline__day-messages">
+                <div class="messages-timeline__date">23 сентября</div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Иван Петров</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                    <img src="img/owner-avatar.jpg" alt="" class="message-item__avatar">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Дядя Федор</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Иван Петров</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                    <img src="img/owner-avatar.jpg" alt="" class="message-item__avatar">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Дядя Федор</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+              </div>
+              <div class="messages-timeline__day-messages">
+                <div class="messages-timeline__date">Сегодня</div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                    <img src="img/owner-avatar.jpg" alt="" class="message-item__avatar">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Дядя Федор</a>
+                    <div class="message-item__text">Привет, какие новости?</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+              </div>
+            </div>
+            <div class="new-message-block">
+              <form action="#" method="post">
+                <textarea class="new-message-block__textarea" name="new-message" rows="4"></textarea>
+                <div class="new-message-block__btns-row clearfix">
+                  <div class="new-message-block__upload-container">
+                    <input type="file" name="upload-photo">
+                    <div class="new-message-block__select-link">Загрузить фотографию</div>
+                  </div>
+                  <button type="submit" class="btn btn--green">Отправить</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="tab-content">
+            <div class="messages-timeline">
+              <div class="messages-timeline__day-messages">
+                <div class="messages-timeline__date">23 сентября</div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                    <img src="img/owner-avatar.jpg" alt="" class="message-item__avatar">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Дядя Федор</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+              </div>
+              <div class="messages-timeline__day-messages">
+                <div class="messages-timeline__date">23 сентября</div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Иван Петров</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                    <img src="img/owner-avatar.jpg" alt="" class="message-item__avatar">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Дядя Федор</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Иван Петров</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                    <img src="img/owner-avatar.jpg" alt="" class="message-item__avatar">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Дядя Федор</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+              </div>
+              <div class="messages-timeline__day-messages">
+                <div class="messages-timeline__date">Сегодня</div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                    <img src="img/owner-avatar.jpg" alt="" class="message-item__avatar">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Дядя Федор</a>
+                    <div class="message-item__text">Привет, какие новости?</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+              </div>
+            </div>
+            <div class="new-message-block">
+              <form action="#" method="post">
+                <textarea class="new-message-block__textarea" name="new-message" rows="4"></textarea>
+                <div class="new-message-block__btns-row clearfix">
+                  <div class="new-message-block__upload-container">
+                    <input type="file" name="upload-photo">
+                    <div class="new-message-block__select-link">Загрузить фотографию</div>
+                  </div>
+                  <button type="submit" class="btn btn--green">Отправить</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="tab-content">
+            <div class="messages-timeline">
+              <div class="messages-timeline__day-messages">
+                <div class="messages-timeline__date">23 сентября</div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Иван Петров</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                    <img src="img/owner-avatar.jpg" alt="" class="message-item__avatar">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Дядя Федор</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Иван Петров</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                    <img src="img/owner-avatar.jpg" alt="" class="message-item__avatar">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Дядя Федор</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+              </div>
+              <div class="messages-timeline__day-messages">
+                <div class="messages-timeline__date">23 сентября</div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Иван Петров</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                    <img src="img/owner-avatar.jpg" alt="" class="message-item__avatar">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Дядя Федор</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Иван Петров</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                    <img src="img/owner-avatar.jpg" alt="" class="message-item__avatar">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Дядя Федор</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+              </div>
+              <div class="messages-timeline__day-messages">
+                <div class="messages-timeline__date">23 сентября</div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                    <img src="img/owner-avatar.jpg" alt="" class="message-item__avatar">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Дядя Федор</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+              </div>
+              <div class="messages-timeline__day-messages">
+                <div class="messages-timeline__date">23 сентября</div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Иван Петров</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                    <img src="img/owner-avatar.jpg" alt="" class="message-item__avatar">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Дядя Федор</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Иван Петров</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                    <img src="img/owner-avatar.jpg" alt="" class="message-item__avatar">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Дядя Федор</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+              </div>
+              <div class="messages-timeline__day-messages">
+                <div class="messages-timeline__date">Сегодня</div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                    <img src="img/owner-avatar.jpg" alt="" class="message-item__avatar">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Дядя Федор</a>
+                    <div class="message-item__text">Привет, какие новости?</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+              </div>
+            </div>
+            <div class="new-message-block">
+              <form action="#" method="post">
+                <textarea class="new-message-block__textarea" name="new-message" rows="4"></textarea>
+                <div class="new-message-block__btns-row clearfix">
+                  <div class="new-message-block__upload-container">
+                    <input type="file" name="upload-photo">
+                    <div class="new-message-block__select-link">Загрузить фотографию</div>
+                  </div>
+                  <button type="submit" class="btn btn--green">Отправить</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="tab-content">
+            <div class="messages-timeline">
+              <div class="messages-timeline__day-messages">
+                <div class="messages-timeline__date">23 сентября</div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Иван Петров</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                    <img src="img/owner-avatar.jpg" alt="" class="message-item__avatar">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Дядя Федор</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Иван Петров</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                    <img src="img/owner-avatar.jpg" alt="" class="message-item__avatar">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Дядя Федор</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+              </div>
+              <div class="messages-timeline__day-messages">
+                <div class="messages-timeline__date">23 сентября</div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Иван Петров</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                    <img src="img/owner-avatar.jpg" alt="" class="message-item__avatar">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Дядя Федор</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Иван Петров</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                    <img src="img/owner-avatar.jpg" alt="" class="message-item__avatar">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Дядя Федор</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+              </div>
+              <div class="messages-timeline__day-messages">
+                <div class="messages-timeline__date">23 сентября</div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                    <img src="img/owner-avatar.jpg" alt="" class="message-item__avatar">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Дядя Федор</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+              </div>
+              <div class="messages-timeline__day-messages">
+                <div class="messages-timeline__date">23 сентября</div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Иван Петров</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                    <img src="img/owner-avatar.jpg" alt="" class="message-item__avatar">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Дядя Федор</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Иван Петров</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                    <img src="img/owner-avatar.jpg" alt="" class="message-item__avatar">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Дядя Федор</a>
+                    <div class="message-item__text">Бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+              </div>
+              <div class="messages-timeline__day-messages">
+                <div class="messages-timeline__date">Сегодня</div>
+                <div class="message-item clearfix">
+                  <a href="#" class="message-item__avatar-wrapper">
+                    <img src="img/owner-avatar.jpg" alt="" class="message-item__avatar">
+                  </a>
+                  <div class="message-item__content-wrapper">
+                    <a href="#" class="message-item__name">Дядя Федор</a>
+                    <div class="message-item__text">Привет, какие новости?</div>
+                  </div>
+                  <div class="message-item__time">21:55</div>
+                </div>
+              </div>
+            </div>
+            <div class="new-message-block">
+              <form action="#" method="post">
+                <textarea class="new-message-block__textarea" name="new-message" rows="4"></textarea>
+                <div class="new-message-block__btns-row clearfix">
+                  <div class="new-message-block__upload-container">
+                    <input type="file" name="upload-photo">
+                    <div class="new-message-block__select-link">Загрузить фотографию</div>
+                  </div>
+                  <button type="submit" class="btn btn--green">Отправить</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="page-footer">
+    <div class="container">
+      <nav class="footer-navigation">
+        <ul class="footer-navigation__list">
+          <li class="footer-navigation__list-item">
+            <a href="#" class="footer-navigation__link">о сайте</a>
+          </li>
+          <li class="footer-navigation__list-item">
+            <a href="#" class="footer-navigation__link">помощь</a>
+          </li>
+          <li class="footer-navigation__list-item">
+            <a href="#" class="footer-navigation__link">правила</a>
+          </li>
+          <li class="footer-navigation__list-item">
+            <a href="#" class="footer-navigation__link">вакансии</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+
+  <script src="js/vendors/jquery.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

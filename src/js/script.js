@@ -72,6 +72,13 @@ $(function() {
     return false;
   })
 
+  //открытие поля нового сообщения
+  $(".compose-a-message").on("click", function(){
+    $(".compose-a-message").toggleClass("active");
+    $(".new-message-container").toggleClass("active");
+    return false;
+  })
+
   //переключение выпадающих фильтров (тип 2)
   $(".filter-toggle").click(function(){
     $(this).parents(".filters-container").toggleClass("opened");
@@ -87,5 +94,21 @@ $(function() {
         e.preventDefault();
     });
     return false;
+  });
+
+  // переключение табов
+  (function($) {
+    $(function() {
+      $('ul.tab-toggles__list').on('click', 'li:not(.active)', function() {
+        $(this)
+          .addClass('active').siblings().removeClass('active')
+          .closest('div.tabs').find('div.tab-content').removeClass('active').eq($(this).index()).addClass('active');
+      });
+    });
+  })(jQuery);
+
+  // закрытие табов
+  $(".tab-toggle__close").click(function(){
+    $(this).parents(".tab-toggle").addClass("hidden");
   });
 });
