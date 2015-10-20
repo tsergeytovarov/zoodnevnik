@@ -289,6 +289,10 @@
       width: 657px;
     }
   }
+
+  .compose-a-message {
+    border-radius: 0 0 2px 2px;
+  }
 }
 
 
@@ -553,6 +557,20 @@
 
     input[type="text"] {
       width: 401px;
+    }
+  }
+
+  .new-message-container {
+
+    &__input-wrapper {
+      width: 345px;
+    }
+  }
+
+  .message-item {
+
+    &__content-wrapper {
+      max-width: 340px;
     }
   }
 }
@@ -840,6 +858,29 @@
 
     &__link {
       font-size: 0;
+    }
+  }
+
+  .new-message-container {
+
+    &__input-wrapper {
+      width: 100%;
+    }
+  }
+
+  .messages-timeline {
+    padding-right: 12px;
+  }
+
+  .message-item {
+
+    &__avatar-wrapper {
+      display: none;
+    }
+
+    &__content-wrapper {
+      margin-left: 0;
+      max-width: 100%;
     }
   }
 }
