@@ -115,8 +115,8 @@ $(function() {
     });
   })(jQuery);
 
-  // закрытие табов
-  $(".tab-toggle__close").click(function(){
-    $(this).parents(".tab-toggle").addClass("hidden");
+  // закрытие элементов
+  $(".close-btn").click(function(){
+    $(this).parents(".element").addClass("hidden");
   });
 });

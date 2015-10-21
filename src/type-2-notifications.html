@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="robots" content="noindex, nofollow">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+  <title>Notifications</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+  <!-- основной хедер. по классу logged-in переключается на состояние для залогиненного пользователя, по классу nested - состояние для незалогиненного пользователя с разделителями -->
+  <header class="page-header logged-in type-3">
+    <div class="page-header__inner clearfix">
+      <div class="logo">
+        <a href="#top" class="logo__link">
+          <img src="img/logo.png" alt="" class="logo__image">
+          <img src="img/logo-small.png" alt="" class="logo__image logo__image--small">
+        </a>
+      </div>
+      <nav class="header-navigation">
+        <ul class="header-navigation__list">
+          <li class="header-navigation__list-item">
+            <a href="#" class="header-navigation__link header-navigation__link--news">Новости</a>
+          </li>
+          <li class="header-navigation__list-item">
+            <a href="#pets" class="header-navigation__link header-navigation__link--pets">Питомцы</a>
+          </li>
+          <li class="header-navigation__list-item">
+            <a href="#groups" class="header-navigation__link header-navigation__link--groups">Группы</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="tooltip-container">
+        <a href="#" class="log-in-btn js-tooltip-toggle">Вход</a>
+        <div class="tooltip-content">
+          <div class="tooltip-content__social">
+            <div class="tooltip-content__social-title">Войти через:</div>
+            <div class="tooltip-content__social-wrapper">
+              <a href="#" class="btn btn--social btn--fb">Facebook</a>
+              <a href="#" class="btn btn--social btn--vk">Вконтакте</a>
+              <a href="#" class="btn btn--social btn--ok">Одноклассники</a>
+            </div>
+          </div>
+          <div class="tooltip-content__form-wrapper">
+            <form action="#" method="post">
+              <input type="text" id="email" name="email" placeholder="Email">
+              <input type="password" id="password" name="password" placeholder="Пароль">
+              <button type="submit" class="btn btn--green btn--login">Зарегистрироваться</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="user-options">
+        <div class="user-options__search clearfix">
+          <button type="button" class="user-options__search-button js-search-open-2">Искать</button>
+          <form action="#" method="post">
+            <button type="button" class="user-options__search-close js-search-close-2">Скрыть</button>
+            <input type="text" id="useroptions-search" class="useroptions-search-input" placeholder="Напишите">
+          </form>
+        </div>
+        <div class="user-options__btn">
+          <a href="#" class="user-options__messages has-new-items">Сообщения</a>
+          <span class="user-options__new-items">5</span>
+        </div>
+        <div class="user-options__btn">
+          <a href="#" class="user-options__notifications">Уведомления</a>
+          <span class="user-options__new-items">5</span>
+        </div>
+        <div class="menu-container">
+          <a href="#" class="avatar-wrapper">
+            <img src="img/avatar.jpg" alt="" class="avatar">
+          </a>
+          <a href="#" class="menu-toggle">Меню</a>
+          <nav class="menu-tooltip">
+            <ul class="menu-tooltip__mobile-list">
+              <li class="menu-tooltip__mobile-item">
+                <a href="#" class="menu-tooltip__mobile-link">Новости</a>
+              </li>
+              <li class="menu-tooltip__mobile-item">
+                <a href="#" class="menu-tooltip__mobile-link">Питомцы</a>
+              </li>
+              <li class="menu-tooltip__mobile-item">
+                <a href="#" class="menu-tooltip__mobile-link">Группы</a>
+              </li>
+            </ul>
+            <ul class="menu-tooltip__list">
+              <li class="menu-tooltip__list-item">
+                <a href="#" class="menu-tooltip__link">Моя страница</a>
+              </li>
+              <li class="menu-tooltip__list-item">
+                <a href="#" class="menu-tooltip__link">Мои Питомцы</a>
+              </li>
+              <li class="menu-tooltip__list-item">
+                <a href="#" class="menu-tooltip__link">Мои группы</a>
+              </li>
+              <li class="menu-tooltip__list-item">
+                <a href="#" class="menu-tooltip__link">Избранное</a>
+              </li>
+              <li class="menu-tooltip__list-item">
+                <a href="#" class="menu-tooltip__link">Друзья</a>
+              </li>
+              <li class="menu-tooltip__list-item">
+                <a href="#" class="menu-tooltip__link">Настройки</a>
+              </li>
+              <li class="menu-tooltip__list-item">
+                <a href="#" class="menu-tooltip__link">Выход</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- основной контент -->
+  <div class="main type-2">
+    <div class="container clearfix tabs">
+      <div class="left-col">
+        <div class="search-container clearfix">
+          <button type="button" class="search-container__search-button js-search-open-3">Искать</button>
+          <form action="#" method="post">
+            <input type="text" id="search" class="search-input" placeholder="Поиск">
+            <button type="button" class="search-container__close-button js-search-close-3">Скрыть</button>
+          </form>
+        </div>
+        <div class="tab-toggles">
+          <!-- ссылка разворачивает список на маленьких экранах -->
+          <a href="#" class="tab-toggles__toggle notifications">Все</a>
+          <ul class="tab-toggles__list hidden">
+            <li class="tab-toggle active">
+              <div class="tab-toggle__text">Все</div>
+            </li>
+            <li class="tab-toggle">
+              <div class="tab-toggle__text">Для меня</div>
+            </li>
+            <li class="tab-toggle">
+              <div class="tab-toggle__text">Для питомцев</div>
+            </li>
+            <li class="tab-toggle">
+              <div class="tab-toggle__text">Для групп</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="main-content">
+        <div class="tabs-container">
+          <div class="tab-content active">
+            <div class="notification-item element">
+              <span class="notification-item__close close-btn">Скрыть</span>
+              <div class="notification-item__row clearfix">
+                <a href="#" class="notification-item__avatar-wrapper">
+                  <img src="img/owner-avatar.jpg" alt="" class="notification-item__avatar">
+                </a>
+                <div class="notification-item__text-wrapper">
+                  <div class="notification-item__subject"><a href="#" class="notification-item__subject--name">Дядя Федор</a> предлагает дружбу</div>
+                  <div class="notification-item__date">22 июня 21:33</div>
+                </div>
+              </div>
+              <div class="notification-item__edit-row">
+                <span class="notification-item__delete">Игнорировать</span>
+                <a href="#" class="btn btn--green">Дружить</a>
+              </div>
+            </div>
+            <div class="notification-item element">
+              <span class="notification-item__close close-btn">Скрыть</span>
+              <div class="notification-item__row clearfix">
+                <div class="notification-item__image-wrapper">
+                  <img src="img/image-preview.jpg" alt="" class="notification-item__image">
+                </div>
+                <div class="notification-item__text-wrapper">Текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения</div>
+              </div>
+              <div class="notification-item__row clearfix">
+                <a href="#" class="notification-item__avatar-wrapper">
+                </a>
+                <div class="notification-item__text-wrapper">
+                  <div class="notification-item__subject"><a href="#" class="notification-item__subject--name">Дядя Федор</a> оставил комментарий:</div>
+                  <div class="notification-item__date">22 июня 21:33</div>
+                </div>
+                <div class="notification-item__comment">Бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
+              </div>
+              <div class="notification-item__edit-row">
+                <span class="notification-item__delete">Удалить <span class="notification-item__delete--long">комментарий</span></span>
+                <a href="#" class="btn btn--green">Ответить</a>
+              </div>
+            </div>
+            <div class="notification-item element">
+              <span class="notification-item__close close-btn">Скрыть</span>
+              <div class="notification-item__row clearfix">
+                <a href="#" class="notification-item__avatar-wrapper">
+                </a>
+                <div class="notification-item__text-wrapper">
+                  <div class="notification-item__subject"><a href="#" class="notification-item__subject--name">Дядя Федор</a>, <a href="#" class="notification-item__subject--name">Ирина Фролова</a>, <a href="#" class="notification-item__subject--name">Виктория Иванова</a>, <a href="#" class="notification-item__subject--name">Екатерина</a> и <a href="#" class="notification-item__subject--name">еще 23</a> отметили как понравившееся:</div>
+                  <div class="notification-item__date">22 июня 21:33</div>
+                </div>
+              </div>
+              <div class="notification-item__row clearfix">
+                <div class="notification-item__image-wrapper">
+                  <img src="img/image-preview.jpg" alt="" class="notification-item__image">
+                </div>
+                <div class="notification-item__text-wrapper">Текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения</div>
+              </div>
+              <div class="notification-item__edit-row">
+                <span class="notification-item__delete">Игнорировать</span>
+                <a href="#" class="btn btn--green">Дружить</a>
+              </div>
+            </div>
+          </div>
+          <div class="tab-content">
+          </div>
+          <div class="tab-content">
+          </div>
+          <div class="tab-content">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="page-footer">
+    <div class="container">
+      <nav class="footer-navigation">
+        <ul class="footer-navigation__list">
+          <li class="footer-navigation__list-item">
+            <a href="#" class="footer-navigation__link">о сайте</a>
+          </li>
+          <li class="footer-navigation__list-item">
+            <a href="#" class="footer-navigation__link">помощь</a>
+          </li>
+          <li class="footer-navigation__list-item">
+            <a href="#" class="footer-navigation__link">правила</a>
+          </li>
+          <li class="footer-navigation__list-item">
+            <a href="#" class="footer-navigation__link">вакансии</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+
+  <script src="js/vendors/jquery.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
