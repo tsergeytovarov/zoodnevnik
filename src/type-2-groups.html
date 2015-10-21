@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width">
   <meta name="robots" content="noindex, nofollow">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
-  <title>Notifications</title>
+  <title>Groups</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -27,7 +27,7 @@
             <a href="#pets" class="header-navigation__link header-navigation__link--pets">Питомцы</a>
           </li>
           <li class="header-navigation__list-item">
-            <a href="type-2-groups.html" class="header-navigation__link header-navigation__link--groups">Группы</a>
+            <a href="type-2-groups.html" class="header-navigation__link header-navigation__link--groups current">Группы</a>
           </li>
         </ul>
       </nav>
@@ -131,85 +131,141 @@
               <div class="tab-toggle__text">Все</div>
             </li>
             <li class="tab-toggle">
-              <div class="tab-toggle__text">Для меня</div>
+              <div class="tab-toggle__text">Питомники</div>
             </li>
             <li class="tab-toggle">
-              <div class="tab-toggle__text">Для питомцев</div>
+              <div class="tab-toggle__text">Выставки</div>
             </li>
             <li class="tab-toggle">
-              <div class="tab-toggle__text">Для групп</div>
+              <div class="tab-toggle__text">Соревнования</div>
+            </li>
+            <li class="tab-toggle">
+              <div class="tab-toggle__text">Потомство</div>
             </li>
           </ul>
         </div>
       </div>
       <div class="main-content">
         <div class="tabs-container">
-          <div class="tab-content active">
-            <div class="notification-item element">
-              <span class="notification-item__close close-btn">Скрыть</span>
-              <div class="notification-item__row clearfix">
-                <a href="#" class="notification-item__avatar-wrapper">
-                  <img src="img/owner-avatar.jpg" alt="" class="notification-item__avatar">
-                </a>
-                <div class="notification-item__text-wrapper">
-                  <div class="notification-item__subject"><a href="#" class="notification-item__subject--name">Дядя Федор</a> предлагает дружбу</div>
-                  <div class="notification-item__date">22 июня 21:33</div>
-                </div>
-              </div>
-              <div class="notification-item__edit-row">
-                <span class="notification-item__delete">Игнорировать</span>
-                <a href="#" class="btn btn--green">Дружить</a>
-              </div>
-            </div>
-            <div class="notification-item element">
-              <span class="notification-item__close close-btn">Скрыть</span>
-              <div class="notification-item__row clearfix">
-                <div class="notification-item__image-wrapper">
-                  <img src="img/image-preview.jpg" alt="" class="notification-item__image">
-                </div>
-                <div class="notification-item__message-wrapper">Текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения</div>
-              </div>
-              <div class="notification-item__row clearfix">
-                <a href="#" class="notification-item__avatar-wrapper">
-                </a>
-                <div class="notification-item__text-wrapper">
-                  <div class="notification-item__subject"><a href="#" class="notification-item__subject--name">Дядя Федор</a> оставил комментарий:</div>
-                  <div class="notification-item__date">22 июня 21:33</div>
-                </div>
-                <div class="notification-item__comment">Бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла бла</div>
-              </div>
-              <div class="notification-item__edit-row">
-                <span class="notification-item__delete">Удалить <span class="notification-item__delete--long">комментарий</span></span>
-                <a href="#" class="btn btn--green">Ответить</a>
+          <div class="tab-content sorting active">
+            <div class="sorting-container">
+              <ul class="sorting-links-list">
+                <li class="active">Все группы</li>
+                <li>Подписки</li>
+                <li>Мои группы</li>
+              </ul>
+              <button type="button" class="sorting-toggle"></button>
+              <div class="sorting-tooltip">
+                <div class="sorting-tooltip__title">Упорядочить:</div>
+                <ul class="sorting-list">
+                  <li class="sorting-list__item">
+                    <a href="#" class="sorting-list__link">По популярности</a>
+                  </li>
+                  <li class="sorting-list__item">
+                    <a href="#" class="sorting-list__link">по дате создания</a>
+                  </li>
+                </ul>
               </div>
             </div>
-            <div class="notification-item element">
-              <span class="notification-item__close close-btn">Скрыть</span>
-              <div class="notification-item__row clearfix">
-                <a href="#" class="notification-item__avatar-wrapper">
-                </a>
-                <div class="notification-item__text-wrapper">
-                  <div class="notification-item__subject"><a href="#" class="notification-item__subject--name">Дядя Федор</a>, <a href="#" class="notification-item__subject--name">Ирина Фролова</a>, <a href="#" class="notification-item__subject--name">Виктория Иванова</a>, <a href="#" class="notification-item__subject--name">Екатерина</a> и <a href="#" class="notification-item__subject--name">еще 23</a> отметили как понравившееся:</div>
-                  <div class="notification-item__date">22 июня 21:33</div>
+            <div class="sorted-items sorted-items--all active">
+              <div class="community-card clearfix">
+                <div class="community-card__image-wrapper">
+                  <img src="img/community-avatar.jpg" alt="" class="community-card__image">
+                </div>
+                <div class="community-card__info-wrapper star-wrapper">
+                  <span class="community-card__rating icon-star"></span>
+                  <a href="#" class="community-card__title">Австралийские Короткошерстные собаки</a>
+                  <div class="community-card__type">Сообщество</div>
+                </div>
+                <div class="community-card__edit-row clearfix">
+                  <div class="community-card__subscribers"><span class="community-card__subscribers--bold">1230</span> подписчиков</div>
+                  <div class="community-card__subscribe">Подписаться</div>
+                  <div class="community-card__unsubscribe">Отписаться</div>
                 </div>
               </div>
-              <div class="notification-item__row clearfix">
-                <div class="notification-item__image-wrapper">
-                  <img src="img/image-preview.jpg" alt="" class="notification-item__image">
+              <div class="community-card clearfix">
+                <div class="community-card__image-wrapper">
+                  <img src="img/community-avatar.jpg" alt="" class="community-card__image">
                 </div>
-                <div class="notification-item__message-wrapper">Текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения</div>
+                <div class="community-card__info-wrapper star-wrapper">
+                  <span class="community-card__rating icon-star"></span>
+                  <a href="#" class="community-card__title">Австралийские Короткошерстные собаки</a>
+                  <div class="community-card__type">Сообщество</div>
+                </div>
+                <div class="community-card__edit-row clearfix">
+                  <div class="community-card__subscribers"><span class="community-card__subscribers--bold">1230</span> подписчиков</div>
+                  <div class="community-card__subscribe">Подписаться</div>
+                  <div class="community-card__unsubscribe">Отписаться</div>
+                </div>
               </div>
-              <div class="notification-item__edit-row">
-                <span class="notification-item__delete">Игнорировать</span>
-                <a href="#" class="btn btn--green">Дружить</a>
+            </div>
+            <div class="sorted-items sorted-items--subscriptions">
+              <div class="community-card subscriptions clearfix">
+                <div class="community-card__image-wrapper">
+                  <img src="img/community-avatar.jpg" alt="" class="community-card__image">
+                </div>
+                <div class="community-card__info-wrapper star-wrapper">
+                  <span class="community-card__rating icon-star"></span>
+                  <a href="#" class="community-card__title">Австралийские Короткошерстные собаки</a>
+                  <div class="community-card__type">Сообщество</div>
+                </div>
+                <div class="community-card__edit-row clearfix">
+                  <div class="community-card__subscribers"><span class="community-card__subscribers--bold">1230</span> подписчиков</div>
+                  <div class="community-card__subscribe">Подписаться</div>
+                  <div class="community-card__unsubscribe">Отписаться</div>
+                </div>
+              </div>
+              <div class="community-card subscriptions clearfix">
+                <div class="community-card__image-wrapper">
+                  <img src="img/community-avatar.jpg" alt="" class="community-card__image">
+                </div>
+                <div class="community-card__info-wrapper star-wrapper">
+                  <span class="community-card__rating icon-star"></span>
+                  <a href="#" class="community-card__title">Австралийские Короткошерстные собаки</a>
+                  <div class="community-card__type">Сообщество</div>
+                </div>
+                <div class="community-card__edit-row clearfix">
+                  <div class="community-card__subscribers"><span class="community-card__subscribers--bold">1230</span> подписчиков</div>
+                  <div class="community-card__subscribe">Подписаться</div>
+                  <div class="community-card__unsubscribe">Отписаться</div>
+                </div>
+              </div>
+            </div>
+            <div class="sorted-items sorted-items--my-groups">
+              <div class="create-a-group">
+                <a href="#" class="create-a-group__text">Создать группу</a>
               </div>
             </div>
           </div>
-          <div class="tab-content">
+          <div class="tab-content sorting">
+            <div class="sorting-container">
+              <ul class="sorting-links-list">
+                <li class="active">Все группы</li>
+                <li>Подписки</li>
+                <li>Мои группы</li>
+              </ul>
+              <button type="button" class="sorting-toggle"></button>
+              <div class="sorting-tooltip">
+                <div class="sorting-tooltip__title">Упорядочить:</div>
+                <ul class="sorting-list">
+                  <li class="sorting-list__item">
+                    <a href="#" class="sorting-list__link">По популярности</a>
+                  </li>
+                  <li class="sorting-list__item">
+                    <a href="#" class="sorting-list__link">по дате создания</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="sorted-items sorted-items--all active">4</div>
+            <div class="sorted-items sorted-items--subscriptions">5</div>
+            <div class="sorted-items sorted-items--my-groups">6</div>
           </div>
-          <div class="tab-content">
+          <div class="tab-content sorting">
           </div>
-          <div class="tab-content">
+          <div class="tab-content sorting">
+          </div>
+          <div class="tab-content sorting">
           </div>
         </div>
       </div>

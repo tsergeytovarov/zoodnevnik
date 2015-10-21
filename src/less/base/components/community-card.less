@@ -61,4 +61,78 @@
     color: #ddd;
     cursor: pointer;
   }
+
+  &__edit-row {
+    float: left;
+    box-sizing: border-box;
+    padding: 17px 16px;
+    width: 100%;
+    border-top: 1px solid #eee;
+  }
+
+  &__subscribers {
+    float: left;
+    font-size: 12px;
+    line-height: 16px;
+    color: #bfbfbf;
+
+    &--bold {
+      font-weight: 600;
+    }
+  }
+
+  &__subscribe {
+    position: relative;
+    float: right;
+    font-size: 14px;
+    line-height: 16px;
+    color: @green;
+    cursor: pointer;
+
+    &:before {
+      content: "\e816";
+      position: absolute;
+      top: 0;
+      left: -20px;
+      font-family: @icon;
+      font-size: 14px;
+      color: @green;
+    }
+
+    &:hover {
+      opacity: .8;
+    }
+
+    .subscriptions & {
+      display: none;
+    }
+  }
+
+  &__unsubscribe {
+    position: relative;
+    float: right;
+    display: none;
+    font-size: 12px;
+    line-height: 16px;
+    color: #bfbfbf;
+    cursor: pointer;
+
+    &:before {
+      content: "\e808";
+      position: absolute;
+      top: -1px;
+      left: -15px;
+      font-family: @icon;
+      font-size: 14px;
+      color: #e5e5e5;
+    }
+
+    &:hover {
+      opacity: .8;
+    }
+
+    .subscriptions & {
+      display: block;
+    }
+  }
 }

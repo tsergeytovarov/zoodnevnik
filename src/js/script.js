@@ -59,7 +59,7 @@ $(function() {
   });
 
   // переключение состояний элементов по скроллу к питомцам (главная)
-  $(".header-navigation__link--pets").on("click", function(event){
+  $(".pets-button").on("click", function(event){
     $(".header-navigation__link--pets").addClass("current");
     $(".page-header").addClass("nested");
     $(".navigation-block").addClass("nested");
@@ -111,6 +111,17 @@ $(function() {
           .addClass('active').siblings().removeClass('active')
           .closest('div.tabs').find('div.tab-content').removeClass('active').eq($(this).index()).addClass('active');
           $('ul.tab-toggles__list').addClass('hidden');
+      });
+    });
+  })(jQuery);
+
+  // переключение сортировки на стр.групп
+  (function($) {
+    $(function() {
+      $('ul.sorting-links-list').on('click', 'li:not(.active)', function() {
+        $(this)
+          .addClass('active').siblings().removeClass('active')
+          .closest('div.sorting').find('div.sorted-items').removeClass('active').eq($(this).index()).addClass('active');
       });
     });
   })(jQuery);
