@@ -79,6 +79,13 @@ $(function() {
     return false;
   })
 
+  //открытие списка сообщений
+  $(".tab-toggles__toggle").on("click", function(){
+    $(".tab-toggles__toggle").toggleClass("active");
+    $(".tab-toggles__list").toggleClass("hidden");
+    return false;
+  })
+
   //переключение выпадающих фильтров (тип 2)
   $(".filter-toggle").click(function(){
     $(this).parents(".filters-container").toggleClass("opened");
@@ -103,6 +110,7 @@ $(function() {
         $(this)
           .addClass('active').siblings().removeClass('active')
           .closest('div.tabs').find('div.tab-content').removeClass('active').eq($(this).index()).addClass('active');
+          $('ul.tab-toggles__list').addClass('hidden');
       });
     });
   })(jQuery);

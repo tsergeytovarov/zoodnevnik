@@ -293,6 +293,27 @@
   .compose-a-message {
     border-radius: 0 0 2px 2px;
   }
+
+  .tab-toggles {
+    position: relative;
+
+    &__toggle {
+      display: block;
+    }
+
+    &__list {
+      position: absolute;
+      top: 51px;
+      left: 0;
+      width: 100%;
+      border-radius: 0 0 2px 2px;
+      z-index: 200;
+
+      &.hidden {
+        display: none;
+      }
+    }
+  }
 }
 
 
