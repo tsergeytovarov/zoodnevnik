@@ -114,71 +114,73 @@
   </header>
   <!-- основной контент -->
   <div class="main type-2">
-    <div class="container clearfix">
+    <div class="container clearfix tabs">
       <div class="left-col">
-        <div class="filters-outer filters-outer--first">
-          <div class="filters-container">
-            <div class="filters-container__title">Тип сообщения</div>
-            <ul class="filters-container__list">
-              <li class="filters-container__list-item filter-toggle">
-                <a href="#" class="filters-container__link filters-container__link--active">Все</a>
-              </li>
-              <li class="filters-container__list-item">
-                <a href="#" class="filters-container__link">Потомства</a>
-              </li>
-              <li class="filters-container__list-item">
-                <a href="#" class="filters-container__link">События</a>
-              </li>
-              <li class="filters-container__list-item">
-                <a href="#" class="filters-container__link">Выставки</a>
-              </li>
-              <li class="filters-container__list-item">
-                <a href="#" class="filters-container__link">Состязания</a>
-              </li>
-            </ul>
-          </div>
+        <div class="tab-toggles tab-toggles--messages">
+          <div class="tab-toggles__title">Тип сообщения</div>
+          <a href="#" class="tab-toggles__toggle">Все</a>
+          <ul class="tab-toggles__list hidden">
+            <li class="tab-toggle">
+              <div class="tab-toggle__text">Все</div>
+            </li>
+            <li class="tab-toggle">
+              <div class="tab-toggle__text">Потомства</div>
+            </li>
+            <li class="tab-toggle">
+              <div class="tab-toggle__text">События</div>
+            </li>
+            <li class="tab-toggle">
+              <div class="tab-toggle__text">Выставки</div>
+            </li>
+            <li class="tab-toggle">
+              <div class="tab-toggle__text">Состязания</div>
+            </li>
+          </ul>
         </div>
-        <div class="filters-outer filters-outer--second">
-          <div class="filters-container">
-            <div class="filters-container__title">Животные</div>
-            <ul class="filters-container__list">
-              <li class="filters-container__list-item filter-toggle">
-                <a href="#" class="filters-container__link">Собаки</a>
-              </li>
-              <li class="filters-container__list-item">
-                <a href="#" class="filters-container__link">Кошки</a>
-              </li>
-              <li class="filters-container__list-item">
-                <a href="#" class="filters-container__link">Птицы</a>
-              </li>
-              <li class="filters-container__list-item">
-                <a href="#" class="filters-container__link">Рыбы</a>
-              </li>
-            </ul>
-          </div>
+        <div class="tab-toggles">
+          <div class="tab-toggles__title">Животные</div>
+          <a href="#" class="tab-toggles__toggle">Собаки</a>
+          <ul class="tab-toggles__list hidden">
+            <li class="tab-toggle">
+              <div class="tab-toggle__text">Собаки</div>
+            </li>
+            <li class="tab-toggle">
+              <div class="tab-toggle__text">Кошки</div>
+            </li>
+            <li class="tab-toggle">
+              <div class="tab-toggle__text">Птицы</div>
+            </li>
+            <li class="tab-toggle">
+              <div class="tab-toggle__text">Рыбы</div>
+            </li>
+          </ul>
         </div>
       </div>
       <div class="main-content">
-        <article class="news-item">
-          <div class="news-item__information-row">
-            <a href="#" class="news-item__avatar-wrapper">
-              <img src="img/pet-avatar.jpg" alt="" class="news-item__avatar">
-            </a>
-            <div class="news-item__text-wrapper">
-              <div class="news-item__title">Простоквашино</div>
-              <div class="news-item__info">Питомец  / 22.12.11  /  12:30  /  <span class="news-item__info--bold">Потомство</span></div>
-            </div>
+        <div class="tabs-container">
+          <div class="tab-content active">
+            <article class="news-item">
+              <div class="news-item__information-row">
+                <a href="#" class="news-item__avatar-wrapper">
+                  <img src="img/pet-avatar.jpg" alt="" class="news-item__avatar">
+                </a>
+                <div class="news-item__text-wrapper">
+                  <div class="news-item__title">Простоквашино</div>
+                  <div class="news-item__info">Питомец  / 22.12.11  /  12:30  /  <span class="news-item__info--bold">Потомство</span></div>
+                </div>
+              </div>
+              <div class="news-item__image-container">
+                <img src="img/article-img-news.jpg" alt="" class="news-item__image">
+              </div>
+              <p class="news-item__text">Текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения,</p>
+              <div class="news-item__social-row">
+                <a href="#" class="news-item__social-link news-item__social-link--like">Нравится</a>
+                <a href="#" class="news-item__social-link news-item__social-link--comment">Комментарий</a>
+                <a href="#" class="news-item__social-link news-item__social-link--share">Поделиться</a>
+              </div>
+            </article>
           </div>
-          <div class="news-item__image-container">
-            <img src="img/article-img-news.jpg" alt="" class="news-item__image">
-          </div>
-          <p class="news-item__text">Текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения,</p>
-          <div class="news-item__social-row">
-            <a href="#" class="news-item__social-link news-item__social-link--like">Нравится</a>
-            <a href="#" class="news-item__social-link news-item__social-link--comment">Комментарий</a>
-            <a href="#" class="news-item__social-link news-item__social-link--share">Поделиться</a>
-          </div>
-        </article>
+        </div>
       </div>
     </div>
   </div>

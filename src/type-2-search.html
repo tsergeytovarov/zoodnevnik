@@ -114,7 +114,7 @@
   </header>
   <!-- основной контент -->
   <div class="main type-2">
-    <div class="container clearfix">
+    <div class="container clearfix tabs">
       <div class="left-col">
         <div class="search-container clearfix">
           <button type="button" class="search-container__search-button js-search-open-3">Искать</button>
@@ -123,253 +123,255 @@
             <button type="button" class="search-container__close-button js-search-close-3">Скрыть</button>
           </form>
         </div>
-        <div class="filters-outer filters-outer--second">
-          <div class="filters-container">
-            <div class="filters-container__title filters-container__title--search-page"></div>
-            <ul class="filters-container__list">
-              <li class="filters-container__list-item filter-toggle">
-                <a href="#" class="filters-container__link filters-container__link--active">Везде</a>
-              </li>
-              <li class="filters-container__list-item">
-                <a href="#" class="filters-container__link">Владельцы</a>
-              </li>
-              <li class="filters-container__list-item">
-                <a href="#" class="filters-container__link">Питомцы</a>
-              </li>
-              <li class="filters-container__list-item">
-                <a href="#" class="filters-container__link">Группы</a>
-              </li>
-              <!-- по модификатору unfolded открывается выпадающий список -->
-              <li class="filters-container__list-item">
-                <a href="#" class="filters-container__link list-toggle">Новости</a>
-                <ul class="news-filters-list">
-                  <li class="news-filters-list__item">
-                    <input type="checkbox" id="all" class="checkbox-input" checked>
-                    <label for="all" class="checkbox-label">Все</label>
-                  </li>
-                  <li class="news-filters-list__item">
-                    <input type="checkbox" id="breed" class="checkbox-input">
-                    <label for="breed" class="checkbox-label">Потомства</label>
-                  </li>
-                  <li class="news-filters-list__item">
-                    <input type="checkbox" id="events" class="checkbox-input">
-                    <label for="events" class="checkbox-label">События</label>
-                  </li>
-                  <li class="news-filters-list__item">
-                    <input type="checkbox" id="exibitions" class="checkbox-input">
-                    <label for="exibitions" class="checkbox-label">Выставки</label>
-                  </li>
-                  <li class="news-filters-list__item">
-                    <input type="checkbox" id="contest" class="checkbox-input">
-                    <label for="contest" class="checkbox-label">Состязания</label>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
+        <div class="tab-toggles">
+          <a href="#" class="tab-toggles__toggle">Везде</a>
+          <ul class="filters-container__list hidden tab-toggles__list">
+            <li class="tab-toggle active">
+              <div class="tab-toggle__text">Везде</div>
+            </li>
+            <li class="tab-toggle">
+              <div class="tab-toggle__text">Владельцы</div>
+            </li>
+            <li class="tab-toggle">
+              <div class="tab-toggle__text">Питомцы</div>
+            </li>
+            <li class="tab-toggle">
+              <div class="tab-toggle__text">Группы</div>
+            </li>
+            <!-- по модификатору unfolded открывается выпадающий список -->
+            <li class="tab-toggle list-toggle">
+              <div class="tab-toggle__text">Новости</div>
+              <ul class="news-filters-list">
+                <li class="news-filters-list__item">
+                  <input type="checkbox" id="all" class="checkbox-input" checked>
+                  <label for="all" class="checkbox-label">Все</label>
+                </li>
+                <li class="news-filters-list__item">
+                  <input type="checkbox" id="breed" class="checkbox-input">
+                  <label for="breed" class="checkbox-label">Потомства</label>
+                </li>
+                <li class="news-filters-list__item">
+                  <input type="checkbox" id="events" class="checkbox-input">
+                  <label for="events" class="checkbox-label">События</label>
+                </li>
+                <li class="news-filters-list__item">
+                  <input type="checkbox" id="exibitions" class="checkbox-input">
+                  <label for="exibitions" class="checkbox-label">Выставки</label>
+                </li>
+                <li class="news-filters-list__item">
+                  <input type="checkbox" id="contest" class="checkbox-input">
+                  <label for="contest" class="checkbox-label">Состязания</label>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
       </div>
       <div class="main-content">
-        <div class="results-info clearfix">
-          <div class="results-info__result">Найдено <span class="results-info__amount">3450</span> питомцев</div>
-          <a href="#" class="results-info__link">Смотреть всех</a>
-        </div>
-        <div class="results-container">
-          <div class="pet-card clearfix">
-            <div class="pet-card__image-wrapper">
-              <img src="img/sharik.jpg" alt="" class="pet-card__image">
+        <div class="tabs-container">
+          <div class="tab-content active">
+            <div class="results-info clearfix">
+              <div class="results-info__result">Найдено <span class="results-info__amount">3450</span> питомцев</div>
+              <a href="#" class="results-info__link">Смотреть всех</a>
             </div>
-            <div class="pet-card__info-wrapper star-wrapper">
-              <span class="pet-card__rating icon-star"></span>
-              <a href="#" class="pet-card__name">Шарик <span class="pet-card__age">(7 лет)</span></a>
-              <div class="pet-card__text">Dundarroch premium quality</div>
-              <div class="pet-card__breed">Австралийская короткохвостая собака</div>
-            </div>
-          </div>
-          <div class="pet-card clearfix">
-            <div class="pet-card__image-wrapper">
-              <img src="img/sharik.jpg" alt="" class="pet-card__image">
-            </div>
-            <div class="pet-card__info-wrapper star-wrapper">
-              <span class="pet-card__rating icon-star"></span>
-              <a href="#" class="pet-card__name">Шарик <span class="pet-card__age">(7 лет)</span></a>
-              <div class="pet-card__text">Dundarroch premium quality</div>
-              <div class="pet-card__breed">Австралийская короткохвостая собака</div>
-            </div>
-          </div>
-          <div class="pet-card clearfix">
-            <div class="pet-card__image-wrapper">
-              <img src="img/sharik.jpg" alt="" class="pet-card__image">
-            </div>
-            <div class="pet-card__info-wrapper star-wrapper">
-              <span class="pet-card__rating icon-star"></span>
-              <a href="#" class="pet-card__name">Шарик <span class="pet-card__age">(7 лет)</span></a>
-              <div class="pet-card__text">Dundarroch premium quality</div>
-              <div class="pet-card__breed">Австралийская короткохвостая собака</div>
-            </div>
-          </div>
-          <div class="pet-card clearfix">
-            <div class="pet-card__image-wrapper">
-              <img src="img/sharik.jpg" alt="" class="pet-card__image">
-            </div>
-            <div class="pet-card__info-wrapper star-wrapper">
-              <span class="pet-card__rating icon-star"></span>
-              <a href="#" class="pet-card__name">Шарик <span class="pet-card__age">(7 лет)</span></a>
-              <div class="pet-card__text">Dundarroch premium quality</div>
-              <div class="pet-card__breed">Австралийская короткохвостая собака</div>
-            </div>
-          </div>
-        </div>
-        <div class="results-info clearfix">
-          <div class="results-info__result">Найдено <span class="results-info__amount">345</span> владельцев</div>
-          <a href="#" class="results-info__link">Смотреть всех</a>
-        </div>
-        <div class="results-container">
-          <div class="owner-card clearfix">
-            <div class="owner-card__image-wrapper">
-              <img src="img/friend-photo-01.jpg" alt="" class="owner-card__image">
-            </div>
-            <div class="owner-card__info-wrapper">
-              <div class="owner-card__info star-wrapper">
-                <span class="owner-card__rating icon-star"></span>
-                <a href="#" class="owner-card__name">Михаил Перегудов</a>
-                <span class="owner-card__location">г. Москва</span>
+            <div class="results-container">
+              <div class="pet-card clearfix">
+                <div class="pet-card__image-wrapper">
+                  <img src="img/sharik.jpg" alt="" class="pet-card__image">
+                </div>
+                <div class="pet-card__info-wrapper star-wrapper">
+                  <span class="pet-card__rating icon-star"></span>
+                  <a href="#" class="pet-card__name">Шарик <span class="pet-card__age">(7 лет)</span></a>
+                  <div class="pet-card__text">Dundarroch premium quality</div>
+                  <div class="pet-card__breed">Австралийская короткохвостая собака</div>
+                </div>
               </div>
-              <p class="owner-card__bio">Люблю двортерьеров</p>
-            </div>
-          </div>
-          <div class="owner-card clearfix">
-            <div class="owner-card__image-wrapper">
-              <img src="img/friend-photo-02.jpg" alt="" class="owner-card__image">
-            </div>
-            <div class="owner-card__info-wrapper">
-              <div class="owner-card__info star-wrapper">
-                <span class="owner-card__rating icon-star"></span>
-                <a href="#" class="owner-card__name">Александр Мамин-Сибиряк</a>
-                <span class="owner-card__location">г. Москва</span>
+              <div class="pet-card clearfix">
+                <div class="pet-card__image-wrapper">
+                  <img src="img/sharik.jpg" alt="" class="pet-card__image">
+                </div>
+                <div class="pet-card__info-wrapper star-wrapper">
+                  <span class="pet-card__rating icon-star"></span>
+                  <a href="#" class="pet-card__name">Шарик <span class="pet-card__age">(7 лет)</span></a>
+                  <div class="pet-card__text">Dundarroch premium quality</div>
+                  <div class="pet-card__breed">Австралийская короткохвостая собака</div>
+                </div>
               </div>
-              <p class="owner-card__bio">Заводчик собак, владелец питомника “Простоквашино”</p>
-            </div>
-          </div>
-          <div class="owner-card clearfix">
-            <div class="owner-card__image-wrapper">
-              <img src="img/friend-photo-01.jpg" alt="" class="owner-card__image">
-            </div>
-            <div class="owner-card__info-wrapper">
-              <div class="owner-card__info star-wrapper">
-                <span class="owner-card__rating icon-star"></span>
-                <a href="#" class="owner-card__name">Михаил Перегудов</a>
-                <span class="owner-card__location">г. Москва</span>
+              <div class="pet-card clearfix">
+                <div class="pet-card__image-wrapper">
+                  <img src="img/sharik.jpg" alt="" class="pet-card__image">
+                </div>
+                <div class="pet-card__info-wrapper star-wrapper">
+                  <span class="pet-card__rating icon-star"></span>
+                  <a href="#" class="pet-card__name">Шарик <span class="pet-card__age">(7 лет)</span></a>
+                  <div class="pet-card__text">Dundarroch premium quality</div>
+                  <div class="pet-card__breed">Австралийская короткохвостая собака</div>
+                </div>
               </div>
-              <p class="owner-card__bio">Люблю двортерьеров</p>
-            </div>
-          </div>
-          <div class="owner-card clearfix">
-            <div class="owner-card__image-wrapper">
-              <img src="img/friend-photo-02.jpg" alt="" class="owner-card__image">
-            </div>
-            <div class="owner-card__info-wrapper">
-              <div class="owner-card__info star-wrapper">
-                <span class="owner-card__rating icon-star"></span>
-                <a href="#" class="owner-card__name">Александр Мамин-Сибиряк</a>
-                <span class="owner-card__location">г. Москва</span>
-              </div>
-              <p class="owner-card__bio">Заводчик собак, владелец питомника “Простоквашино”</p>
-            </div>
-          </div>
-        </div>
-        <div class="results-info clearfix">
-          <div class="results-info__result">Найдено <span class="results-info__amount">12</span> групп</div>
-          <a href="#" class="results-info__link">Смотреть все</a>
-        </div>
-        <div class="results-container">
-          <div class="community-card clearfix">
-            <div class="community-card__image-wrapper">
-              <img src="img/community-avatar.jpg" alt="" class="community-card__image">
-            </div>
-            <div class="community-card__info-wrapper star-wrapper">
-              <span class="community-card__rating icon-star"></span>
-              <a href="#" class="community-card__title">Австралийские Короткошерстные собаки</a>
-              <div class="community-card__type">Сообщество</div>
-            </div>
-          </div>
-          <div class="community-card clearfix">
-            <div class="community-card__image-wrapper">
-              <img src="img/community-avatar.jpg" alt="" class="community-card__image">
-            </div>
-            <div class="community-card__info-wrapper star-wrapper">
-              <span class="community-card__rating icon-star"></span>
-              <a href="#" class="community-card__title">Австралийские Короткошерстные собаки</a>
-              <div class="community-card__type">Сообщество</div>
-            </div>
-          </div>
-          <div class="community-card clearfix">
-            <div class="community-card__image-wrapper">
-              <img src="img/community-avatar.jpg" alt="" class="community-card__image">
-            </div>
-            <div class="community-card__info-wrapper star-wrapper">
-              <span class="community-card__rating icon-star"></span>
-              <a href="#" class="community-card__title">Австралийские Короткошерстные собаки</a>
-              <div class="community-card__type">Сообщество</div>
-            </div>
-          </div>
-          <div class="community-card clearfix">
-            <div class="community-card__image-wrapper">
-              <img src="img/community-avatar.jpg" alt="" class="community-card__image">
-            </div>
-            <div class="community-card__info-wrapper star-wrapper">
-              <span class="community-card__rating icon-star"></span>
-              <a href="#" class="community-card__title">Австралийские Короткошерстные собаки</a>
-              <div class="community-card__type">Сообщество</div>
-            </div>
-          </div>
-        </div>
-        <div class="results-info clearfix">
-          <div class="results-info__result">Найдено <span class="results-info__amount">56 454</span> записи</div>
-          <a href="#" class="results-info__link">Смотреть все</a>
-        </div>
-        <div class="results-container results-container--news">
-          <article class="news-item">
-            <div class="news-item__information-row">
-              <a href="#" class="news-item__avatar-wrapper">
-                <img src="img/owner-avatar.jpg" alt="" class="news-item__avatar">
-              </a>
-              <div class="news-item__text-wrapper">
-                <div class="news-item__title">Дядя Федор</div>
-                <div class="news-item__info"> д. Простоквашино</div>
+              <div class="pet-card clearfix">
+                <div class="pet-card__image-wrapper">
+                  <img src="img/sharik.jpg" alt="" class="pet-card__image">
+                </div>
+                <div class="pet-card__info-wrapper star-wrapper">
+                  <span class="pet-card__rating icon-star"></span>
+                  <a href="#" class="pet-card__name">Шарик <span class="pet-card__age">(7 лет)</span></a>
+                  <div class="pet-card__text">Dundarroch premium quality</div>
+                  <div class="pet-card__breed">Австралийская короткохвостая собака</div>
+                </div>
               </div>
             </div>
-            <div class="news-item__image-container">
+            <div class="results-info clearfix">
+              <div class="results-info__result">Найдено <span class="results-info__amount">345</span> владельцев</div>
+              <a href="#" class="results-info__link">Смотреть всех</a>
             </div>
-            <p class="news-item__text">Текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения,</p>
-            <div class="news-item__social-row">
-              <a href="#" class="news-item__social-link news-item__social-link--like">Нравится</a>
-              <a href="#" class="news-item__social-link news-item__social-link--comment">Комментарий</a>
-              <a href="#" class="news-item__social-link news-item__social-link--share">Поделиться</a>
-              <a href="#" class="news-item__social-link news-item__social-link--public">Опубликовать</a>
-            </div>
-          </article>
-          <article class="news-item">
-            <div class="news-item__information-row">
-              <a href="#" class="news-item__avatar-wrapper">
-                <img src="img/pet-avatar.jpg" alt="" class="news-item__avatar">
-              </a>
-              <div class="news-item__text-wrapper">
-                <div class="news-item__title">Простоквашино</div>
-                <div class="news-item__info">Питомец  / 22.12.11  /  12:30  /  <span class="news-item__info--bold">Потомство</span></div>
+            <div class="results-container">
+              <div class="owner-card clearfix">
+                <div class="owner-card__image-wrapper">
+                  <img src="img/friend-photo-01.jpg" alt="" class="owner-card__image">
+                </div>
+                <div class="owner-card__info-wrapper">
+                  <div class="owner-card__info star-wrapper">
+                    <span class="owner-card__rating icon-star"></span>
+                    <a href="#" class="owner-card__name">Михаил Перегудов</a>
+                    <span class="owner-card__location">г. Москва</span>
+                  </div>
+                  <p class="owner-card__bio">Люблю двортерьеров</p>
+                </div>
+              </div>
+              <div class="owner-card clearfix">
+                <div class="owner-card__image-wrapper">
+                  <img src="img/friend-photo-02.jpg" alt="" class="owner-card__image">
+                </div>
+                <div class="owner-card__info-wrapper">
+                  <div class="owner-card__info star-wrapper">
+                    <span class="owner-card__rating icon-star"></span>
+                    <a href="#" class="owner-card__name">Александр Мамин-Сибиряк</a>
+                    <span class="owner-card__location">г. Москва</span>
+                  </div>
+                  <p class="owner-card__bio">Заводчик собак, владелец питомника “Простоквашино”</p>
+                </div>
+              </div>
+              <div class="owner-card clearfix">
+                <div class="owner-card__image-wrapper">
+                  <img src="img/friend-photo-01.jpg" alt="" class="owner-card__image">
+                </div>
+                <div class="owner-card__info-wrapper">
+                  <div class="owner-card__info star-wrapper">
+                    <span class="owner-card__rating icon-star"></span>
+                    <a href="#" class="owner-card__name">Михаил Перегудов</a>
+                    <span class="owner-card__location">г. Москва</span>
+                  </div>
+                  <p class="owner-card__bio">Люблю двортерьеров</p>
+                </div>
+              </div>
+              <div class="owner-card clearfix">
+                <div class="owner-card__image-wrapper">
+                  <img src="img/friend-photo-02.jpg" alt="" class="owner-card__image">
+                </div>
+                <div class="owner-card__info-wrapper">
+                  <div class="owner-card__info star-wrapper">
+                    <span class="owner-card__rating icon-star"></span>
+                    <a href="#" class="owner-card__name">Александр Мамин-Сибиряк</a>
+                    <span class="owner-card__location">г. Москва</span>
+                  </div>
+                  <p class="owner-card__bio">Заводчик собак, владелец питомника “Простоквашино”</p>
+                </div>
               </div>
             </div>
-            <div class="news-item__image-container">
-              <img src="img/article-img-news.jpg" alt="" class="news-item__image">
+            <div class="results-info clearfix">
+              <div class="results-info__result">Найдено <span class="results-info__amount">12</span> групп</div>
+              <a href="#" class="results-info__link">Смотреть все</a>
             </div>
-            <p class="news-item__text">Текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения,</p>
-            <div class="news-item__social-row">
-              <a href="#" class="news-item__social-link news-item__social-link--like">Нравится</a>
-              <a href="#" class="news-item__social-link news-item__social-link--comment">Комментарий</a>
-              <a href="#" class="news-item__social-link news-item__social-link--share">Поделиться</a>
-              <a href="#" class="news-item__social-link news-item__social-link--public">Опубликовать</a>
+            <div class="results-container">
+              <div class="community-card clearfix">
+                <div class="community-card__image-wrapper">
+                  <img src="img/community-avatar.jpg" alt="" class="community-card__image">
+                </div>
+                <div class="community-card__info-wrapper star-wrapper">
+                  <span class="community-card__rating icon-star"></span>
+                  <a href="#" class="community-card__title">Австралийские Короткошерстные собаки</a>
+                  <div class="community-card__type">Сообщество</div>
+                </div>
+              </div>
+              <div class="community-card clearfix">
+                <div class="community-card__image-wrapper">
+                  <img src="img/community-avatar.jpg" alt="" class="community-card__image">
+                </div>
+                <div class="community-card__info-wrapper star-wrapper">
+                  <span class="community-card__rating icon-star"></span>
+                  <a href="#" class="community-card__title">Австралийские Короткошерстные собаки</a>
+                  <div class="community-card__type">Сообщество</div>
+                </div>
+              </div>
+              <div class="community-card clearfix">
+                <div class="community-card__image-wrapper">
+                  <img src="img/community-avatar.jpg" alt="" class="community-card__image">
+                </div>
+                <div class="community-card__info-wrapper star-wrapper">
+                  <span class="community-card__rating icon-star"></span>
+                  <a href="#" class="community-card__title">Австралийские Короткошерстные собаки</a>
+                  <div class="community-card__type">Сообщество</div>
+                </div>
+              </div>
+              <div class="community-card clearfix">
+                <div class="community-card__image-wrapper">
+                  <img src="img/community-avatar.jpg" alt="" class="community-card__image">
+                </div>
+                <div class="community-card__info-wrapper star-wrapper">
+                  <span class="community-card__rating icon-star"></span>
+                  <a href="#" class="community-card__title">Австралийские Короткошерстные собаки</a>
+                  <div class="community-card__type">Сообщество</div>
+                </div>
+              </div>
             </div>
-          </article>
+            <div class="results-info clearfix">
+              <div class="results-info__result">Найдено <span class="results-info__amount">56 454</span> записи</div>
+              <a href="#" class="results-info__link">Смотреть все</a>
+            </div>
+            <div class="results-container results-container--news">
+              <article class="news-item">
+                <div class="news-item__information-row">
+                  <a href="#" class="news-item__avatar-wrapper">
+                    <img src="img/owner-avatar.jpg" alt="" class="news-item__avatar">
+                  </a>
+                  <div class="news-item__text-wrapper">
+                    <div class="news-item__title">Дядя Федор</div>
+                    <div class="news-item__info"> д. Простоквашино</div>
+                  </div>
+                </div>
+                <div class="news-item__image-container">
+                </div>
+                <p class="news-item__text">Текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения,</p>
+                <div class="news-item__social-row">
+                  <a href="#" class="news-item__social-link news-item__social-link--like">Нравится</a>
+                  <a href="#" class="news-item__social-link news-item__social-link--comment">Комментарий</a>
+                  <a href="#" class="news-item__social-link news-item__social-link--share">Поделиться</a>
+                  <a href="#" class="news-item__social-link news-item__social-link--public">Опубликовать</a>
+                </div>
+              </article>
+              <article class="news-item">
+                <div class="news-item__information-row">
+                  <a href="#" class="news-item__avatar-wrapper">
+                    <img src="img/pet-avatar.jpg" alt="" class="news-item__avatar">
+                  </a>
+                  <div class="news-item__text-wrapper">
+                    <div class="news-item__title">Простоквашино</div>
+                    <div class="news-item__info">Питомец  / 22.12.11  /  12:30  /  <span class="news-item__info--bold">Потомство</span></div>
+                  </div>
+                </div>
+                <div class="news-item__image-container">
+                  <img src="img/article-img-news.jpg" alt="" class="news-item__image">
+                </div>
+                <p class="news-item__text">Текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения,</p>
+                <div class="news-item__social-row">
+                  <a href="#" class="news-item__social-link news-item__social-link--like">Нравится</a>
+                  <a href="#" class="news-item__social-link news-item__social-link--comment">Комментарий</a>
+                  <a href="#" class="news-item__social-link news-item__social-link--share">Поделиться</a>
+                  <a href="#" class="news-item__social-link news-item__social-link--public">Опубликовать</a>
+                </div>
+              </article>
+            </div>
+          </div>
         </div>
       </div>
     </div>

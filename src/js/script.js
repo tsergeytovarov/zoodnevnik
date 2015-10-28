@@ -53,9 +53,9 @@ $(function() {
   })
 
   // открытие выпадающего списка на странице поиска
-  $(".list-toggle").click(function(event){
+  $(".tab-toggle__text").click(function(event){
     event.preventDefault();
-    $(this).parents(".filters-container__list-item").toggleClass("unfolded");
+    $(this).parents(".list-toggle").toggleClass("unfolded");
   });
 
   // переключение состояний элементов по скроллу к питомцам (главная)
@@ -79,10 +79,10 @@ $(function() {
     return false;
   })
 
-  //открытие списка сообщений
+  //открытие списка табов
   $(".tab-toggles__toggle").on("click", function(){
     $(".tab-toggles__toggle").toggleClass("active");
-    $(".tab-toggles__list").toggleClass("hidden");
+    $(this).next().toggleClass("hidden");
     return false;
   })
 
