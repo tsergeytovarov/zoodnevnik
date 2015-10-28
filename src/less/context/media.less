@@ -198,8 +198,17 @@
       }
     }
   }
-}
 
+  .date-picker {
+    padding-bottom: 6px;
+
+    &__row {
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 30px;
+    }
+  }
+}
 
 @media (max-width: 749px) {
 
@@ -492,6 +501,24 @@
 
   .create-a-group {
     margin-right: 0;
+  }
+
+  .date-picker {
+
+    &__label {
+
+      &--desktop {
+        display: none;
+      }
+
+      &--mobile {
+        display: block;
+      }
+    }
+
+    &__row {
+      margin-right: 10;
+    }
   }
 }
 
@@ -848,5 +875,25 @@
 
   .sorting-toggle {
     right: 11px;
+  }
+
+  .date-picker {
+
+    &__row {
+      display: block;
+      margin-right: 0;
+      text-align: right;
+    }
+
+    &__label {
+
+      &--mobile {
+        display: none;
+      }
+
+      &--desktop {
+        display: block;
+      }
+    }
   }
 }

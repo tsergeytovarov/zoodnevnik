@@ -72,6 +72,12 @@ $(function() {
     return false;
   })
 
+  //переключение тултипа календаря
+  $(".calendar-toggle").on("click", function(){
+    $(this).next().toggleClass("opened");
+    return false;
+  })
+
   //открытие поля нового сообщения
   $(".compose-a-message").on("click", function(){
     $(".compose-a-message").toggleClass("active");

@@ -1,0 +1,215 @@
+.date-picker {
+  margin-bottom: 22px;
+  padding: 15px 30px;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgba(25,26,25,.1);
+
+  &__row {
+    text-align: right;
+    font-size: 0;
+  }
+
+  &__label {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+    line-height: 48px;
+    color: #656565;
+
+    &--mobile {
+      display: none;
+    }
+
+    &--desktop {
+      display: block;
+    }
+  }
+
+  &__fieldset {
+    display: inline-block;
+    vertical-align: top;
+    padding: 11px 0;
+  }
+
+  input[type="text"] {
+    margin-left: 8px;
+    padding: 0 5px;
+    font-size: 14px;
+    line-height: 25px;
+    border: none;
+    border-bottom: 1px solid #eee;
+    border-radius: 0;
+    outline: none;
+
+    &:focus {
+      color: #656565;
+    }
+
+    &.date-picker__input {
+
+      &--day {
+        width: 26px;
+      }
+
+      &--year {
+        width: 44px;
+      }
+    }
+  }
+}
+
+.calendar-tooltip {
+  position: absolute;
+  bottom: 110%;
+  right: -13px;
+  display: none;
+  box-sizing: border-box;
+  padding-bottom: 12px;
+  padding-left: 4px;
+  padding-right: 4px;
+  width: 200px;
+  background-color: rgba(0,0,0,.8);
+  border-radius: 2px;
+  z-index: 500;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    right: 15px;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 10px 6px 0px;
+    border-color: rgba(0, 0, 0, 0.8) transparent rgba(0, 0, 0, 0.8);
+  }
+
+  &.opened {
+    display: block;
+  }
+
+  &__month-row {
+    text-align: center;
+  }
+
+  &__month {
+    font-size: 14px;
+    line-height: 38px;
+    color: #fff;
+  }
+
+  &__year {
+    margin-left: 8px;
+    font-size: 14px;
+    line-height: 38px;
+    color: #fff;
+  }
+
+  &__day {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 1.5px;
+    margin-right: 1.5px;
+    width: 21px;
+    height: 21px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 21px;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover {
+      background-color: @green;
+    }
+
+    &.current {
+      background-color: @green;
+    }
+  }
+
+  &__days {
+    text-align: left;
+  }
+
+  &__prev-month {
+    position: absolute;
+    top: 14px;
+    left: 15px;
+    width: 10px;
+    height: 12px;
+
+    &:before {
+      content: '\e81b';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 10px;
+      height: 12px;
+      font-family: @icon;
+      font-weight: 300;
+      font-size: 10px;
+      line-height: 12px;
+      color: #fff;
+    }
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+  &__next-month {
+    position: absolute;
+    top: 14px;
+    right: 15px;
+    width: 10px;
+    height: 12px;
+
+    &:before {
+      content: '\e819';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 10px;
+      height: 12px;
+      font-family: @icon;
+      font-weight: 300;
+      font-size: 10px;
+      line-height: 12px;
+      color: #fff;
+    }
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+}
+
+.calendar-container {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  padding: 17px 0;
+}
+
+.calendar-toggle {
+  position: relative;
+  margin-left: 9px;
+  width: 15px;
+  height: 15px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+
+  &:after {
+    content: '\e81c';
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: @icon;
+    font-size: 14px;
+    line-height: 15px;
+    color: #dadada;
+  }
+}
