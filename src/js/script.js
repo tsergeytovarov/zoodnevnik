@@ -92,10 +92,22 @@ $(function() {
     return false;
   })
 
+  //
+  $(".news-item__social-link").on("click", function(){
+    $(this).parents(".news-item__social-container").toggleClass("opened");
+    return false;
+  })
+
   //переключение выпадающих фильтров (тип 2)
   $(".filter-toggle").click(function(){
     $(this).parents(".filters-container").toggleClass("opened");
   });
+
+  //переключение состояний кнопки "добавить в избранное"
+  $(".favourite").on("click", function(){
+    $(this).toggleClass("added");
+    return false;
+  })
 
   // скролл до якоря
   $(document).ready(function(){
