@@ -256,6 +256,68 @@
       width: 625px;
     }
   }
+
+  .inner-tabs {
+    position: relative;
+
+    &__toggle {
+      display: block;
+      border-top: 1px solid #eee;
+    }
+
+    &__list {
+      display: none;
+    }
+
+    &.opened {
+
+      .inner-tabs {
+
+        &__toggle {
+
+          &.active {
+            color: #fff;
+            background-color: @green;
+            border-radius: 0;
+
+            &:after {
+              color: #fff;
+            }
+          }
+        }
+
+        &__list {
+          position: absolute;
+          display: block;
+          width: 100%;
+          background-color: #fff;
+          border-radius: 0 0 2px 2px;
+          box-shadow: 0 1px 2px rgba(25,26,25,.1);
+        }
+
+        &__list-item {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .info-table {
+
+    td {
+      display: table-row;
+    }
+
+    &__title {
+      padding-bottom: 4px;
+      line-height: 14px;
+    }
+
+    &__text {
+      padding-top: 4px;
+      padding-left: 20px;
+    }
+  }
 }
 
 @media (max-width: 749px) {
@@ -568,17 +630,6 @@
     }
   }
 
-  .inner-tabs {
-
-    &__list {
-      padding: 12px 0;
-    }
-
-    &__list-item {
-      line-height: 24px;
-    }
-  }
-
   .photo-gallery {
 
     &__item {
@@ -852,8 +903,8 @@
     }
 
     &__social-link {
-      margin-left: 43px;
-      margin-right: 43px;
+      margin-left: 25px;
+      margin-right: 25px;
       font-size: 0;
 
       &:first-child {
@@ -864,10 +915,20 @@
         margin-right: 0;
       }
 
-      &:nth-child(3) {
-        margin-right: 0;
+      &--public {
+        display: block;
+        margin: 0;
       }
     }
+
+    &__social-container {
+      margin-left: 25px;
+    }
+  }
+
+  .news-item-tooltip {
+    right: -22%;
+    text-align: left;
   }
 
   .search-container {
@@ -994,17 +1055,23 @@
   }
 
   .ancestor-table {
+    display: none;
+  }
+
+  .ancestor-table-mobile {
+    display: table;
+  }
+
+  .breed-table {
+    display: none;
 
     &__inner {
       padding: 10px;
     }
   }
 
-  .breed-table {
-
-    &__inner {
-      padding: 10px;
-    }
+  .breed-table-mobile {
+    display: table;
   }
 
   .info-table {

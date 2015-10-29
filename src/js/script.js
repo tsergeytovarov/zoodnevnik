@@ -93,6 +93,13 @@ $(function() {
     return false;
   })
 
+  //
+  $(".inner-tabs__toggle").on("click", function(event){
+    $(this).toggleClass("active");
+    $(this).parents(".inner-tabs").toggleClass("opened");
+    return false;
+  })
+
   //открытие тултипа соцсетей
   $(".news-item__social-link").on("click", function(){
     $(this).parents(".news-item__social-container").toggleClass("opened");
