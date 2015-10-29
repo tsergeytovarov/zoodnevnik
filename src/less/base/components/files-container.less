@@ -1,0 +1,37 @@
+.files-container {
+	margin-top: 8px;
+	margin-bottom: 8px;
+	background-color: #fff;
+	border-radius: 2px;
+	box-shadow: 0 1px 2px rgba(25,26,25,.1);
+}
+
+.download-link {
+	position: relative;
+	display: block;
+	padding-left: 22px;
+	padding-right: 22px;
+	text-decoration: none;
+	font-size: 14px;
+	line-height: 50px;
+	color: #656565;
+	border-bottom: 1px solid #eee;
+
+	&:last-child {
+		border-bottom: none;
+	}
+
+	&:hover {
+
+		&:after {
+			content: '\e80f';
+			position: absolute;
+			top: 16px;
+			right: 22px;
+			font-family: @icon;
+			font-size: 14px;
+			line-height: 18px;
+			color: #dcdcdc;
+		}
+	}
+}

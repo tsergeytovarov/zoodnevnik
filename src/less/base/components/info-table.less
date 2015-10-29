@@ -17,6 +17,10 @@
     &:last-child {
       border-bottom: none;
     }
+
+    &:nth-child(2) {
+      border-bottom: 1px solid #eee;
+    }
   }
 
   td {
@@ -36,5 +40,121 @@
     padding-right: 30px;
     padding-top: 16.5px;
     padding-bottom: 16.5px;
+  }
+
+  &__inner {
+    padding: 12px 19px;
+  }
+}
+
+.ancestor-table {
+  margin-bottom: 7px;
+  width: 100%;
+
+  th {
+    text-align: left;
+
+    &:last-child {
+      text-align: right;
+    }
+  }
+
+  td {
+    border: 1px solid #eee;
+  }
+
+  &__inner {
+    padding: 12px 19px;
+  }
+
+  &__title {
+    font-size: 12px;
+    line-height: 26px;
+    color: #bfbfbf;
+  }
+
+  &__show-more {
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 26px;
+    color: #656565;
+
+    &:hover {
+      color: @green;
+    }
+  }
+
+  &__avatar-wrapper {
+    margin-bottom: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  &__avatar {
+    display: block;
+    width: 100%;
+  }
+
+  &__name {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &__details {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+.breed-table {
+  margin-bottom: 16px;
+  width: 100%;
+
+  th {
+    text-align: left;
+
+    &:first-child {
+      width: 33%;
+    }
+  }
+
+  td {
+    border: 1px solid #eee;
+  }
+
+  &__inner {
+    padding: 11px 19px;
+  }
+
+  &__title {
+    font-size: 12px;
+    line-height: 26px;
+    color: #bfbfbf;
+  }
+
+  &__children {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &__date {
+    margin-bottom: 7px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &__name {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &__detail {
+    font-size: 12px;
+    line-height: 18px;
   }
 }

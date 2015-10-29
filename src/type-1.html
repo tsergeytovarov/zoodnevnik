@@ -8,7 +8,7 @@
   <title>Zoodnevnik</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
-<body сlass="index-type-1">
+<body>
   <!-- основной хедер. по классу logged-in переключается на состояние для залогиненного пользователя, по классу nested - состояние для незалогиненного пользователя с разделителями -->
   <header class="page-header logged-in type-3">
     <div class="page-header__inner clearfix">
@@ -157,7 +157,7 @@
           </div>
           <div class="owner-block">
             <div class="owner-block__title">Владелец</div>
-            <a href+"#" class="owner-block__avatar-wrapper">
+            <a href="#" class="owner-block__avatar-wrapper">
               <img src="img/owner-avatar.jpg" alt="" class="owner-block__avatar">
             </a>
             <div class="owner-block__text-wrapper">
@@ -254,7 +254,7 @@
                     <img src="img/owner-avatar.jpg" alt="" class="comment-block__avatar">
                   </a>
                   <form action="#" method="post">
-                    <textarea class="comment-block__textarea" name="new-comment" id="new-comment" class="comment-block__textarea" placeholder="Написать комментарий ..."></textarea>
+                    <textarea name="new-comment" id="new-comment" class="comment-block__textarea" placeholder="Написать комментарий ..."></textarea>
                   </form>
                 </div>
               </div>
@@ -482,9 +482,241 @@
                   </td>
                 </tr>
               </table>
+              <div class="info-table__inner">
+                <table class="ancestor-table">
+                  <tr>
+                    <th><div class="ancestor-table__title">Отец</div></th>
+                    <th></th>
+                    <th><a href="#" class="ancestor-table__show-more">Больше</a></th>
+                  </tr>
+                  <tr>
+                    <td rowspan="4">
+                      <div class="ancestor-table__inner">
+                        <div class="ancestor-table__avatar-wrapper">
+                          <img src="img/pet-avatar-01.jpg" alt="" class="ancestor-table__avatar">
+                        </div>
+                        <div class="ancestor-table__name">БИМ</div>
+                        <div class="ancestor-table__details">Maryvics IBM Think</div>
+                        <div class="ancestor-table__details">RKF 21009933</div>
+                        <div class="ancestor-table__details">23.09.2005</div>
+                        <div class="ancestor-table__details">Россия</div>
+                        <div class="ancestor-table__details">Ch RUS, FIN</div>
+                      </div>
+                    </td>
+                    <td rowspan="2">
+                      <div class="ancestor-table__inner">
+                        <div class="ancestor-table__name">МУХТАР</div>
+                        <div class="ancestor-table__details">Maryvics IBM Think</div>
+                        <div class="ancestor-table__details">RKF 21009933</div>
+                        <div class="ancestor-table__details">23.09.2005</div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="ancestor-table__inner">
+                        <div class="ancestor-table__name">Maryvics IBM Think</div>
+                        <div class="ancestor-table__details">RKF 21009933</div>
+                        <div class="ancestor-table__details">23.09.2005</div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="ancestor-table__inner">
+                        <div class="ancestor-table__name">Maryvics IBM Think</div>
+                        <div class="ancestor-table__details">RKF 21009933</div>
+                        <div class="ancestor-table__details">23.09.2005</div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">
+                      <div class="ancestor-table__inner">
+                        <div class="ancestor-table__name">Maryvics IBM Think</div>
+                        <div class="ancestor-table__details">RKF 21009933</div>
+                        <div class="ancestor-table__details">23.09.2005</div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="ancestor-table__inner">
+                        <div class="ancestor-table__name">Maryvics IBM Think</div>
+                        <div class="ancestor-table__details">RKF 21009933</div>
+                        <div class="ancestor-table__details">23.09.2005</div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="ancestor-table__inner">
+                        <div class="ancestor-table__name">Maryvics IBM Think</div>
+                        <div class="ancestor-table__details">RKF 21009933</div>
+                        <div class="ancestor-table__details">23.09.2005</div>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div class="info-table__inner">
+                <table class="ancestor-table">
+                  <tr>
+                    <th><div class="ancestor-table__title">Мать</div></th>
+                    <th></th>
+                    <th><a href="#" class="ancestor-table__show-more">Больше</a></th>
+                  </tr>
+                  <tr>
+                    <td rowspan="4">
+                      <div class="ancestor-table__inner">
+                        <div class="ancestor-table__avatar-wrapper">
+                          <img src="img/pet-avatar-01.jpg" alt="" class="ancestor-table__avatar">
+                        </div>
+                        <div class="ancestor-table__name">БИМ</div>
+                        <div class="ancestor-table__details">Maryvics IBM Think</div>
+                        <div class="ancestor-table__details">RKF 21009933</div>
+                        <div class="ancestor-table__details">23.09.2005</div>
+                        <div class="ancestor-table__details">Россия</div>
+                        <div class="ancestor-table__details">Ch RUS, FIN</div>
+                      </div>
+                    </td>
+                    <td rowspan="2">
+                      <div class="ancestor-table__inner">
+                        <div class="ancestor-table__name">МУХТАР</div>
+                        <div class="ancestor-table__details">Maryvics IBM Think</div>
+                        <div class="ancestor-table__details">RKF 21009933</div>
+                        <div class="ancestor-table__details">23.09.2005</div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="ancestor-table__inner">
+                        <div class="ancestor-table__name">Maryvics IBM Think</div>
+                        <div class="ancestor-table__details">RKF 21009933</div>
+                        <div class="ancestor-table__details">23.09.2005</div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="ancestor-table__inner">
+                        <div class="ancestor-table__name">Maryvics IBM Think</div>
+                        <div class="ancestor-table__details">RKF 21009933</div>
+                        <div class="ancestor-table__details">23.09.2005</div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">
+                      <div class="ancestor-table__inner">
+                        <div class="ancestor-table__name">Maryvics IBM Think</div>
+                        <div class="ancestor-table__details">RKF 21009933</div>
+                        <div class="ancestor-table__details">23.09.2005</div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="ancestor-table__inner">
+                        <div class="ancestor-table__name">Maryvics IBM Think</div>
+                        <div class="ancestor-table__details">RKF 21009933</div>
+                        <div class="ancestor-table__details">23.09.2005</div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="ancestor-table__inner">
+                        <div class="ancestor-table__name">Maryvics IBM Think</div>
+                        <div class="ancestor-table__details">RKF 21009933</div>
+                        <div class="ancestor-table__details">23.09.2005</div>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="info-table-wrapper">
+              <div class="info-table__inner">
+                <div class="info-table-wrapper__title">Потомство</div>
+                <table class="breed-table">
+                  <tr>
+                    <th>
+                      <div class="breed-table__title">Вязка</div>
+                    </th>
+                    <th><div class="breed-table__title">Потомство</div></th>
+                  </tr>
+                  <tr>
+                    <td rowspan="3">
+                      <div class="breed-table__inner">
+                        <div class="breed-table__date">23.08.2014</div>
+                        <div class="breed-table__name">ЛИЗА</div>
+                        <div class="breed-table__detail">Maryvics IBM Think</div>
+                        <div class="breed-table__detail">RKF 21009933</div>
+                        <div class="breed-table__detail">Ch RUS, FIN</div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="breed-table__inner">
+                        <div class="breed-table__children">1. Maryvics IBM Think</div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="breed-table__inner">
+                        <div class="breed-table__children">2. Maryvics IBM Think</div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="breed-table__inner">
+                        <div class="breed-table__children">3. Maryvics IBM Think</div>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+                <table class="breed-table">
+                  <tr>
+                    <th>
+                      <div class="breed-table__title">Вязка</div>
+                    </th>
+                    <th><div class="breed-table__title">Потомство</div></th>
+                  </tr>
+                  <tr>
+                    <td rowspan="3">
+                      <div class="breed-table__inner">
+                        <div class="breed-table__date">13.03.2013</div>
+                        <div class="breed-table__name">ЛИЗА</div>
+                        <div class="breed-table__detail">Maryvics IBM Think</div>
+                        <div class="breed-table__detail">RKF 21009933</div>
+                        <div class="breed-table__detail">Ch RUS, FIN</div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="breed-table__inner">
+                        <div class="breed-table__children">1. Maryvics IBM Think</div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="breed-table__inner">
+                        <div class="breed-table__children">2. Maryvics IBM Think</div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="breed-table__inner">
+                        <div class="breed-table__children">3. Maryvics IBM Think</div>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
             </div>
           </div>
-          <div class="tab-content files"></div>
+          <div class="tab-content files">
+            <div class="files-container">
+              <a href="#" class="download-link">Родословная.pdf</a>
+              <a href="#" class="download-link">Сертификат.pdf</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
