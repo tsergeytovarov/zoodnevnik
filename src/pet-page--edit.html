@@ -121,6 +121,10 @@
         <div class="pet-card pet-card--edit clearfix">
           <div class="pet-card__image-wrapper">
             <img src="img/sharik.jpg" alt="" class="pet-card__image">
+            <!-- блок "изменить картинку", виден в режиме редактирования -->
+            <div class="pet-card__image-overlay">
+              <div class="pet-card__image-overlay-text">Изменить</div>
+            </div>
           </div>
           <div class="pet-card__info-wrapper star-wrapper">
             <span class="pet-card__rating icon-star"></span>
@@ -130,14 +134,7 @@
           </div>
         </div>
         <div class="pet-block">
-          <!-- по классу added появляется надпись "убрать из избранного" -->
-          <div class="favourite">
-            <div class="favourite__add">Добавить в избранное</div>
-            <div class="favourite__remove">Убрать из избранного</div>
-          </div>
-          <div class="new-message">
-            <div class="new-message__add">Написать владельцу</div>
-          </div>
+          <div class="pet-block__edit-info">Редактировать информацию</div>
         </div>
         <div class="pet-block pet-block--comment">
           <div class="titles-block">
@@ -166,9 +163,12 @@
             </div>
           </div>
         </div>
-        <div class="owner-message">
-          <div class="owner-message__text">Предлагается для племенного размножения.</div>
-          <div class="owner-message__text">Звоните: +7 (945) 345-45-56, Федор</div>
+        <div class="owner-message owner-message--edit">
+          <form action="#" method="post">
+            <div class="owner-message__input-wrapper">
+              <input type="text" id="owner-message" class="owner-message__input" placeholder="Напишите сообщение">
+            </div>
+          </form>
         </div>
       </div>
       <div class="main-content tabs">

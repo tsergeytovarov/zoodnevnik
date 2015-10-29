@@ -3,6 +3,36 @@
   background-color: #fff;
 	border-radius: 2px;
   box-shadow: 0 1px 2px rgba(25,26,25,.1);
+
+  &__edit-info {
+    position: relative;
+    text-align: center;
+    font-size: 14px;
+    line-height: 50px;
+    color: @green;
+    border-radius: 2px;
+    cursor: pointer;
+
+    &:before {
+      content: '\e80a';
+      position: absolute;
+      top: 0;
+      left: 20px;
+      font-family: @icon;
+      font-size: 14px;
+      line-height: 50px;
+      color: @green;
+    }
+
+    &:hover {
+      color: #fff;
+      background-color: @green;
+
+      &:before {
+        color: #fff;
+      }
+    }
+  }
 }
 
 .favourite {
@@ -261,5 +291,40 @@
     border-style: solid;
     border-width: 13px 0 0 12.1337px;
     border-color: transparent transparent transparent #fef8be;
+  }
+
+  &--edit {
+    padding: 0;
+
+    .owner-message__input-wrapper {
+      position: relative;
+
+      &:after {
+        content: '\e80a';
+        position: absolute;
+        top: 0;
+        right: 10px;
+        font-family: @icon;
+        font-size: 14px;
+        line-height: 35px;
+        color: #e6df87;
+      }
+    }
+
+    input[type="text"] {
+      margin-bottom: 0;
+      padding-top: 9px;
+      padding-bottom: 8px;
+      font-size: 14px;
+      line-height: 18px;
+      border: none;
+    }
+
+    input::-webkit-input-placeholder{
+      color: #c7c27b;
+    }
+    input::-moz-placeholde{
+      color: #c7c27b;
+    }
   }
 }
