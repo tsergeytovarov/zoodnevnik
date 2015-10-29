@@ -21,6 +21,13 @@
     }
   }
 
+  &.new-comment {
+
+    .comment-block {
+      display: block;
+    }
+  }
+
   &__information-row {
     margin-bottom: 15px;
     padding-top: 15px;
@@ -106,6 +113,10 @@
     color: #666;
 
     &:hover {
+      color: @green;
+    }
+
+    &.active {
       color: @green;
     }
 

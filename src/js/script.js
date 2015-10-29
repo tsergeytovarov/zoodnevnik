@@ -92,7 +92,7 @@ $(function() {
     return false;
   })
 
-  //
+  //открытие тултипа соцсетей
   $(".news-item__social-link").on("click", function(){
     $(this).parents(".news-item__social-container").toggleClass("opened");
     return false;
@@ -101,6 +101,17 @@ $(function() {
   //переключение выпадающих фильтров (тип 2)
   $(".filter-toggle").click(function(){
     $(this).parents(".filters-container").toggleClass("opened");
+  });
+
+  //разворачивание блока комментариев (тип1)
+  $(".news-item__social-link--comment").click(function(){
+    $(this).toggleClass("active");
+    $(this).parents(".news-item").toggleClass("new-comment");
+  });
+
+  //
+  $(".comment-block__show-prev").click(function(){
+    $(this).parents(".comment-block").toggleClass("show-comments");
   });
 
   //переключение состояний кнопки "добавить в избранное"
