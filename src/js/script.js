@@ -56,6 +56,7 @@ $(function() {
   $(".tab-toggle__text").click(function(event){
     event.preventDefault();
     $(this).parents(".list-toggle").toggleClass("unfolded");
+    $(".tab-toggles__toggle").text($(this).text());
   });
 
   // переключение состояний элементов по скроллу к питомцам (главная)
@@ -86,7 +87,7 @@ $(function() {
   })
 
   //открытие списка табов
-  $(".tab-toggles__toggle").on("click", function(){
+  $(".tab-toggles__toggle").on("click", function(event){
     $(".tab-toggles__toggle").toggleClass("active");
     $(this).next().toggleClass("hidden");
     return false;

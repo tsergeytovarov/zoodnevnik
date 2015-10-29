@@ -139,7 +139,7 @@
             <div class="new-message__add">Написать владельцу</div>
           </div>
         </div>
-        <div class="pet-block">
+        <div class="pet-block pet-block--comment">
           <div class="titles-block">
             <div class="titles-block__header-row clearfix">
               <div class="titles-block__header">Титулы</div>
@@ -164,16 +164,16 @@
               <a href="#" class="owner-block__name">Дядя Федор</a>
               <div class="owner-block__location">д. Простоквашино</div>
             </div>
-            <div class="owner-message">
-              <div class="owner-message__text">Предлагается для племенного размножения.</div>
-              <div class="owner-message__text">Звоните: +7 (945) 345-45-56, Федор</div>
-            </div>
           </div>
+        </div>
+        <div class="owner-message">
+          <div class="owner-message__text">Предлагается для племенного размножения.</div>
+          <div class="owner-message__text">Звоните: +7 (945) 345-45-56, Федор</div>
         </div>
       </div>
       <div class="main-content tabs">
         <div class="tab-toggles tab-toggles--horizontal">
-          <a href="#" class="tab-toggles__toggle">Дневник</a>
+          <a href="#" class="tab-toggles__toggle tab-toggles__toggle--pet-page">Дневник</a>
           <ul class="tab-toggles__list hidden">
             <li class="tab-toggle active">
               <div class="tab-toggle__text">Дневник</div>
@@ -326,12 +326,12 @@
           <div class="tab-content info">
             <div class="inner-tabs">
               <ul class="inner-tabs__list">
-                <li class="inner-tabs__list-item active">Общая информация</li>
-                <li class="inner-tabs__list-item">Родословная</li>
-                <li class="inner-tabs__list-item">Потомство</li>
+                <li class="inner-tabs__list-item active"><a href="#general-info">Общая информация</a></li>
+                <li class="inner-tabs__list-item"><a href="#breeding-record">Родословная</a></li>
+                <li class="inner-tabs__list-item"><a href="#breed">Потомство</a></li>
               </ul>
             </div>
-            <div class="info-table-wrapper">
+            <div class="info-table-wrapper" id="general-info">
               <table class="info-table">
                 <tr>
                   <td class="table-left-col">
@@ -463,7 +463,7 @@
                 </tr>
               </table>
             </div>
-            <div class="info-table-wrapper">
+            <div class="info-table-wrapper" id="breeding-record">
               <table class="info-table">
                 <tr>
                   <td class="table-left-col">
@@ -629,7 +629,7 @@
                 </table>
               </div>
             </div>
-            <div class="info-table-wrapper">
+            <div class="info-table-wrapper" id="breed">
               <div class="info-table__inner">
                 <div class="info-table-wrapper__title">Потомство</div>
                 <table class="breed-table">

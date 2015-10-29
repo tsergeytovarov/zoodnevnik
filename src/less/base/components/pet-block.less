@@ -8,6 +8,7 @@
 .favourite {
   padding: 0 19px;
   border-bottom: 1px solid #eee;
+  border-radius: 2px 2px 0 0;
   cursor: pointer;
 
   &__remove {
@@ -17,6 +18,14 @@
     font-size: 14px;
     line-height: 50px;
     color: @green;
+
+    &:hover {
+      color: #fff;
+
+      &:before {
+        color: #fff;
+      }
+    }
 
     &:before {
       content: '\e809';
@@ -40,10 +49,6 @@
       border-bottom: 1px solid #fff;
       transform: rotate(-45deg);
     }
-
-    &:hover {
-      opacity: .8;
-    }
   }
 
   &__add {
@@ -52,6 +57,14 @@
     font-size: 14px;
     line-height: 50px;
     color: @green;
+
+    &:hover {
+      color: #fff;
+
+      &:before {
+        color: #fff;
+      }
+    }
 
     &:before {
       content: '\e809';
@@ -62,10 +75,6 @@
       font-size: 14px;
       line-height: 16px;
       color: @green;
-    }
-
-    &:hover {
-      opacity: .8;
     }
   }
 
@@ -82,11 +91,15 @@
       }
     }
   }
+
+  &:hover {
+    background-color: @green;
+  }
 }
 
 .new-message {
   padding: 0 19px;
-  border-bottom: 1px solid #eee;
+  border-radius: 0 0 2px 2px;
   cursor: pointer;
 
   &__add {
@@ -95,6 +108,14 @@
     font-size: 14px;
     line-height: 50px;
     color: @green;
+
+    &:hover {
+      color: #fff;
+
+      &:before {
+        color: #fff;
+      }
+    }
 
     &:before {
       content: '\e806';
@@ -106,10 +127,10 @@
       line-height: 16px;
       color: @green;
     }
+  }
 
-    &:hover {
-      opacity: .8;
-    }
+  &:hover {
+    background-color: @green;
   }
 }
 
@@ -209,10 +230,9 @@
 }
 
 .owner-message {
-  position: absolute;
-  left: 0;
-  bottom: -87px;
+  position: relative;
   box-sizing: border-box;
+  margin-bottom: 8px;
   padding: 12px;
   width: 100%;
   border: 1px solid #e7df87;
