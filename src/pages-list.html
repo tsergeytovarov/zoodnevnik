@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width">
   <meta name="robots" content="noindex, nofollow">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
-  <title>News</title>
+  <title>Zoodnevnik</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
-<body сlass="news">
+<body>
   <!-- основной хедер. по классу logged-in переключается на состояние для залогиненного пользователя, по классу nested - состояние для незалогиненного пользователя с разделителями -->
   <header class="page-header logged-in type-3">
     <div class="page-header__inner clearfix">
@@ -21,7 +21,7 @@
       <nav class="header-navigation">
         <ul class="header-navigation__list">
           <li class="header-navigation__list-item">
-            <a href="type-2-news.html" class="header-navigation__link header-navigation__link--news current">Новости</a>
+            <a href="type-2-news.html" class="header-navigation__link header-navigation__link--news">Новости</a>
           </li>
           <li class="header-navigation__list-item">
             <a href="#pets" class="header-navigation__link header-navigation__link--pets">Питомцы</a>
@@ -60,10 +60,12 @@
           </form>
         </div>
         <div class="user-options__btn">
-          <a href="#" class="user-options__messages has-new-items">Сообщения</a>
+          <!-- класс has-new-items показывает метку с новыми сообщениями -->
+          <a href="#" class="user-options__messages">Сообщения</a>
           <span class="user-options__new-items">5</span>
         </div>
         <div class="user-options__btn">
+          <!-- класс has-new-items показывает метку с новыми сообщениями -->
           <a href="#" class="user-options__notifications">Уведомления</a>
           <span class="user-options__new-items">5</span>
         </div>
@@ -113,98 +115,46 @@
     </div>
   </header>
   <!-- основной контент -->
-  <div class="main type-2">
-    <div class="container clearfix tabs">
-      <div class="left-col">
-        <div class="tab-toggles tab-toggles--messages">
-          <div class="tab-toggles__title">Тип сообщения</div>
-          <a href="#" class="tab-toggles__toggle">Все</a>
-          <ul class="tab-toggles__list hidden">
-            <li class="tab-toggle active">
-              <div class="tab-toggle__text">Все</div>
-            </li>
-            <li class="tab-toggle">
-              <div class="tab-toggle__text">Потомства</div>
-            </li>
-            <li class="tab-toggle">
-              <div class="tab-toggle__text">События</div>
-            </li>
-            <li class="tab-toggle">
-              <div class="tab-toggle__text">Выставки</div>
-            </li>
-            <li class="tab-toggle">
-              <div class="tab-toggle__text">Состязания</div>
-            </li>
-          </ul>
-        </div>
-        <div class="tab-toggles">
-          <div class="tab-toggles__title">Животные</div>
-          <a href="#" class="tab-toggles__toggle">Собаки</a>
-          <ul class="tab-toggles__list hidden">
-            <li class="tab-toggle">
-              <div class="tab-toggle__text">Собаки</div>
-            </li>
-            <li class="tab-toggle">
-              <div class="tab-toggle__text">Кошки</div>
-            </li>
-            <li class="tab-toggle">
-              <div class="tab-toggle__text">Птицы</div>
-            </li>
-            <li class="tab-toggle">
-              <div class="tab-toggle__text">Рыбы</div>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="main-content">
-        <div class="tabs-container">
-          <div class="tab-content active">
-            <article class="news-item">
-              <div class="news-item__information-row">
-                <a href="#" class="news-item__avatar-wrapper">
-                  <img src="img/pet-avatar.jpg" alt="" class="news-item__avatar">
-                </a>
-                <div class="news-item__text-wrapper">
-                  <div class="news-item__title">Простоквашино</div>
-                  <div class="news-item__info">Питомец  / 22.12.11  /  12:30  /  <span class="news-item__info--bold">Потомство</span></div>
-                </div>
-              </div>
-              <div class="news-item__image-container">
-                <img src="img/article-img-news.jpg" alt="" class="news-item__image">
-              </div>
-              <p class="news-item__text">Текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения,</p>
-              <div class="news-item__social-row">
-                <a href="#" class="news-item__social-link news-item__social-link--like">Нравится</a>
-                <a href="#" class="news-item__social-link news-item__social-link--comment">Комментарий</a>
-                <a href="#" class="news-item__social-link news-item__social-link--share">Поделиться</a>
-              </div>
-              <div class="comment-block">
-                <div class="comment-block__show-prev">Показать предыдущие записи (<span class="previous-comments">12</span>)</div>
-                <div class="comment-block__item">
-                  <a href="#" class="comment-block__avatar-wrapper">
-                    <img src="img/avatar-01.jpg" alt="" class="comment-block__avatar">
-                  </a>
-                  <div class="comment-block__comment"><a href="#" class="comment-block__comment--name">Евгения Кукушкина,</a> лдавопдлоавпдовадповадпо ваопдваопдовап оваопдваопд оваопд дваоп овадопд овадповаопд дваоп овадопд овадповаопд дваоп овадопд овадповаопд дваоп овадопд овадповаопд дваоп овадопд овадп <span class="comment-block__comment--date">22.12.11 / 12:30</span></div>
-                </div>
-                <div class="comment-block__item">
-                  <a href="#" class="comment-block__avatar-wrapper">
-                    <img src="img/avatar-02.jpg" alt="" class="comment-block__avatar">
-                  </a>
-                  <div class="comment-block__comment"><a href="#" class="comment-block__comment--name">Игорь Кудрин,</a> лдавопдлоавпдовадповадпо ваопдваопдовап оваопдваопд оваопд дваоп овадопд овадповаопд дваоп овадопд овадповаопд дваоп овадопд овадповаопд дваоп овадопд овадповаопд дваоп овадопд овадп <span class="comment-block__comment--date">22.12.11 / 12:30</span></div>
-                </div>
-                <div class="comment-block__comment-form">
-                  <a href="#" class="comment-block__avatar-wrapper">
-                    <img src="img/owner-avatar.jpg" alt="" class="comment-block__avatar">
-                  </a>
-                  <form action="#" method="post">
-                    <textarea name="new-comment" id="new-comment" class="comment-block__textarea" placeholder="Написать комментарий ..."></textarea>
-                  </form>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
+  <div class="main type-1">
+    <div class="container clearfix">
+      <ul class="pages-list">
+        <li>
+          <a href="index.html">Главная</a>
+        </li>
+        <li>
+          <a href="type-2-groups.html">Тип 2 - Группы</a>
+        </li>
+        <li>
+          <a href="type-2-messages.html"> Тип 2 - Сообщения</a>
+        </li>
+        <li>
+          <a href="type-2-news.html">Тип 2 - Новости</a>
+        </li>
+        <li>
+          <a href="type-2-notifications.html">Тип 2 - Уведомления</a>
+        </li>
+        <li>
+          <a href="type-2-search.html">Тип 2 - Поиск</a>
+        </li>
+        <li>
+          <a href="type-3-favourites.html">Тип 3 - Избранное</a>
+        </li>
+        <li>
+          <a href="type-3-friends.html">Тип 3 - Друзья</a>
+        </li>
+        <li>
+          <a href="type-3-level-1.html">Тип 3 - Уровень 1</a>
+        </li>
+        <li>
+          <a href="type-3-level-2.html">Тип 3 - Уровень 2</a>
+        </li>
+        <li>
+          <a href="type-3-level-3.html">Тип 3 - Уровень 3</a>
+        </li>
+        <li>
+          <a href="type-3-level-4.html">Тип 3 - Уровень 4</a>
+        </li>
+      </ul>
     </div>
   </div>
   <footer class="page-footer">
