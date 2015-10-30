@@ -318,6 +318,13 @@
       padding-left: 20px;
     }
   }
+
+  .screen-1 {
+
+    .container {
+      background-position: top 10px right 0;
+    }
+  }
 }
 
 @media (max-width: 749px) {
@@ -644,6 +651,16 @@
       width: 368px;
     }
   }
+
+  .screen-1 {
+
+    .container {
+      padding-top: 355px;
+      padding-bottom: 40px;
+      min-height: 1px;
+      background-position: top 65px right 50%;
+    }
+  }
 }
 
 @media (max-width: 479px) {
@@ -675,6 +692,33 @@
       padding-left: 6px;
       font-size: 18px;
       line-height: 26px;
+    }
+
+    .container {
+      padding-top: 220px;
+      padding-bottom: 80px;
+      background-position: top 65px center;
+    }
+
+    &.dog {
+
+      .container {
+        background-image: url("../img/bg-dog-mobile.png");
+      }
+    }
+
+    &.cat {
+
+      .container {
+        background-image: url("../img/bg-cat-mobile.png");
+      }
+    }
+
+    &.bird {
+
+      .container {
+        background-image: url("../img/bg-bird-mobile.png");
+      }
     }
   }
 
