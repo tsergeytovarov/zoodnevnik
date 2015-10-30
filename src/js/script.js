@@ -128,6 +128,43 @@ $(function() {
     return false;
   })
 
+  //
+  $(".inner-tabs__tooltip-toggle").click(function(event){
+    event.preventDefault();
+    $(this).parents(".inner-tabs__tooltip-container").toggleClass("opened");
+  });
+
+  //
+  $(".inner-tabs__add-user-button").click(function(event){
+    event.preventDefault();
+    $(this).next(".inner-tabs__add-user-field").addClass("opened");
+  });
+
+  //
+  $(".inner-tabs__close-btn").click(function(event){
+    event.preventDefault();
+    $(this).parents(".inner-tabs__add-user-field").removeClass("opened");
+  });
+
+  //
+  $(".inner-tabs__write-btn").click(function(event) {
+    event.preventDefault();
+    $(this).prev("textarea").removeAttr("disabled");
+    $(this).parents(".inner-tabs__message-block").addClass("unfolded");
+  })
+
+  //
+  $(".inner-tabs__cancel-button").click(function(event) {
+    event.preventDefault();
+    $(this).parents(".inner-tabs__message-block").removeClass("unfolded");
+  })
+
+  //
+  $(".news-item__close-btn").click(function(event) {
+    event.preventDefault();
+    $(this).parents(".news-item").addClass("hidden");
+  })
+
   // скролл до якоря
   $(document).ready(function(){
     $("a[href*=#]").bind("click", function(e){

@@ -167,12 +167,13 @@
           <form action="#" method="post">
             <div class="owner-message__input-wrapper">
               <input type="text" id="owner-message" class="owner-message__input" placeholder="Напишите сообщение">
+              <div class="owner-message__write-btn">Написать</div>
             </div>
           </form>
         </div>
       </div>
       <div class="main-content tabs">
-        <div class="tab-toggles tab-toggles--horizontal">
+        <div class="tab-toggles tab-toggles--edit tab-toggles--horizontal">
           <a href="#" class="tab-toggles__toggle tab-toggles__toggle--pet-page">Дневник</a>
           <ul class="tab-toggles__list hidden">
             <li class="tab-toggle active">
@@ -191,7 +192,7 @@
         </div>
         <div class="tabs-container">
           <div class="tab-content active diary">
-            <div class="inner-tabs">
+            <div class="inner-tabs inner-tabs--edit">
               <a href="#" class="inner-tabs__toggle">Все записи</a>
               <ul class="inner-tabs__list">
                 <li class="inner-tabs__list-item active">Все записи</li>
@@ -200,8 +201,38 @@
                 <li class="inner-tabs__list-item">Состязание</li>
                 <li class="inner-tabs__list-item">Фотосессия</li>
               </ul>
+              <div class="inner-tabs__message-block">
+                <form action="#" method="post">
+                  <div class="inner-tabs__textarea-wrapper">
+                    <textarea id="new-message" class="inner-tabs__textarea" placeholder="Сделать запись..." disabled></textarea>
+                    <a href="#" class="inner-tabs__write-btn">Написать</a>
+                  </div>
+                  <div class="inner-tabs__message-edit-row clearfix">
+                    <div class="inner-tabs__upload-container">
+                      <input type="file" id="upload-photo" name="upload-photo">
+                      <div class="inner-tabs__upload-link">Прикрепить фото</div>
+                    </div>
+                    <div class="inner-tabs__add-user-container">
+                      <div class="inner-tabs__add-user-button">Добавить пользователя</div>
+                      <div class="inner-tabs__add-user-field">
+                        <input type="text" id="add-user">
+                        <div class="inner-tabs__close-btn">Закрыть</div>
+                      </div>
+                    </div>
+                    <div class="inner-tabs__buttons-wrapper">
+                      <div class="inner-tabs__cancel-button">Отменить</div>
+                      <button type="submit" class="btn btn--send">Отправить</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="inner-tabs__tooltip-container">
+                <div class="inner-tabs__tooltip-toggle"></div>
+                <div class="inner-tabs__tooltip-content">Для упоминания зарегистрированного питомца используйте «@»</div>
+              </div>
             </div>
-            <article class="news-item">
+            <article class="news-item news-item--edit">
+              <div class="news-item__close-btn">Скрыть</div>
               <div class="news-item__information-row">
                 <a href="#" class="news-item__avatar-wrapper">
                   <img src="img/pet-avatar.jpg" alt="" class="news-item__avatar">
@@ -262,7 +293,7 @@
             </article>
           </div>
           <div class="tab-content photos">
-            <div class="inner-tabs">
+            <div class="inner-tabs inner-tabs--edit">
               <a href="#" class="inner-tabs__toggle">Все (<span class="entries-all">20</span>)</a>
               <ul class="inner-tabs__list">
                 <li class="inner-tabs__list-item active">Все (<span class="entries-all">20</span>)</li>
@@ -271,6 +302,10 @@
                 <li class="inner-tabs__list-item">Состязание</li>
                 <li class="inner-tabs__list-item">Фотосессия</li>
               </ul>
+              <div class="inner-tabs__tooltip-container">
+                <div class="inner-tabs__tooltip-toggle"></div>
+                <div class="inner-tabs__tooltip-content">Для упоминания зарегистрированного питомца используйте «@»</div>
+              </div>
             </div>
             <div class="photo-gallery">
               <div class="photo-gallery__item">
@@ -326,13 +361,17 @@
             </div>
           </div>
           <div class="tab-content info">
-            <div class="inner-tabs">
+            <div class="inner-tabs inner-tabs--edit">
               <a href="#" class="inner-tabs__toggle">Общая информация</a>
               <ul class="inner-tabs__list">
                 <li class="inner-tabs__list-item active"><a href="#general-info">Общая информация</a></li>
                 <li class="inner-tabs__list-item"><a href="#breeding-record">Родословная</a></li>
                 <li class="inner-tabs__list-item"><a href="#breed">Потомство</a></li>
               </ul>
+              <div class="inner-tabs__tooltip-container">
+                <div class="inner-tabs__tooltip-toggle"></div>
+                <div class="inner-tabs__tooltip-content">Для упоминания зарегистрированного питомца используйте «@»</div>
+              </div>
             </div>
             <div class="info-table-wrapper" id="general-info">
               <table class="info-table">

@@ -293,21 +293,46 @@
     border-color: transparent transparent transparent #fef8be;
   }
 
+  &__write-btn {
+    position: absolute;
+    top: 4px;
+    right: 10px;
+    display: none;
+    width: 13px;
+    height: 13px;
+    font-size: 0;
+    cursor: pointer;
+
+    &:after {
+      content: '\e80a';
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-family: @icon;
+      font-size: 14px;
+      line-height: 28px;
+      color: #e6df87;
+    }
+
+    &:hover {
+
+      &:after {
+        opacity: .8;
+      }
+    }
+  }
+
   &--edit {
     padding: 0;
 
-    .owner-message__input-wrapper {
-      position: relative;
+    .owner-message {
 
-      &:after {
-        content: '\e80a';
-        position: absolute;
-        top: 0;
-        right: 10px;
-        font-family: @icon;
-        font-size: 14px;
-        line-height: 35px;
-        color: #e6df87;
+      &__input-wrapper {
+        position: relative;
+      }
+
+      &__write-btn {
+        display: block;
       }
     }
 
