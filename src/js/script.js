@@ -186,11 +186,6 @@ $(function() {
     $(this).prev("input").focus();
   })
 
-  //
-  $(".info-table__text-input").focusin(function() {
-    $(".info-table__edit-btn").style.display="none";
-  })
-
   // скролл до якоря
   $(document).ready(function(){
     $("a[href*=#]").bind("click", function(e){
