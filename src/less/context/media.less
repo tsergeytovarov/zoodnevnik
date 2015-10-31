@@ -217,6 +217,33 @@
         }
       }
     }
+
+    &--edit {
+
+      .tab-toggles {
+
+        &__toggle {
+
+          &:after {
+            right: 60px;
+          }
+        }
+      }
+
+      &:hover {
+
+        &:after {
+          color: #fff;
+        }
+      }
+
+      &.active {
+
+        &:after {
+          color: #fff;
+        }
+      }
+    }
   }
 
   .date-picker {
@@ -297,6 +324,30 @@
 
         &__list-item {
           display: block;
+        }
+      }
+    }
+
+    &--edit {
+
+      .inner-tabs {
+
+        &__tooltip-container {
+          display: none;
+        }
+      }
+
+      &.opened {
+
+        .inner-tabs {
+
+          &__list {
+            z-index: 400;
+          }
+
+          &__message-block {
+            display: none;
+          }
         }
       }
     }
@@ -659,6 +710,14 @@
       padding-bottom: 40px;
       min-height: 1px;
       background-position: top 65px right 50%;
+    }
+  }
+
+  .inner-tabs {
+
+    &__add-user-field {
+      width: 220px;
+      z-index: 100;
     }
   }
 }
@@ -1127,6 +1186,19 @@
     &__text {
       padding: 10px;
       padding-left: none;
+    }
+  }
+
+  .inner-tabs {
+
+    &__cancel-button {
+      padding-left: 0;
+      font-size: 0;
+    }
+
+    &__add-user-field {
+      left: -14px;
+      top: -9px;
     }
   }
 }
