@@ -290,10 +290,75 @@
     &__toggle {
       display: block;
       border-top: 1px solid #eee;
+
+      .inner-tabs--edit & {
+        border-top: none;
+      }
+
+      .tab-content.photos & {
+        position: relative;
+
+        &:before {
+          content: "";
+          position: absolute;
+          bottom: -8px;
+          left: 30px;
+          width: 16px;
+          height: 16px;
+          background-color: #eaeaea;
+          transform: rotate(45deg);
+        }
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: auto;
+          bottom: -8px;
+          left: 30px;
+          margin-bottom: 1px;
+          width: 16px;
+          height: 16px;
+          background-color: #f8f8f8;
+          transform: rotate(45deg);
+          z-index: 1;
+        }
+
+        &:hover {
+
+          &:after {
+            background-color: @green;
+          }
+        }
+
+        &.active {
+
+          &:before {
+            display: none;
+          }
+
+          &:after {
+            display: none;
+          }
+        }
+      }
     }
 
     &__list {
       display: none;
+    }
+
+    &__list-item {
+
+      &.active {
+
+        &:before {
+          display: none;
+        }
+
+        &:after {
+          display: none;
+        }
+      }
     }
 
     &.opened {
