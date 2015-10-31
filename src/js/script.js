@@ -93,7 +93,7 @@ $(function() {
     return false;
   })
 
-  //
+  //разворачиванеи подсписка табов на странице питомца
   $(".inner-tabs__toggle").on("click", function(event){
     $(this).toggleClass("active");
     $(this).parents(".inner-tabs").toggleClass("opened");
@@ -117,7 +117,7 @@ $(function() {
     $(this).parents(".news-item").toggleClass("new-comment");
   });
 
-  //
+  //кнопка "показать комментарии"
   $(".comment-block__show-prev").click(function(){
     $(this).parents(".comment-block").toggleClass("show-comments");
   });
@@ -128,41 +128,47 @@ $(function() {
     return false;
   })
 
-  //
+  //переключение тултипа в строке с табами на стр питомца (редактирование)
   $(".inner-tabs__tooltip-toggle").click(function(event){
     event.preventDefault();
     $(this).parents(".inner-tabs__tooltip-container").toggleClass("opened");
   });
 
-  //
+  //открытие поля по кнопке "добавить юзера"
   $(".inner-tabs__add-user-button").click(function(event){
     event.preventDefault();
     $(this).next(".inner-tabs__add-user-field").addClass("opened");
   });
 
-  //
+  //закрытие поля "добавить юзера"
   $(".inner-tabs__close-btn").click(function(event){
     event.preventDefault();
     $(this).parents(".inner-tabs__add-user-field").removeClass("opened");
   });
 
-  //
+  //разворачивание блока редактирования комментариев на странице питомца (редактирование)
   $(".inner-tabs__write-btn").click(function(event) {
     event.preventDefault();
     $(this).prev("textarea").removeAttr("disabled");
     $(this).parents(".inner-tabs__message-block").addClass("unfolded");
   })
 
-  //
+  //скрытие блока редактирования комментариев на странице питомца (редактирование)
   $(".inner-tabs__cancel-button").click(function(event) {
     event.preventDefault();
     $(this).parents(".inner-tabs__message-block").removeClass("unfolded");
   })
 
-  //
+  //скрытие новости
   $(".news-item__close-btn").click(function(event) {
     event.preventDefault();
     $(this).parents(".news-item").addClass("hidden");
+  })
+
+  //скрытие фотографии из галереи
+  $(".photo-gallery__item-close").click(function(event) {
+    event.preventDefault();
+    $(this).parents(".photo-gallery__item").addClass("hidden");
   })
 
   // скролл до якоря
