@@ -150,6 +150,7 @@ $(function() {
   $(".inner-tabs__write-btn").click(function(event) {
     event.preventDefault();
     $(this).prev("textarea").removeAttr("disabled");
+    $(this).prev("textarea").focus();
     $(this).parents(".inner-tabs__message-block").addClass("unfolded");
   })
 
@@ -169,6 +170,25 @@ $(function() {
   $(".photo-gallery__item-close").click(function(event) {
     event.preventDefault();
     $(this).parents(".photo-gallery__item").addClass("hidden");
+  })
+
+  //
+  $(window).load(function(){
+    var fieldEls = $(".info-table__text-input");
+    fieldEls.each(function() {
+      var elValue = $(this).parent().parent().find(".info-table__text").text();
+      $(this).attr("value", elValue);
+    })
+  });
+
+  //
+  $(".info-table__edit-btn").click(function() {
+    $(this).prev("input").focus();
+  })
+
+  //
+  $(".info-table__text-input").focusin(function() {
+    $(".info-table__edit-btn").style.display="none";
   })
 
   // скролл до якоря

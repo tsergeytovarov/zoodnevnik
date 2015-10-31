@@ -45,6 +45,100 @@
   &__inner {
     padding: 12px 19px;
   }
+
+  &__input-wrapper {
+    position: relative;
+    display: none;
+
+    &:hover {
+
+      .info-table__edit-btn {
+        display: block;
+      }
+    }
+  }
+
+  input[name="cell-value"] {
+    margin-bottom: 0;
+    padding: 16px;
+    padding-left: 0;
+    font-size: 14px;
+    line-height: 18px;
+    border: none;
+
+    &:focus + .info-table__edit-btn {
+      display: none;
+    }
+
+    &:focus ~ .info-table__close-btn {
+      display: block;
+    }
+  }
+
+  &__edit-btn {
+    position: absolute;
+    top: 19px;
+    right: 19px;
+    display: none;
+    width: 14px;
+    height: 14px;
+    font-size: 0;
+    cursor: pointer;
+
+    &:before {
+      content: '\e80a';
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-family: @icon;
+      font-size: 14px;
+      line-height: 14px;
+      color: #e5e5e5;
+    }
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 21px;
+    right: 21px;
+    display: none;
+    width: 10px;
+    height: 10px;
+    font-size: 0;
+    cursor: pointer;
+
+    &:hover {
+
+      &:before {
+        color: #ccc;
+      }
+    }
+
+    &:before {
+      content: '\e808';
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-family: @icon;
+      font-size: 12px;
+      line-height: 10px;
+      color: #ddd;
+    }
+  }
+
+  &--edit {
+
+    .info-table {
+
+      &__text {
+        display: none;
+      }
+
+      &__input-wrapper {
+        display: block;
+      }
+    }
+  }
 }
 
 .ancestor-table {
