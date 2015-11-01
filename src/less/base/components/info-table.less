@@ -3,6 +3,7 @@
   background-color: #fff;
   border-radius: 2px;
   box-shadow: 0 1px 2px rgba(25,26,25,.1);
+  overflow: hidden;
 }
 
 .info-table {
@@ -62,6 +63,7 @@
     margin-bottom: 0;
     padding: 16px;
     padding-left: 0;
+    padding-right: 40px;
     font-size: 14px;
     line-height: 18px;
     border: none;
@@ -124,6 +126,38 @@
       line-height: 10px;
       color: #ddd;
     }
+  }
+
+  &__add-a-breed {
+    position: relative;
+    padding: 11px;
+    padding-left: 19px;
+    font-size: 12px;
+    line-height: 18px;
+    color: @green;
+    cursor: pointer;
+
+    &:hover {
+      opacity: .8;
+    }
+
+    &:before {
+      content: '\e81a';
+      position: absolute;
+      top: 13px;
+      left: 0;
+      font-family: @icon;
+      font-size: 12px;
+      line-height: 18px;
+      color: @green;
+    }
+  }
+
+  &__notice {
+    font-size: 12px;
+    line-height: 18px;
+    color: #bfbfbf;
+    opacity: .47;
   }
 
   &--edit {
@@ -274,6 +308,7 @@
     width: 13px;
     height: 13px;
     font-size: 0;
+    cursor: pointer;
 
     &:before {
       content: '\e80a';
@@ -351,6 +386,83 @@
     font-size: 12px;
     line-height: 18px;
   }
+
+  &__edit-btn {
+    position: absolute;
+    top: 11px;
+    right: 6px;
+    display: none;
+    width: 13px;
+    height: 13px;
+    font-size: 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    &:before {
+      content: '\e80a';
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-family: @icon;
+      font-size: 14px;
+      line-height: 14px;
+      color: #e5e5e5;
+    }
+  }
+
+  &__add-pet-btn {
+    position: relative;
+    padding: 11px;
+    padding-left: 33px;
+    font-size: 12px;
+    line-height: 18px;
+    color: @green;
+    cursor: pointer;
+
+    &:hover {
+      opacity: .8;
+    }
+
+    &:before {
+      content: '\e81a';
+      position: absolute;
+      top: 13px;
+      left: 15px;
+      font-family: @icon;
+      font-size: 12px;
+      line-height: 18px;
+      color: @green;
+    }
+  }
+
+  &--edit {
+
+    .breed-table {
+
+      &__inner {
+        padding: 6px;
+      }
+
+      &__input-wrapper {
+        position: relative;
+      }
+    }
+
+    input[type="text"] {
+      margin-bottom: 0;
+      padding: 11px 6px;
+      font-size: 12px;
+      line-height: 18px;
+      color: #bfbfbf;
+      border: none;
+
+      &:hover + .breed-table__edit-btn {
+        display: block;
+      }
+    }
+  }
 }
 
 .ancestor-table-mobile {
@@ -397,5 +509,74 @@
 
   td {
     border: 1px solid #eee;
+  }
+}
+
+.control-tools {
+
+  &__title {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 14px;
+    line-height: 50px;
+    border-bottom: 1px solid #eee;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__list-item {
+    border-bottom: 1px solid #eee;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    padding-left: 50px;
+    padding-right: 22px;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 50px;
+    color: @green;
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 20px;
+      font-family: @icon;
+      font-size: 14px;
+      line-height: 50px;
+      color: @green;
+    }
+
+    &--give-away {
+
+      &:before {
+        content: '\e813';
+      }
+    }
+
+    &--hide {
+
+      &:before {
+        content: '\e814';
+      }
+    }
+
+    &:hover {
+      color: #fff;
+      background-color: @green;
+
+      &:before {
+        color: #fff;
+      }
+    }
   }
 }

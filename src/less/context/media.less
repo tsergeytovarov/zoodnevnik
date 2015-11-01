@@ -152,9 +152,15 @@
 
       &.active {
         border-radius: 0;
+        color: #fff;
+        background-color: @green;
 
         .type-1 & {
           border-radius: 2px 2px 0 0;
+        }
+
+        &:after {
+          color: #fff;
         }
       }
 
@@ -178,7 +184,7 @@
       width: 100%;
       border-radius: 0 0 2px 2px;
       border-top: 1px solid #eee;
-      z-index: 200;
+      z-index: 500;
 
       &.hidden {
         display: none;
@@ -419,9 +425,15 @@
   }
 
   .info-table {
+    width: 100%;
 
     td {
       display: table-row;
+      width: 100%;
+
+      &.table-left-col {
+        width: 100%;
+      }
     }
 
     &__title {
@@ -432,6 +444,11 @@
     &__text {
       padding-top: 4px;
       padding-left: 20px;
+    }
+
+    input[name="cell-value"] {
+      padding-left: 16px;
+      width: 700px;
     }
   }
 
@@ -783,6 +800,77 @@
     &__add-user-field {
       width: 220px;
       z-index: 100;
+    }
+  }
+
+  .info-table {
+
+    input[name="cell-value"] {
+      width: 450px;
+    }
+  }
+
+  .pet-page-edit {
+
+    .ancestor-table {
+      display: none;
+
+      &__inner {
+        padding: 8px;
+      }
+    }
+
+    .ancestor-table-mobile {
+      display: none;
+
+      &--edit {
+        display: table;
+      }
+
+      input[type="text"] {
+        padding: 6px;
+        font-size: 12px;
+        line-height: 16px;
+        border: none;
+      }
+
+      input[name="search"] {
+        padding: 6px;
+        font-size: 12px;
+        line-height: 16px;
+        border: 1px solid #dcdcdc;
+
+        &:focus {
+          border: 1px solid #ccc;
+        }
+      }
+
+      td {
+        width: 50%;
+      }
+    }
+
+    .breed-table {
+      display: none;
+    }
+
+    .breed-table-mobile {
+      display: table;
+
+      input[type="text"] {
+        margin-bottom: 0;
+        border: none;
+      }
+
+      &--edit {
+
+        .breed-table {
+
+          &__inner {
+            padding: 8px;
+          }
+        }
+      }
     }
   }
 }
@@ -1251,6 +1339,10 @@
     &__text {
       padding: 10px;
       padding-left: none;
+    }
+
+    input[name="cell-value"] {
+      width: 294px;
     }
   }
 
