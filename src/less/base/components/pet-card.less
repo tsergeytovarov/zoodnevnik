@@ -32,6 +32,27 @@
     }
   }
 
+  &__close-btn {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    display: none;
+    width: 13px;
+    height: 13px;
+    cursor: pointer;
+
+    &:before {
+      content: '\e808';
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-family: @icon;
+      font-size: 14px;
+      line-height: 13px;
+      color: #ddd;
+    }
+  }
+
   &__image-wrapper {
     position: absolute;
     top: 0;
@@ -175,6 +196,10 @@
     .pet-card {
 
       &__edit-btn {
+        display: block;
+      }
+
+      &__close-btn {
         display: block;
       }
     }

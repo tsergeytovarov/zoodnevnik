@@ -134,6 +134,12 @@ $(function() {
     return false;
   })
 
+  //переключение состояний кнопки "подписаться"
+  $(".subscribe").on("click", function(){
+    $(this).toggleClass("subscription");
+    return false;
+  })
+
   //переключение тултипа в строке с табами на стр питомца (редактирование)
   $(".inner-tabs__tooltip-toggle").click(function(event){
     event.preventDefault();

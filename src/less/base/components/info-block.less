@@ -33,6 +33,81 @@
       }
     }
   }
+
+  &__subscribe {
+    position: relative;
+    text-align: center;
+    font-size: 14px;
+    line-height: 50px;
+    color: @green;
+    border-radius: 2px;
+    cursor: pointer;
+
+    &:before {
+      content: '\e816';
+      position: absolute;
+      top: 0;
+      left: 70px;
+      font-family: @icon;
+      font-size: 14px;
+      line-height: 50px;
+      color: @green;
+    }
+
+    &:hover {
+      color: #fff;
+      background-color: @green;
+
+      &:before {
+        color: #fff;
+      }
+    }
+  }
+
+  &__unsubscribe {
+    position: relative;
+    display: none;
+    text-align: center;
+    font-size: 14px;
+    line-height: 50px;
+    color: @green;
+    border-radius: 2px;
+    cursor: pointer;
+
+    &:before {
+      content: '\e808';
+      position: absolute;
+      top: 0;
+      left: 50px;
+      font-family: @icon;
+      font-size: 14px;
+      line-height: 50px;
+      color: @green;
+    }
+
+    &:hover {
+      color: #fff;
+      background-color: @green;
+
+      &:before {
+        color: #fff;
+      }
+    }
+  }
+
+  &.subscription {
+
+    .info-block {
+
+      &__subscribe {
+        display: none;
+      }
+
+      &__unsubscribe {
+        display: block;
+      }
+    }
+  }
 }
 
 .favourite {
@@ -601,5 +676,55 @@
       display: block;
       width: 100%;
     }
+  }
+}
+
+.administration-block {
+  padding: 3px 12px;
+
+  &__title {
+    margin-bottom: 6px;
+    font-size: 12px;
+    line-height: 24px;
+    color: #cbcbcb;
+  }
+
+  &__member {
+    margin-bottom: 11px;
+  }
+
+  &__avatar-wrapper {
+    display: inline-block;
+    vertical-align: top;
+    width: 30px;
+    height: 30px;
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  &__avatar {
+    display: block;
+    width: 100%;
+  }
+
+  &__text-wrapper {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 5px;
+    max-width: 200px;
+  }
+
+  &__name {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    color: #656565;
+  }
+
+  &__location {
+    font-size: 12px;
+    line-height: 14px;
+    color: #bfbfbf;
   }
 }
