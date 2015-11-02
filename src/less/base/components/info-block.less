@@ -1,4 +1,4 @@
-.pet-block {
+.info-block {
   margin-bottom: 8px;
   background-color: #fff;
 	border-radius: 2px;
@@ -111,6 +111,98 @@
   &.added {
 
     .favourite {
+
+      &__add {
+        display: none;
+      }
+
+      &__remove {
+        display: block;
+      }
+    }
+  }
+
+  &:hover {
+    background-color: @green;
+  }
+}
+
+.friend {
+  padding: 0 19px;
+  border-bottom: 1px solid #eee;
+  border-radius: 2px 2px 0 0;
+  cursor: pointer;
+
+  &__remove {
+    position: relative;
+    display: none;
+    padding-left: 30px;
+    font-size: 14px;
+    line-height: 50px;
+    color: @green;
+
+    &:hover {
+      color: #fff;
+
+      &:before {
+        color: #fff;
+      }
+    }
+
+    &:before {
+      content: '\e81a';
+      position: absolute;
+      top: 17px;
+      left: 0;
+      font-family: @icon;
+      font-size: 14px;
+      line-height: 16px;
+      color: @green;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 24px;
+      left: -3px;
+      width: 17px;
+      height: 0;
+      border-top: 1px solid @green;
+      border-bottom: 1px solid #fff;
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__add {
+    position: relative;
+    padding-left: 30px;
+    font-size: 14px;
+    line-height: 50px;
+    color: @green;
+
+    &:hover {
+      color: #fff;
+
+      &:before {
+        color: #fff;
+      }
+    }
+
+    &:before {
+      content: '\e81a';
+      position: absolute;
+      top: 17px;
+      left: 0;
+      font-family: @icon;
+      font-size: 14px;
+      line-height: 16px;
+      color: @green;
+    }
+  }
+
+  &.added {
+
+    .friend {
 
       &__add {
         display: none;

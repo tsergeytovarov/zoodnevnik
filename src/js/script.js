@@ -128,6 +128,12 @@ $(function() {
     return false;
   })
 
+  //переключение состояний кнопки "добавить в друзья"
+  $(".friend").on("click", function(){
+    $(this).toggleClass("added");
+    return false;
+  })
+
   //переключение тултипа в строке с табами на стр питомца (редактирование)
   $(".inner-tabs__tooltip-toggle").click(function(event){
     event.preventDefault();
