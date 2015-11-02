@@ -16,6 +16,45 @@
     }
   }
 
+  &__upload-container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__add-file {
+    position: relative;
+    padding-left: 48px;
+    font-size: 14px;
+    line-height: 52px;
+    color: @green;
+
+    &:before {
+      content: '\e81a';
+      position: absolute;
+      top: 0;
+      left: 20px;
+      font-family: @icon;
+      font-size: 14px;
+      line-height: 52px;
+      color: @green;
+    }
+  }
+
+  input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 10;
+
+    &:hover + .files-container__add-file {
+      opacity: .8;
+    }
+  }
+
   &--edit {
 
     .files-container {

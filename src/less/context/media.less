@@ -152,8 +152,6 @@
 
       &.active {
         border-radius: 0;
-        color: #fff;
-        background-color: @green;
 
         .type-1 & {
           border-radius: 2px 2px 0 0;
@@ -810,7 +808,8 @@
     }
   }
 
-  .pet-page-edit {
+  .pet-page-edit,
+  .new-pet {
 
     .ancestor-table {
       display: none;
@@ -1179,6 +1178,16 @@
 
     &__social-container {
       margin-left: 25px;
+    }
+
+    &--edit {
+
+      .news-item {
+
+        &__social-row {
+          text-align: left;
+        }
+      }
     }
   }
 

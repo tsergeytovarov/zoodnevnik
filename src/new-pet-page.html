@@ -115,43 +115,25 @@
     </div>
   </header>
   <!-- основной контент -->
-  <div class="main type-1 pet-page-edit">
+  <div class="main type-1 new-pet">
     <div class="container clearfix">
       <div class="left-col">
-        <div class="pet-card pet-card--edit clearfix">
+        <div class="pet-card pet-card--new clearfix">
           <div class="pet-card__image-wrapper">
-            <img src="img/sharik.jpg" alt="" class="pet-card__image">
-            <!-- блок "изменить картинку", виден в режиме редактирования -->
-            <div class="pet-card__image-overlay">
-              <div class="pet-card__image-overlay-text">Изменить</div>
-            </div>
+            <input type="file" name="new-pet">
+            <div class="pet-card__upload-link">Загрузите фото</div>
           </div>
           <div class="pet-card__info-wrapper star-wrapper">
             <span class="pet-card__rating icon-star"></span>
-            <a href="#" class="pet-card__name">Шарик <span class="pet-card__age">(7 лет)</span></a>
-            <div class="pet-card__text">Dundarroch premium quality</div>
-            <div class="pet-card__breed">Австралийская короткохвостая собака</div>
+            <a href="#" class="pet-card__name">Шарик <span class="pet-card__age"></span></a>
+            <div class="pet-card__text">Имя полное</div>
+            <div class="pet-card__breed">Порода</div>
           </div>
         </div>
         <div class="pet-block">
           <div class="pet-block__edit-info">Редактировать информацию</div>
         </div>
         <div class="pet-block pet-block--comment">
-          <div class="titles-block">
-            <div class="titles-block__header-row clearfix">
-              <div class="titles-block__header">Титулы</div>
-              <a href="#" class="titles-block__show-all">Все</a>
-            </div>
-            <ul class="titles-list">
-              <li class="titles-list__item">Ch Int,</li>
-              <li class="titles-list__item">Jun Ch Rus,</li>
-              <li class="titles-list__item">Ch Rus,</li>
-              <li class="titles-list__item">Ch Czh,</li>
-              <li class="titles-list__item">Ch RKF,</li>
-              <li class="titles-list__item">Ch Ua,</li>
-              <li class="titles-list__item">6 CAC!B</li>
-            </ul>
-          </div>
           <div class="owner-block">
             <div class="owner-block__title">Владелец</div>
             <a href="#" class="owner-block__avatar-wrapper">
@@ -231,66 +213,6 @@
                 <div class="inner-tabs__tooltip-content">Для упоминания зарегистрированного питомца используйте «@»</div>
               </div>
             </div>
-            <article class="news-item news-item--edit">
-              <div class="news-item__close-btn">Скрыть</div>
-              <div class="news-item__information-row">
-                <a href="#" class="news-item__avatar-wrapper">
-                  <img src="img/pet-avatar.jpg" alt="" class="news-item__avatar">
-                </a>
-                <div class="news-item__text-wrapper">
-                  <div class="news-item__title">ШАРИК</div>
-                  <div class="news-item__info">Dundarroch premium quality  / 22.12.11  /  12:30  /  <span class="news-item__info--bold">Потомство</span></div>
-                </div>
-              </div>
-              <div class="news-item__image-container">
-                <img src="img/article-img-news.jpg" alt="" class="news-item__image">
-              </div>
-              <p class="news-item__text">Текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения,</p>
-              <div class="news-item__social-row">
-                <a href="#" class="news-item__social-link news-item__social-link--like">Нравится</a>
-                <a href="#" class="news-item__social-link news-item__social-link--comment">Комментарий</a>
-                <a href="#" class="news-item__social-link news-item__social-link--share">Поделиться</a>
-                <div class="news-item__social-container">
-                  <a href="#" class="news-item__social-link news-item__social-link--public">Опубликовать</a>
-                  <div class="news-item-tooltip">
-                    <ul class="news-item-tooltip__list">
-                      <li class="news-item-tooltip__list-item">
-                        <a href="#" class="news-item-tooltip__public-link news-item-tooltip__public-link--vk">Вконтакте</a>
-                      </li>
-                      <li class="news-item-tooltip__list-item">
-                        <a href="#" class="news-item-tooltip__public-link news-item-tooltip__public-link--fb">Facebook</a>
-                      </li>
-                      <li class="news-item-tooltip__list-item">
-                        <a href="#" class="news-item-tooltip__public-link news-item-tooltip__public-link--ok">Однокласники</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="comment-block">
-                <div class="comment-block__show-prev">Показать предыдущие записи (<span class="previous-comments">12</span>)</div>
-                <div class="comment-block__item">
-                  <a href="#" class="comment-block__avatar-wrapper">
-                    <img src="img/avatar-01.jpg" alt="" class="comment-block__avatar">
-                  </a>
-                  <div class="comment-block__comment"><a href="#" class="comment-block__comment--name">Евгения Кукушкина,</a> лдавопдлоавпдовадповадпо ваопдваопдовап оваопдваопд оваопд дваоп овадопд овадповаопд дваоп овадопд овадповаопд дваоп овадопд овадповаопд дваоп овадопд овадповаопд дваоп овадопд овадп <span class="comment-block__comment--date">22.12.11 / 12:30</span></div>
-                </div>
-                <div class="comment-block__item">
-                  <a href="#" class="comment-block__avatar-wrapper">
-                    <img src="img/avatar-02.jpg" alt="" class="comment-block__avatar">
-                  </a>
-                  <div class="comment-block__comment"><a href="#" class="comment-block__comment--name">Игорь Кудрин,</a> лдавопдлоавпдовадповадпо ваопдваопдовап оваопдваопд оваопд дваоп овадопд овадповаопд дваоп овадопд овадповаопд дваоп овадопд овадповаопд дваоп овадопд овадповаопд дваоп овадопд овадп <span class="comment-block__comment--date">22.12.11 / 12:30</span></div>
-                </div>
-                <div class="comment-block__comment-form">
-                  <a href="#" class="comment-block__avatar-wrapper">
-                    <img src="img/owner-avatar.jpg" alt="" class="comment-block__avatar">
-                  </a>
-                  <form action="#" method="post">
-                    <textarea name="new-comment" id="new-comment" class="comment-block__textarea" placeholder="Написать комментарий ..."></textarea>
-                  </form>
-                </div>
-              </div>
-            </article>
           </div>
           <div class="tab-content photos">
             <div class="inner-tabs inner-tabs--edit">
@@ -305,98 +227,6 @@
               <div class="inner-tabs__add-media-container">
                 <input type="file" name="add-media" id="add-media">
                 <div class="inner-tabs__add-media-link">Добавить фото или видео</div>
-              </div>
-            </div>
-            <div class="photo-gallery">
-              <div class="photo-gallery__item photo-gallery__item--edit">
-                <div class="photo-gallery__item-close">Скрыть</div>
-                <img src="img/article-img-news.jpg" class="photo-gallery__image" alt="">
-                <div class="photo-gallery__item-overlay">
-                  <div class="photo-gallery__item-title">Название  фотографии</div>
-                  <div class="photo-gallery__item-edit">
-                    <form action="#" method="post">
-                      <div class="photo-gallery__input-wrapper">
-                        <input type="text" name="change-title" placeholder="Добавить название">
-                      </div>
-                    </form>
-                  </div>
-                  <div class="photo-gallery__item-stats">
-                    <div class="photo-gallery__item-likes"><span class="photo-gallery__item-likes-number">3</span></div>
-                    <div class="photo-gallery__item-comments"><span class="photo-gallery__item-comments-number"></span></div>
-                  </div>
-                </div>
-              </div>
-              <div class="photo-gallery__item photo-gallery__item--edit">
-                <div class="photo-gallery__item-close">Скрыть</div>
-                <img src="img/article-img-news.jpg" class="photo-gallery__image" alt="">
-                <div class="photo-gallery__item-overlay">
-                  <div class="photo-gallery__item-title">Название  фотографии</div>
-                  <div class="photo-gallery__item-edit">
-                    <form action="#" method="post">
-                      <div class="photo-gallery__input-wrapper">
-                        <input type="text" name="change-title" placeholder="Добавить название">
-                      </div>
-                    </form>
-                  </div>
-                  <div class="photo-gallery__item-stats">
-                    <div class="photo-gallery__item-likes"><span class="photo-gallery__item-likes-number">3</span></div>
-                    <div class="photo-gallery__item-comments"><span class="photo-gallery__item-comments-number"></span></div>
-                  </div>
-                </div>
-              </div>
-              <div class="photo-gallery__item photo-gallery__item--edit">
-                <div class="photo-gallery__item-close">Скрыть</div>
-                <img src="img/article-img-news.jpg" class="photo-gallery__image" alt="">
-                <div class="photo-gallery__item-overlay">
-                  <div class="photo-gallery__item-title">Название  фотографии</div>
-                  <div class="photo-gallery__item-edit">
-                    <form action="#" method="post">
-                      <div class="photo-gallery__input-wrapper">
-                        <input type="text" name="change-title" placeholder="Добавить название">
-                      </div>
-                    </form>
-                  </div>
-                  <div class="photo-gallery__item-stats">
-                    <div class="photo-gallery__item-likes"><span class="photo-gallery__item-likes-number">3</span></div>
-                    <div class="photo-gallery__item-comments"><span class="photo-gallery__item-comments-number"></span></div>
-                  </div>
-                </div>
-              </div>
-              <div class="photo-gallery__item photo-gallery__item--edit">
-                <div class="photo-gallery__item-close">Скрыть</div>
-                <img src="img/article-img-news.jpg" class="photo-gallery__image" alt="">
-                <div class="photo-gallery__item-overlay">
-                  <div class="photo-gallery__item-title">Название  фотографии</div>
-                  <div class="photo-gallery__item-edit">
-                    <form action="#" method="post">
-                      <div class="photo-gallery__input-wrapper">
-                        <input type="text" name="change-title" placeholder="Добавить название">
-                      </div>
-                    </form>
-                  </div>
-                  <div class="photo-gallery__item-stats">
-                    <div class="photo-gallery__item-likes"><span class="photo-gallery__item-likes-number">3</span></div>
-                    <div class="photo-gallery__item-comments"><span class="photo-gallery__item-comments-number"></span></div>
-                  </div>
-                </div>
-              </div>
-              <div class="photo-gallery__item photo-gallery__item--edit">
-                <div class="photo-gallery__item-close">Скрыть</div>
-                <img src="img/article-img-news.jpg" class="photo-gallery__image" alt="">
-                <div class="photo-gallery__item-overlay">
-                  <div class="photo-gallery__item-title">Название  фотографии в две строки</div>
-                  <div class="photo-gallery__item-edit">
-                    <form action="#" method="post">
-                      <div class="photo-gallery__input-wrapper">
-                        <input type="text" name="change-title" placeholder="Добавить название">
-                      </div>
-                    </form>
-                  </div>
-                  <div class="photo-gallery__item-stats">
-                    <div class="photo-gallery__item-likes"><span class="photo-gallery__item-likes-number">3</span></div>
-                    <div class="photo-gallery__item-comments"><span class="photo-gallery__item-comments-number"></span></div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -430,9 +260,8 @@
                       <div class="info-table__title">Имя полное</div>
                     </td>
                     <td>
-                      <div class="info-table__text">Dundarroch premium quality</div>
                       <div class="info-table__input-wrapper">
-                        <input type="text" name="cell-value" class="info-table__text-input">
+                        <input type="text" name="cell-value" class="info-table__text-input" placeholder="Укажите полное имя">
                         <div class="info-table__edit-btn">Редактировать</div>
                         <div class="info-table__close-btn">Отменить</div>
                       </div>
@@ -443,9 +272,8 @@
                       <div class="info-table__title">Порода</div>
                     </td>
                     <td>
-                      <div class="info-table__text">Австралийская короткохвостая собака</div>
                       <div class="info-table__input-wrapper">
-                        <input type="text" name="cell-value" class="info-table__text-input">
+                        <input type="text" name="cell-value" class="info-table__text-input" placeholder="Укажите породу">
                         <div class="info-table__edit-btn">Редактировать</div>
                         <div class="info-table__close-btn">Отменить</div>
                       </div>
@@ -456,9 +284,8 @@
                       <div class="info-table__title">Пол</div>
                     </td>
                     <td>
-                      <div class="info-table__text">Мужской</div>
                       <div class="info-table__input-wrapper">
-                        <input type="text" name="cell-value" class="info-table__text-input">
+                        <input type="text" name="cell-value" class="info-table__text-input" placeholder="Укажите пол">
                         <div class="info-table__edit-btn">Редактировать</div>
                         <div class="info-table__close-btn">Отменить</div>
                       </div>
@@ -469,9 +296,8 @@
                       <div class="info-table__title">Дата рождения</div>
                     </td>
                     <td>
-                      <div class="info-table__text">02.03.2011</div>
                       <div class="info-table__input-wrapper">
-                        <input type="text" name="cell-value" class="info-table__text-input">
+                        <input type="text" name="cell-value" class="info-table__text-input" placeholder="Укажите дату рождения">
                         <div class="info-table__edit-btn">Редактировать</div>
                         <div class="info-table__close-btn">Отменить</div>
                       </div>
@@ -482,9 +308,8 @@
                       <div class="info-table__title">Страна происхождения</div>
                     </td>
                     <td>
-                      <div class="info-table__text">Россия</div>
                       <div class="info-table__input-wrapper">
-                        <input type="text" name="cell-value" class="info-table__text-input">
+                        <input type="text" name="cell-value" class="info-table__text-input" placeholder="Укажите страну происхождения">
                         <div class="info-table__edit-btn">Редактировать</div>
                         <div class="info-table__close-btn">Отменить</div>
                       </div>
@@ -495,9 +320,8 @@
                       <div class="info-table__title">Место проживания</div>
                     </td>
                     <td>
-                      <div class="info-table__text">г. Москва</div>
                       <div class="info-table__input-wrapper">
-                        <input type="text" name="cell-value" class="info-table__text-input">
+                        <input type="text" name="cell-value" class="info-table__text-input" placeholder="Укажите место проживания">
                         <div class="info-table__edit-btn">Редактировать</div>
                         <div class="info-table__close-btn">Отменить</div>
                       </div>
@@ -508,9 +332,8 @@
                       <div class="info-table__title">Титулы</div>
                     </td>
                     <td>
-                      <div class="info-table__text">Ch Int, Jun Ch Rus, Ch Rus, Ch Czh, Ch RKF, Ch Ua, 6 CAC!B</div>
                       <div class="info-table__input-wrapper">
-                        <input type="text" name="cell-value" class="info-table__text-input">
+                        <input type="text" name="cell-value" class="info-table__text-input" placeholder="Перечислите титулы">
                         <div class="info-table__edit-btn">Редактировать</div>
                         <div class="info-table__close-btn">Отменить</div>
                       </div>
@@ -521,9 +344,8 @@
                       <div class="info-table__title">Окрас</div>
                     </td>
                     <td>
-                      <div class="info-table__text">Черный в серых пятнах</div>
                       <div class="info-table__input-wrapper">
-                        <input type="text" name="cell-value" class="info-table__text-input">
+                        <input type="text" name="cell-value" class="info-table__text-input" placeholder="Укажите окрас">
                         <div class="info-table__edit-btn">Редактировать</div>
                         <div class="info-table__close-btn">Отменить</div>
                       </div>
@@ -534,9 +356,8 @@
                       <div class="info-table__title">Вес</div>
                     </td>
                     <td>
-                      <div class="info-table__text">15 кг</div>
                       <div class="info-table__input-wrapper">
-                        <input type="text" name="cell-value" class="info-table__text-input">
+                        <input type="text" name="cell-value" class="info-table__text-input" placeholder="Укажите вес">
                         <div class="info-table__edit-btn">Редактировать</div>
                         <div class="info-table__close-btn">Отменить</div>
                       </div>
@@ -547,9 +368,8 @@
                       <div class="info-table__title">Рост</div>
                     </td>
                     <td>
-                      <div class="info-table__text">90х50 см</div>
                       <div class="info-table__input-wrapper">
-                        <input type="text" name="cell-value" class="info-table__text-input">
+                        <input type="text" name="cell-value" class="info-table__text-input" placeholder="Укажите рост">
                         <div class="info-table__edit-btn">Редактировать</div>
                         <div class="info-table__close-btn">Отменить</div>
                       </div>
@@ -560,9 +380,8 @@
                       <div class="info-table__title">Татуировка</div>
                     </td>
                     <td>
-                      <div class="info-table__text">33456654</div>
                       <div class="info-table__input-wrapper">
-                        <input type="text" name="cell-value" class="info-table__text-input">
+                        <input type="text" name="cell-value" class="info-table__text-input" placeholder="Укажите номер татуировки">
                         <div class="info-table__edit-btn">Редактировать</div>
                         <div class="info-table__close-btn">Отменить</div>
                       </div>
@@ -573,9 +392,8 @@
                       <div class="info-table__title">Чипкод</div>
                     </td>
                     <td>
-                      <div class="info-table__text">3243242342342</div>
                       <div class="info-table__input-wrapper">
-                        <input type="text" name="cell-value" class="info-table__text-input">
+                        <input type="text" name="cell-value" class="info-table__text-input" placeholder="Укажите чипкод">
                         <div class="info-table__edit-btn">Редактировать</div>
                         <div class="info-table__close-btn">Отменить</div>
                       </div>
@@ -586,9 +404,8 @@
                       <div class="info-table__title">Описание характера</div>
                     </td>
                     <td>
-                      <div class="info-table__text">Спокойный</div>
                       <div class="info-table__input-wrapper">
-                        <input type="text" name="cell-value" class="info-table__text-input">
+                        <input type="text" name="cell-value" class="info-table__text-input" placeholder="Опишите характер">
                         <div class="info-table__edit-btn">Редактировать</div>
                         <div class="info-table__close-btn">Отменить</div>
                       </div>
@@ -599,9 +416,8 @@
                       <div class="info-table__title">Здоровье</div>
                     </td>
                     <td>
-                      <div class="info-table__text">Отличное</div>
                       <div class="info-table__input-wrapper">
-                        <input type="text" name="cell-value" class="info-table__text-input">
+                        <input type="text" name="cell-value" class="info-table__text-input" placeholder="Состояние здоровья">
                         <div class="info-table__edit-btn">Редактировать</div>
                         <div class="info-table__close-btn">Отменить</div>
                       </div>
@@ -612,9 +428,8 @@
                       <div class="info-table__title">Отзыв владельца</div>
                     </td>
                     <td>
-                      <div class="info-table__text">Отзыв владельца Отзыв владельца Отзыв владельца Отзыв владельца</div>
                       <div class="info-table__input-wrapper">
-                        <input type="text" name="cell-value" class="info-table__text-input">
+                        <input type="text" name="cell-value" class="info-table__text-input" placeholder="Напишите отзыв">
                         <div class="info-table__edit-btn">Редактировать</div>
                         <div class="info-table__close-btn">Отменить</div>
                       </div>
@@ -631,9 +446,8 @@
                       <div class="info-table__title">Родословная</div>
                     </td>
                     <td>
-                      <div class="info-table__text">№ 1233000023</div>
                       <div class="info-table__input-wrapper">
-                        <input type="text" name="cell-value" class="info-table__text-input">
+                        <input type="text" name="cell-value" class="info-table__text-input" placeholder="Укажите номер родословной">
                         <div class="info-table__edit-btn">Редактировать</div>
                         <div class="info-table__close-btn">Отменить</div>
                       </div>
@@ -644,9 +458,8 @@
                       <div class="info-table__title">Экспортная родословная</div>
                     </td>
                     <td>
-                      <div class="info-table__text">№ RT3000333</div>
                       <div class="info-table__input-wrapper">
-                        <input type="text" name="cell-value" class="info-table__text-input">
+                        <input type="text" name="cell-value" class="info-table__text-input" placeholder="Укажите номер экспортной родословной">
                         <div class="info-table__edit-btn">Редактировать</div>
                         <div class="info-table__close-btn">Отменить</div>
                       </div>
@@ -1035,16 +848,10 @@
             </div>
           </div>
           <div class="tab-content files">
-            <div class="files-container files-container--edit">
-              <div class="files-container__btns-wrapper">
-                <a href="#" class="download-link">Родословная.pdf</a>
-                <button class="eye-btn">Скрыть</button>
-                <button class="trash-btn">Удалить</button>
-              </div>
-              <div class="files-container__btns-wrapper">
-                <a href="#" class="download-link">Сертификат.pdf</a>
-                <button class="eye-btn">Скрыть</button>
-                <button class="trash-btn">Удалить</button>
+            <div class="files-container">
+              <div class="files-container__upload-container">
+                <input type="file" name="add-file" id="add-file">
+                <div class="files-container__add-file">Добавить файл</div>
               </div>
             </div>
           </div>
