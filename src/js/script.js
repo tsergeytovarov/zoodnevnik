@@ -88,7 +88,7 @@ $(function() {
 
   //открытие списка табов
   $(".tab-toggles__toggle").on("click", function(event){
-    $(".tab-toggles__toggle").toggleClass("active");
+    /*$(".tab-toggles__toggle").toggleClass("active");*/
     $(this).next().toggleClass("hidden");
     return false;
   })

@@ -445,3 +445,147 @@
     }
   }
 }
+
+.pets-block {
+
+  &__header-row {
+    margin-bottom: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  &__title {
+    float: left;
+    font-size: 14px;
+    line-height: 24px;
+    color: #bfbfbf;
+  }
+
+  &__show-all {
+    float: right;
+    font-size: 14px;
+    line-height: 24px;
+    color: #bfbfbf;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+}
+
+.pets-list {
+  margin: 0;
+  padding: 0;
+  padding-left: 12px;
+  padding-right: 12px;
+  font-size: 0;
+  list-style: none;
+  border-bottom: 1px solid #eee;
+
+  &__item {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px;
+    margin-bottom: 12px;
+
+    &:nth-child(7n) {
+      margin-right: 0;
+    }
+
+    &:hover {
+
+      .pet-item-tooltip {
+        display: block;
+      }
+    }
+  }
+
+  &__avatar-wrapper {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  &__avatar {
+    display: block;
+    height: 100%;
+  }
+}
+
+.pet-item-tooltip {
+  position: absolute;
+  bottom: 100%;
+  margin-bottom: 10px;
+  left: 0;
+  display: none;
+  padding: 8px 13px;
+  width: 165px;
+  font-size: 12px;
+  line-height: 14px;
+  color: #fff;
+  background-color: rgba(0,0,0,.6);
+  border-radius: 2px;
+  z-index: 100;
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 100%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 7px 0 7px;
+    border-color: rgba(0,0,0,.6) transparent transparent transparent;
+  }
+
+  &__name {
+    display: block;
+    margin-bottom: 3px;
+    font-weight: 600;
+  }
+
+  &__full-name {
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  &__breed {
+    display: block;
+  }
+}
+
+.groups-block {
+  padding-left: 12px;
+  padding-right: 12px;
+
+  &__title {
+    margin-bottom: 6px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #bfbfbf;
+  }
+
+  .avatar-wrapper {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px;
+    margin-bottom: 12px;
+    width: 30px;
+    height: 30px;
+    border-radius: 2px;
+    overflow: hidden;
+
+    &:nth-child(7n) {
+      margin-right: 0;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}

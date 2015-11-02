@@ -64,18 +64,16 @@
   .owner-card {
     width: 342px;
 
-    &__image-wrapper {
-      width: 90px;
-      height: 105px;
-    }
-
     &__info-wrapper {
-      width: 252px;
     }
 
     &__bio {
       padding-top: 6px;
       padding-bottom: 6px;
+    }
+
+    &--main {
+      width: 100%;
     }
   }
 
@@ -172,6 +170,10 @@
 
       &--pet-page {
         margin-bottom: 0;
+      }
+
+      .owner-page & {
+        border-radius: 2px;
       }
     }
 
@@ -295,11 +297,15 @@
       display: block;
       border-top: 1px solid #eee;
 
+      .owner-page & {
+        border-top: none;
+      }
+
       .inner-tabs--edit & {
         border-top: none;
       }
 
-      .tab-content.photos & {
+      .tab-content.photos--edit & {
         position: relative;
 
         &:before {
@@ -389,6 +395,7 @@
           background-color: #fff;
           border-radius: 0 0 2px 2px;
           box-shadow: 0 1px 2px rgba(25,26,25,.1);
+          z-index: 10;
         }
 
         &__list-item {
@@ -671,10 +678,6 @@
   .owner-card {
     margin-right: 0;
     width: 450px;
-
-    &__info-wrapper {
-      width: 360px;
-    }
   }
 
   .community-card {
@@ -1103,10 +1106,6 @@
 
   .owner-card {
     width: 294px;
-
-    &__info-wrapper {
-      width: 204px;
-    }
   }
 
   .community-card {

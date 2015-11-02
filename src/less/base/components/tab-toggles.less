@@ -213,14 +213,18 @@
       &__list {
         font-size: 0;
         border-radius: 2px 2px 0 0;
+
+        .owner-page & {
+          border-radius: 2px;
+        }
       }
     }
 
     .tab-toggle {
       display: inline-block;
       vertical-align: top;
-      padding-left: 19px;
-      padding-right: 19px;
+      padding-left: 16px;
+      padding-right: 16px;
       border-right: none;
       border-bottom: none;
 
@@ -243,6 +247,10 @@
         }
       }
     }
+
+    .owner-page & {
+      border-radius: 2px;
+    }
   }
 
   &--edit {
@@ -258,5 +266,14 @@
       color: #656565;
       cursor: pointer;
     }
+  }
+}
+
+.tab-content {
+
+  &__wrapper {
+    margin-top: 22px;
+    margin-right: -22px;
+    font-size: 0;
   }
 }
