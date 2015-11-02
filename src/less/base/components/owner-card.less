@@ -110,6 +110,43 @@
     width: 100%;
   }
 
+  &__close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: none;
+    width: 11px;
+    height: 11px;
+    font-size: 0;
+    cursor: pointer;
+    z-index: 10;
+
+    &:before {
+      content: '\e808';
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-family: @icon;
+      font-size: 14px;
+      line-height: 11px;
+      color: #e5e5e5;
+    }
+  }
+
+  &:hover {
+
+    .owner-card {
+
+      &__close-btn {
+        display: block;
+      }
+    }
+  }
+
+  &.hidden {
+    display: none;
+  }
+
   .owner-page & {
     margin-bottom: 8px;
   }

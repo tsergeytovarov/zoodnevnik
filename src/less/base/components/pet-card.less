@@ -11,6 +11,27 @@
   box-shadow: 0 1px 2px rgba(25,26,25,.1);
   overflow: hidden;
 
+  &__edit-btn {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    display: none;
+    width: 13px;
+    height: 13px;
+    cursor: pointer;
+
+    &:before {
+      content: '\e80a';
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-family: @icon;
+      font-size: 14px;
+      line-height: 13px;
+      color: #ddd;
+    }
+  }
+
   &__image-wrapper {
     position: absolute;
     top: 0;
@@ -146,6 +167,16 @@
       background-image: url("../img/pets-sprite.png");
       background-repeat: no-repeat;
       background-position: 0 -254px;
+    }
+  }
+
+  &:hover {
+
+    .pet-card {
+
+      &__edit-btn {
+        display: block;
+      }
     }
   }
 

@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="robots" content="noindex, nofollow">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+  <title>Zoodnevnik</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+  <!-- основной хедер. по классу logged-in переключается на состояние для залогиненного пользователя, по классу nested - состояние для незалогиненного пользователя с разделителями -->
+  <header class="page-header logged-in type-3">
+    <div class="page-header__inner clearfix">
+      <div class="logo">
+        <a href="index.html" class="logo__link">
+          <img src="img/logo.png" alt="" class="logo__image">
+          <img src="img/logo-small.png" alt="" class="logo__image logo__image--small">
+        </a>
+      </div>
+      <nav class="header-navigation">
+        <ul class="header-navigation__list">
+          <li class="header-navigation__list-item">
+            <a href="type-2-news.html" class="header-navigation__link header-navigation__link--news">Новости</a>
+          </li>
+          <li class="header-navigation__list-item">
+            <a href="#pets" class="header-navigation__link header-navigation__link--pets">Питомцы</a>
+          </li>
+          <li class="header-navigation__list-item">
+            <a href="type-2-groups.html" class="header-navigation__link header-navigation__link--groups">Группы</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="tooltip-container">
+        <a href="#" class="log-in-btn js-tooltip-toggle">Вход</a>
+        <div class="tooltip-content">
+          <div class="tooltip-content__social">
+            <div class="tooltip-content__social-title">Войти через:</div>
+            <div class="tooltip-content__social-wrapper">
+              <a href="#" class="btn btn--social btn--fb">Facebook</a>
+              <a href="#" class="btn btn--social btn--vk">Вконтакте</a>
+              <a href="#" class="btn btn--social btn--ok">Одноклассники</a>
+            </div>
+          </div>
+          <div class="tooltip-content__form-wrapper">
+            <form action="#" method="post">
+              <input type="text" id="email" name="email" placeholder="Email">
+              <input type="password" id="password" name="password" placeholder="Пароль">
+              <button type="submit" class="btn btn--green btn--login">Зарегистрироваться</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="user-options">
+        <div class="user-options__search clearfix">
+          <button type="button" class="user-options__search-button js-search-open-2">Искать</button>
+          <form action="#" method="post">
+            <button type="button" class="user-options__search-close js-search-close-2">Скрыть</button>
+            <input type="text" id="useroptions-search" class="useroptions-search-input" placeholder="Напишите">
+          </form>
+        </div>
+        <div class="user-options__btn">
+          <!-- класс has-new-items показывает метку с новыми сообщениями -->
+          <a href="#" class="user-options__messages">Сообщения</a>
+          <span class="user-options__new-items">5</span>
+        </div>
+        <div class="user-options__btn">
+          <!-- класс has-new-items показывает метку с новыми сообщениями -->
+          <a href="#" class="user-options__notifications">Уведомления</a>
+          <span class="user-options__new-items">5</span>
+        </div>
+        <div class="menu-container">
+          <a href="#" class="avatar-wrapper">
+            <img src="img/avatar.jpg" alt="" class="avatar">
+          </a>
+          <a href="#" class="menu-toggle">Меню</a>
+          <nav class="menu-tooltip">
+            <ul class="menu-tooltip__mobile-list">
+              <li class="menu-tooltip__mobile-item">
+                <a href="#" class="menu-tooltip__mobile-link">Новости</a>
+              </li>
+              <li class="menu-tooltip__mobile-item">
+                <a href="#" class="menu-tooltip__mobile-link">Питомцы</a>
+              </li>
+              <li class="menu-tooltip__mobile-item">
+                <a href="#" class="menu-tooltip__mobile-link">Группы</a>
+              </li>
+            </ul>
+            <ul class="menu-tooltip__list">
+              <li class="menu-tooltip__list-item">
+                <a href="#" class="menu-tooltip__link">Моя страница</a>
+              </li>
+              <li class="menu-tooltip__list-item">
+                <a href="#" class="menu-tooltip__link">Мои Питомцы</a>
+              </li>
+              <li class="menu-tooltip__list-item">
+                <a href="#" class="menu-tooltip__link">Мои группы</a>
+              </li>
+              <li class="menu-tooltip__list-item">
+                <a href="#" class="menu-tooltip__link">Избранное</a>
+              </li>
+              <li class="menu-tooltip__list-item">
+                <a href="#" class="menu-tooltip__link">Друзья</a>
+              </li>
+              <li class="menu-tooltip__list-item">
+                <a href="#" class="menu-tooltip__link">Настройки</a>
+              </li>
+              <li class="menu-tooltip__list-item">
+                <a href="#" class="menu-tooltip__link">Выход</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- основной контент -->
+  <div class="main type-1 owner-page">
+    <div class="container clearfix">
+      <div class="left-col">
+        <div class="owner-card owner-card--main clearfix">
+          <div class="owner-card__image-wrapper">
+            <img src="img/owner-avatar-big.jpg" alt="" class="owner-card__image">
+          </div>
+          <div class="owner-card__info-wrapper">
+            <div class="owner-card__info star-wrapper">
+              <span class="owner-card__rating icon-star"></span>
+              <a href="#" class="owner-card__name">Дядя Федор</a>
+              <span class="owner-card__location">д. Простоквашино</span>
+            </div>
+            <p class="owner-card__bio">Заводчик собак, владелец питомника “Простоквашино”</p>
+          </div>
+        </div>
+        <div class="owner-message owner-message--edit">
+          <form action="#" method="post">
+            <div class="owner-message__input-wrapper">
+              <textarea id="owner-message" class="owner-message__textarea" placeholder="Напишите сообщение">Предлагается для племенного размножения Шарик. Звоните: +7 (945) 345-45-56, Федор</textarea>
+              <div class="owner-message__write-btn">Написать</div>
+            </div>
+          </form>
+        </div>
+        <div class="info-block">
+          <div class="info-block__edit-info">Редактировать информацию</div>
+        </div>
+        <div class="info-block">
+          <div class="pets-block">
+            <div class="pets-block__header-row clearfix">
+              <div class="pets-block__title">Питомцы</div>
+              <a href="#" class="pets-block__show-all">Все</a>
+            </div>
+            <ul class="pets-list">
+              <li class="pets-list__item">
+                <a href="#" class="pets-list__avatar-wrapper">
+                  <img src="img/pet-avatar.jpg" alt="" class="pets-list__avatar">
+                </a>
+                <span class="pet-item-tooltip">
+                  <span class="pet-item-tooltip__name">ШАРИК <span class="pet-item-tooltip__age">(7 лет)</span></span>
+                  <span class="pet-item-tooltip__full-name">Dundarroch premium quality</span>
+                  <span class="pet-item-tooltip__breed">Австралийская  короткохвостая собака</span>
+                </span>
+              </li>
+              <li class="pets-list__item">
+                <a href="#" class="pets-list__avatar-wrapper">
+                  <img src="img/pet-avatar-02.jpg" alt="" class="pets-list__avatar">
+                </a>
+                <span class="pet-item-tooltip">
+                  <span class="pet-item-tooltip__name">ШАРИК <span class="pet-item-tooltip__age">(7 лет)</span></span>
+                  <span class="pet-item-tooltip__full-name">Dundarroch premium quality</span>
+                  <span class="pet-item-tooltip__breed">Австралийская  короткохвостая собака</span>
+                </span>
+              </li>
+              <li class="pets-list__item">
+                <a href="#" class="pets-list__avatar-wrapper">
+                  <img src="img/pet-avatar-03.jpg" alt="" class="pets-list__avatar">
+                </a>
+                <span class="pet-item-tooltip">
+                  <span class="pet-item-tooltip__name">ШАРИК <span class="pet-item-tooltip__age">(7 лет)</span></span>
+                  <span class="pet-item-tooltip__full-name">Dundarroch premium quality</span>
+                  <span class="pet-item-tooltip__breed">Австралийская  короткохвостая собака</span>
+                </span>
+              </li>
+              <li class="pets-list__item">
+                <a href="#" class="pets-list__avatar-wrapper">
+                  <img src="img/pet-avatar.jpg" alt="" class="pets-list__avatar">
+                </a>
+                <span class="pet-item-tooltip">
+                  <span class="pet-item-tooltip__name">ШАРИК <span class="pet-item-tooltip__age">(7 лет)</span></span>
+                  <span class="pet-item-tooltip__full-name">Dundarroch premium quality</span>
+                  <span class="pet-item-tooltip__breed">Австралийская  короткохвостая собака</span>
+                </span>
+              </li>
+              <li class="pets-list__item">
+                <a href="#" class="pets-list__avatar-wrapper">
+                  <img src="img/pet-avatar-02.jpg" alt="" class="pets-list__avatar">
+                </a>
+                <span class="pet-item-tooltip">
+                  <span class="pet-item-tooltip__name">ШАРИК <span class="pet-item-tooltip__age">(7 лет)</span></span>
+                  <span class="pet-item-tooltip__full-name">Dundarroch premium quality</span>
+                  <span class="pet-item-tooltip__breed">Австралийская  короткохвостая собака</span>
+                </span>
+              </li>
+              <li class="pets-list__item">
+                <a href="#" class="pets-list__avatar-wrapper">
+                  <img src="img/pet-avatar-03.jpg" alt="" class="pets-list__avatar">
+                </a>
+                <span class="pet-item-tooltip">
+                  <span class="pet-item-tooltip__name">ШАРИК <span class="pet-item-tooltip__age">(7 лет)</span></span>
+                  <span class="pet-item-tooltip__full-name">Dundarroch premium quality</span>
+                  <span class="pet-item-tooltip__breed">Австралийская  короткохвостая собака</span>
+                </span>
+              </li>
+              <li class="pets-list__item">
+                <a href="#" class="pets-list__avatar-wrapper">
+                  <img src="img/pet-avatar-01.jpg" alt="" class="pets-list__avatar">
+                </a>
+                <span class="pet-item-tooltip">
+                  <span class="pet-item-tooltip__name">ШАРИК <span class="pet-item-tooltip__age">(7 лет)</span></span>
+                  <span class="pet-item-tooltip__full-name">Dundarroch premium quality</span>
+                  <span class="pet-item-tooltip__breed">Австралийская  короткохвостая собака</span>
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class="groups-block">
+            <div class="groups-block__title">Группы</div>
+            <a href="#" class="avatar-wrapper">
+              <img src="img/group-avatar.jpg" alt="" class="avatar">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="main-content tabs">
+        <div class="tab-toggles tab-toggles--horizontal">
+          <div class="tab-toggles__gear-btn">Настроить</div>
+          <a href="#" class="tab-toggles__toggle tab-toggles__toggle--pet-page">Дневник</a>
+          <ul class="tab-toggles__list hidden">
+            <li class="tab-toggle active">
+              <div class="tab-toggle__text">Дневник</div>
+            </li>
+            <li class="tab-toggle">
+              <div class="tab-toggle__text">Питомцы</div>
+            </li>
+            <li class="tab-toggle">
+              <div class="tab-toggle__text">Друзья</div>
+            </li>
+            <li class="tab-toggle">
+              <div class="tab-toggle__text">Фото и видео</div>
+            </li>
+            <li class="tab-toggle">
+              <div class="tab-toggle__text">Информация</div>
+            </li>
+            <li class="tab-toggle">
+              <div class="tab-toggle__text">Файлы</div>
+            </li>
+          </ul>
+        </div>
+        <div class="tabs-container">
+          <div class="tab-content active diary">
+            <div class="inner-tabs">
+              <a href="#" class="inner-tabs__toggle">Все записи</a>
+              <ul class="inner-tabs__list">
+                <li class="inner-tabs__list-item active">Все записи</li>
+                <li class="inner-tabs__list-item">Потомство</li>
+                <li class="inner-tabs__list-item">Выставка</li>
+                <li class="inner-tabs__list-item">Состязание</li>
+                <li class="inner-tabs__list-item">Фотосессия</li>
+              </ul>
+            </div>
+            <article class="news-item news-item--edit">
+              <div class="news-item__close-btn">Скрыть</div>
+              <div class="news-item__information-row">
+                <a href="#" class="news-item__avatar-wrapper">
+                  <img src="img/owner-avatar.jpg" alt="" class="news-item__avatar">
+                </a>
+                <div class="news-item__text-wrapper">
+                  <div class="news-item__title">Дядя Федор</div>
+                  <div class="news-item__info"> д. Простоквашино</div>
+                </div>
+              </div>
+              <div class="news-item__image-container">
+              </div>
+              <p class="news-item__text">Текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения,</p>
+              <div class="news-item__social-row">
+                <a href="#" class="news-item__social-link news-item__social-link--like">Нравится</a>
+                <a href="#" class="news-item__social-link news-item__social-link--comment">Комментарий</a>
+                <a href="#" class="news-item__social-link news-item__social-link--share">Поделиться</a>
+                <div class="news-item__social-container">
+                  <a href="#" class="news-item__social-link news-item__social-link--public">Опубликовать</a>
+                  <div class="news-item-tooltip">
+                    <ul class="news-item-tooltip__list">
+                      <li class="news-item-tooltip__list-item">
+                        <a href="#" class="news-item-tooltip__public-link news-item-tooltip__public-link--vk">Вконтакте</a>
+                      </li>
+                      <li class="news-item-tooltip__list-item">
+                        <a href="#" class="news-item-tooltip__public-link news-item-tooltip__public-link--fb">Facebook</a>
+                      </li>
+                      <li class="news-item-tooltip__list-item">
+                        <a href="#" class="news-item-tooltip__public-link news-item-tooltip__public-link--ok">Однокласники</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="comment-block">
+                <div class="comment-block__show-prev">Показать предыдущие записи (<span class="previous-comments">12</span>)</div>
+                <div class="comment-block__item">
+                  <a href="#" class="comment-block__avatar-wrapper">
+                    <img src="img/avatar-01.jpg" alt="" class="comment-block__avatar">
+                  </a>
+                  <div class="comment-block__comment"><a href="#" class="comment-block__comment--name">Евгения Кукушкина,</a> лдавопдлоавпдовадповадпо ваопдваопдовап оваопдваопд оваопд дваоп овадопд овадповаопд дваоп овадопд овадповаопд дваоп овадопд овадповаопд дваоп овадопд овадповаопд дваоп овадопд овадп <span class="comment-block__comment--date">22.12.11 / 12:30</span></div>
+                </div>
+                <div class="comment-block__item">
+                  <a href="#" class="comment-block__avatar-wrapper">
+                    <img src="img/avatar-02.jpg" alt="" class="comment-block__avatar">
+                  </a>
+                  <div class="comment-block__comment"><a href="#" class="comment-block__comment--name">Игорь Кудрин,</a> лдавопдлоавпдовадповадпо ваопдваопдовап оваопдваопд оваопд дваоп овадопд овадповаопд дваоп овадопд овадповаопд дваоп овадопд овадповаопд дваоп овадопд овадповаопд дваоп овадопд овадп <span class="comment-block__comment--date">22.12.11 / 12:30</span></div>
+                </div>
+                <div class="comment-block__comment-form">
+                  <a href="#" class="comment-block__avatar-wrapper">
+                    <img src="img/owner-avatar.jpg" alt="" class="comment-block__avatar">
+                  </a>
+                  <form action="#" method="post">
+                    <textarea name="new-comment" id="new-comment" class="comment-block__textarea" placeholder="Написать комментарий ..."></textarea>
+                  </form>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="tab-content pets">
+            <div class="inner-tabs inner-tabs--edit">
+              <div class="inner-tabs__add-pet">Добавить питомца</div>
+            </div>
+            <div class="tab-content__wrapper">
+              <div class="pet-card pet-card--edit clearfix">
+                <div class="pet-card__edit-btn">Редактировать</div>
+                <div class="pet-card__image-wrapper">
+                  <img src="img/sharik.jpg" alt="" class="pet-card__image">
+                </div>
+                <div class="pet-card__info-wrapper star-wrapper">
+                  <span class="pet-card__rating icon-star"></span>
+                  <a href="#" class="pet-card__name">Шарик <span class="pet-card__age">(7 лет)</span></a>
+                  <div class="pet-card__text">Dundarroch premium quality</div>
+                  <div class="pet-card__breed">Австралийская короткохвостая собака</div>
+                </div>
+              </div>
+              <div class="pet-card pet-card--edit clearfix">
+                <div class="pet-card__edit-btn">Редактировать</div>
+                <div class="pet-card__image-wrapper">
+                  <img src="img/sharik.jpg" alt="" class="pet-card__image">
+                </div>
+                <div class="pet-card__info-wrapper star-wrapper">
+                  <span class="pet-card__rating icon-star"></span>
+                  <a href="#" class="pet-card__name">Шарик <span class="pet-card__age">(7 лет)</span></a>
+                  <div class="pet-card__text">Dundarroch premium quality</div>
+                  <div class="pet-card__breed">Австралийская короткохвостая собака</div>
+                </div>
+              </div>
+              <div class="pet-card pet-card--edit clearfix">
+                <div class="pet-card__edit-btn">Редактировать</div>
+                <div class="pet-card__image-wrapper">
+                  <img src="img/sharik.jpg" alt="" class="pet-card__image">
+                </div>
+                <div class="pet-card__info-wrapper star-wrapper">
+                  <span class="pet-card__rating icon-star"></span>
+                  <a href="#" class="pet-card__name">Шарик <span class="pet-card__age">(7 лет)</span></a>
+                  <div class="pet-card__text">Dundarroch premium quality</div>
+                  <div class="pet-card__breed">Австралийская короткохвостая собака</div>
+                </div>
+              </div>
+              <div class="pet-card pet-card--edit clearfix">
+                <div class="pet-card__edit-btn">Редактировать</div>
+                <div class="pet-card__image-wrapper">
+                  <img src="img/sharik.jpg" alt="" class="pet-card__image">
+                </div>
+                <div class="pet-card__info-wrapper star-wrapper">
+                  <span class="pet-card__rating icon-star"></span>
+                  <a href="#" class="pet-card__name">Шарик <span class="pet-card__age">(7 лет)</span></a>
+                  <div class="pet-card__text">Dundarroch premium quality</div>
+                  <div class="pet-card__breed">Австралийская короткохвостая собака</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-content friends">
+            <div class="tab-content__wrapper">
+              <div class="owner-card owner-card--edit clearfix">
+                <div class="owner-card__close-btn">Скрыть</div>
+                <div class="owner-card__image-wrapper">
+                  <img src="img/friend-photo-01.jpg" alt="" class="owner-card__image">
+                </div>
+                <div class="owner-card__info-wrapper">
+                  <div class="owner-card__info star-wrapper">
+                    <span class="owner-card__rating icon-star"></span>
+                    <a href="#" class="owner-card__name">Михаил Перегудов</a>
+                    <span class="owner-card__location">г. Москва</span>
+                  </div>
+                  <p class="owner-card__bio">Люблю двортерьеров</p>
+                </div>
+              </div>
+              <div class="owner-card owner-card--edit clearfix">
+                <div class="owner-card__close-btn">Скрыть</div>
+                <div class="owner-card__image-wrapper">
+                  <img src="img/friend-photo-02.jpg" alt="" class="owner-card__image">
+                </div>
+                <div class="owner-card__info-wrapper">
+                  <div class="owner-card__info star-wrapper">
+                    <span class="owner-card__rating icon-star"></span>
+                    <a href="#" class="owner-card__name">Александр Мамин-Сибиряк</a>
+                    <span class="owner-card__location">г. Москва</span>
+                  </div>
+                  <p class="owner-card__bio">Заводчик собак, владелец питомника “Простоквашино”</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-content photos">
+            <div class="inner-tabs">
+              <a href="#" class="inner-tabs__toggle">Все (<span class="entries-all">20</span>)</a>
+              <ul class="inner-tabs__list">
+                <li class="inner-tabs__list-item active">Все (<span class="entries-all">20</span>)</li>
+                <li class="inner-tabs__list-item">Потомство (<span class="entries-breed">4</span>)</li>
+                <li class="inner-tabs__list-item">Выставка (<span class="entries-exibition">10</span>)</li>
+                <li class="inner-tabs__list-item">Состязание</li>
+                <li class="inner-tabs__list-item">Фотосессия</li>
+              </ul>
+            </div>
+            <div class="photo-gallery">
+              <div class="photo-gallery__item photo-gallery__item--edit">
+                <div class="photo-gallery__item-close">Скрыть</div>
+                <img src="img/article-img-news.jpg" class="photo-gallery__image" alt="">
+                <div class="photo-gallery__item-overlay">
+                  <div class="photo-gallery__item-title">Название  фотографии</div>
+                  <div class="photo-gallery__item-edit">
+                    <form action="#" method="post">
+                      <div class="photo-gallery__input-wrapper">
+                        <input type="text" name="change-title" placeholder="Добавить название">
+                      </div>
+                    </form>
+                  </div>
+                  <div class="photo-gallery__item-stats">
+                    <div class="photo-gallery__item-likes"><span class="photo-gallery__item-likes-number">3</span></div>
+                    <div class="photo-gallery__item-comments"><span class="photo-gallery__item-comments-number"></span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="photo-gallery__item photo-gallery__item--edit">
+                <div class="photo-gallery__item-close">Скрыть</div>
+                <img src="img/article-img-news.jpg" class="photo-gallery__image" alt="">
+                <div class="photo-gallery__item-overlay">
+                  <div class="photo-gallery__item-title">Название  фотографии</div>
+                  <div class="photo-gallery__item-edit">
+                    <form action="#" method="post">
+                      <div class="photo-gallery__input-wrapper">
+                        <input type="text" name="change-title" placeholder="Добавить название">
+                      </div>
+                    </form>
+                  </div>
+                  <div class="photo-gallery__item-stats">
+                    <div class="photo-gallery__item-likes"><span class="photo-gallery__item-likes-number">3</span></div>
+                    <div class="photo-gallery__item-comments"><span class="photo-gallery__item-comments-number"></span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="photo-gallery__item photo-gallery__item--edit">
+                <div class="photo-gallery__item-close">Скрыть</div>
+                <img src="img/article-img-news.jpg" class="photo-gallery__image" alt="">
+                <div class="photo-gallery__item-overlay">
+                  <div class="photo-gallery__item-title">Название  фотографии</div>
+                  <div class="photo-gallery__item-edit">
+                    <form action="#" method="post">
+                      <div class="photo-gallery__input-wrapper">
+                        <input type="text" name="change-title" placeholder="Добавить название">
+                      </div>
+                    </form>
+                  </div>
+                  <div class="photo-gallery__item-stats">
+                    <div class="photo-gallery__item-likes"><span class="photo-gallery__item-likes-number">3</span></div>
+                    <div class="photo-gallery__item-comments"><span class="photo-gallery__item-comments-number"></span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="photo-gallery__item photo-gallery__item--edit">
+                <div class="photo-gallery__item-close">Скрыть</div>
+                <img src="img/article-img-news.jpg" class="photo-gallery__image" alt="">
+                <div class="photo-gallery__item-overlay">
+                  <div class="photo-gallery__item-title">Название  фотографии</div>
+                  <div class="photo-gallery__item-edit">
+                    <form action="#" method="post">
+                      <div class="photo-gallery__input-wrapper">
+                        <input type="text" name="change-title" placeholder="Добавить название">
+                      </div>
+                    </form>
+                  </div>
+                  <div class="photo-gallery__item-stats">
+                    <div class="photo-gallery__item-likes"><span class="photo-gallery__item-likes-number">3</span></div>
+                    <div class="photo-gallery__item-comments"><span class="photo-gallery__item-comments-number"></span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="photo-gallery__item photo-gallery__item--edit">
+                <div class="photo-gallery__item-close">Скрыть</div>
+                <img src="img/article-img-news.jpg" class="photo-gallery__image" alt="">
+                <div class="photo-gallery__item-overlay">
+                  <div class="photo-gallery__item-title">Название  фотографии в две строки</div>
+                  <div class="photo-gallery__item-edit">
+                    <form action="#" method="post">
+                      <div class="photo-gallery__input-wrapper">
+                        <input type="text" name="change-title" placeholder="Добавить название">
+                      </div>
+                    </form>
+                  </div>
+                  <div class="photo-gallery__item-stats">
+                    <div class="photo-gallery__item-likes"><span class="photo-gallery__item-likes-number">3</span></div>
+                    <div class="photo-gallery__item-comments"><span class="photo-gallery__item-comments-number"></span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-content info">
+            <div class="info-table-wrapper" id="owner-info">
+              <table class="info-table info-table--edit">
+                  <tr>
+                    <td class="table-left-col">
+                      <div class="info-table__title">Имя и Фамилия</div>
+                    </td>
+                    <td>
+                      <div class="info-table__text">Дядя Федор</div>
+                      <div class="info-table__input-wrapper">
+                        <input type="text" name="cell-value" class="info-table__text-input">
+                        <div class="info-table__edit-btn">Редактировать</div>
+                        <div class="info-table__close-btn">Отменить</div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="table-left-col">
+                      <div class="info-table__title">Место проживания</div>
+                    </td>
+                    <td>
+                      <div class="info-table__text">п. Простоквашино</div>
+                      <div class="info-table__input-wrapper">
+                        <input type="text" name="cell-value" class="info-table__text-input">
+                        <div class="info-table__edit-btn">Редактировать</div>
+                        <div class="info-table__close-btn">Отменить</div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="table-left-col">
+                      <div class="info-table__title">Пару слов о себе</div>
+                    </td>
+                    <td>
+                      <div class="info-table__text">Заводчик собак, владелец питомника “Простоквашино”</div>
+                      <div class="info-table__input-wrapper">
+                        <input type="text" name="cell-value" class="info-table__text-input">
+                        <div class="info-table__edit-btn">Редактировать</div>
+                        <div class="info-table__close-btn">Отменить</div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="table-left-col">
+                      <div class="info-table__title">Дата рождения</div>
+                    </td>
+                    <td>
+                      <div class="info-table__text">1967</div>
+                      <div class="info-table__input-wrapper">
+                        <input type="text" name="cell-value" class="info-table__text-input">
+                        <div class="info-table__edit-btn">Редактировать</div>
+                        <div class="info-table__close-btn">Отменить</div>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+            </div>
+          </div>
+          <div class="tab-content files">
+            <div class="files-container files-container--edit">
+              <div class="files-container__btns-wrapper">
+                <a href="#" class="download-link">Данные.pdf</a>
+                <button class="eye-btn">Скрыть</button>
+                <button class="trash-btn">Удалить</button>
+              </div>
+              <div class="files-container__btns-wrapper">
+                <a href="#" class="download-link">Данные.pdf</a>
+                <button class="eye-btn">Скрыть</button>
+                <button class="trash-btn">Удалить</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="page-footer">
+    <div class="container">
+      <nav class="footer-navigation">
+        <ul class="footer-navigation__list">
+          <li class="footer-navigation__list-item">
+            <a href="#" class="footer-navigation__link">о сайте</a>
+          </li>
+          <li class="footer-navigation__list-item">
+            <a href="#" class="footer-navigation__link">помощь</a>
+          </li>
+          <li class="footer-navigation__list-item">
+            <a href="#" class="footer-navigation__link">правила</a>
+          </li>
+          <li class="footer-navigation__list-item">
+            <a href="#" class="footer-navigation__link">вакансии</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+
+  <script src="js/vendors/jquery.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

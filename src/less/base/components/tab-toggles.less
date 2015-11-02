@@ -144,6 +144,31 @@
   position: relative;
   margin-bottom: 20px;
 
+  &__gear-btn {
+    position: absolute;
+    top: 18px;
+    right: 12px;
+    width: 18px;
+    height: 18px;
+    font-size: 0;
+
+    &:after {
+      content: '\e80e';
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-family: @icon;
+      font-size: 18px;
+      line-height: 18px;
+      color: #ddd;
+      cursor: pointer;
+    }
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+
   &__title {
     position: absolute;
     top: -17px;
@@ -255,16 +280,8 @@
 
   &--edit {
 
-    &:after {
-      content: '\e80e';
-      position: absolute; 
-      top: 18px;
-      right: 18px;
-      font-family: @icon;
-      font-size: 18px;
-      line-height: 18px;
-      color: #656565;
-      cursor: pointer;
+    .tab-toggles__gear-btn {
+      display: block;
     }
   }
 }

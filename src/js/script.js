@@ -172,6 +172,12 @@ $(function() {
     $(this).parents(".news-item").addClass("hidden");
   })
 
+  //скрытие карочки владельца
+  $(".owner-card__close-btn").click(function(event) {
+    event.preventDefault();
+    $(this).parents(".owner-card").addClass("hidden");
+  })
+
   //скрытие фотографии из галереи
   $(".photo-gallery__item-close").click(function(event) {
     event.preventDefault();
