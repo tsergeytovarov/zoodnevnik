@@ -56,6 +56,14 @@
     overflow-y: scroll;
   }
 
+  &--pets,
+  &--group {
+
+    .tabs-container {
+      overflow-y: auto;
+    }
+  }
+
   &__close-btn {
     position: absolute;
     top: 0;
@@ -89,6 +97,22 @@
   &.active {
     display: block;
   }
+
+  .chosen-container-active {
+
+    &.chosen-with-drop {
+
+      .chosen-single {
+        left: -100%;
+        width: 200%;
+      }
+
+      .chosen-drop {
+        left: -100%;
+        width: 200%;
+      }
+    }
+  }
 }
 
 .form-section {
@@ -113,10 +137,12 @@
 
   &__label {
     float: left;
+    padding-top: 12px;
+    padding-bottom: 12px;
     width: 40%;
     text-align: left;
     font-size: 12px;
-    line-height: 38px;
+    line-height: 16px;
     color: #bfbfbf;
   }
 
@@ -163,14 +189,16 @@
     float: right;
     box-sizing: border-box;
     padding-right: 0;
-    width: 45%;
+    width: 30%;
   }
 
   &__select-label {
     float: left;
-    width: 55%;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    width: 70%;
     font-size: 12px;
-    line-height: 50px;
+    line-height: 16px;
     color: #bfbfbf;
   }
 
