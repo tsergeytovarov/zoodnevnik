@@ -241,6 +241,21 @@
         }
       }
     }
+
+    &--modal {
+
+      .tab-toggles {
+
+        &__list {
+          position: static;
+          border-top: none;
+
+          &.hidden {
+            display: block;
+          }
+        }
+      }
+    }
   }
 
   .date-picker {
@@ -868,6 +883,32 @@
   }
 }
 
+@media (max-width: 610px) {
+
+  .modal {
+    margin-left: -240px;
+    width: 480px;
+  }
+
+  .form-section {
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+
+  .form-table {
+    padding-left: 13px;
+    padding-right: 13px;
+
+    &__select-label {
+      width: 70%;
+    }
+
+    &__select-wrapper {
+      width: 30%;
+    }
+  }
+}
+
 @media (max-width: 479px) {
 
   html,
@@ -1351,6 +1392,61 @@
     &__add-user-field {
       left: -14px;
       top: -9px;
+    }
+  }
+
+  .modal {
+    box-sizing: border-box;
+    width: 320px;
+    top: 0;
+    margin-left: -160px;
+
+    .tab-toggle {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+  }
+
+  .modal-form {
+
+    &__label {
+      float: none;
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+
+    input[type="password"],
+    input[type="text"] {
+      float: none;
+      width: 100%;
+    }
+  }
+
+  .form-table {
+    padding-left: 13px;
+    padding-right: 13px;
+
+    &__select-label {
+      padding-top: 18px;
+      padding-bottom: 18px;
+      line-height: 14px;
+    }
+  }
+
+  .chosen-container-active {
+
+    &.chosen-with-drop {
+
+      .chosen-single {
+        left: -200%;
+        width: 300%;
+      }
+
+      .chosen-drop {
+        left: -200%;
+        width: 300%;
+      }
     }
   }
 }
