@@ -204,6 +204,18 @@ $(function() {
     $(this).prev("input").focus();
   })
 
+  //
+  $(".tab-toggles__gear-btn").click(function() {
+    $(".color-overlay").addClass("active");
+    $(".modal").addClass("active");
+  })
+
+  //
+  $(".modal__close-btn").click(function() {
+    $(".color-overlay").removeClass("active");
+    $(".modal").removeClass("active");
+  })
+
   // скролл до якоря
   $(document).ready(function(){
     $("a[href*=#]").bind("click", function(e){

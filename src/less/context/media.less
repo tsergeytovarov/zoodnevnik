@@ -130,6 +130,10 @@
     position: relative;
     margin-bottom: 0;
 
+    &__gear-btn {
+      z-index: 100;
+    }
+
     &__title {
       display: none;
     }
@@ -165,6 +169,10 @@
 
       .owner-page & {
         border-radius: 2px;
+      }
+
+      &:after {
+        right: 45px;
       }
     }
 
@@ -878,6 +886,22 @@
             padding: 8px;
           }
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 666px) {
+
+  .modal {
+
+    &__close-btn {
+      right: 15px;
+      top: 25px;
+      z-index: 1002;
+
+      &:before {
+        color: #656565;
       }
     }
   }
