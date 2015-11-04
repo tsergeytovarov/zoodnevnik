@@ -904,6 +904,16 @@
         color: #656565;
       }
     }
+
+    &--message {
+
+      .news-item {
+
+        &__date-block {
+          margin-right: 12px;
+        }
+      }
+    }
   }
 }
 
@@ -912,6 +922,16 @@
   .modal {
     margin-left: -240px;
     width: 480px;
+
+    &--message {
+
+      .news-item {
+
+        &__date-block {
+          display: none;
+        }
+      }
+    }
   }
 
   .form-section {
@@ -929,6 +949,26 @@
 
     &__select-wrapper {
       width: 30%;
+    }
+  }
+
+  .registration-form {
+
+    &__input-label {
+      float: none;
+      width: 100%;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      float: none;
+      margin-top: 5px;
+      width: 100%;
+    }
+
+    &__checkbox-label {
+      float: none;
+      width: auto;
     }
   }
 }
@@ -1482,6 +1522,22 @@
         left: -200%;
         width: 300%;
       }
+    }
+  }
+
+  .modal-block {
+    padding-left: 22px;
+    padding-right: 22px;
+
+    &__btns-wrapper {
+      width: 275px;
+    }
+  }
+
+  .registration-form {
+
+    &__checkbox-label {
+      display: block;
     }
   }
 }
