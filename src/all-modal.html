@@ -647,7 +647,7 @@
   <div class="modal modal--ancestors" id="father-table">
     <div class="modal__close-btn">Закрыть</div>
     <h3 class="modal__title">Родословная</h3>
-    <div class="ancestor-table-wrapper">
+    <div class="ancestor-table-wrapper scroller default-skin">
       <table class="ancestor-table">
         <tr>
           <td rowspan="8">
@@ -856,10 +856,15 @@
 
   <script src="js/vendors/jquery.js"></script>
   <script src="js/vendors/chosen.jquery.min.js"></script>
+  <script src="js/vendors/jquery.custom-scrollbar.min.js"></script>
   <script src="js/script.js"></script>
 
   <script>
     $(".chosen-select").chosen({disable_search_threshold: 10});
+
+    $(document).ready(function() {
+      $(".scroller").customScrollbar();
+    });
   </script>
 
 </body>
