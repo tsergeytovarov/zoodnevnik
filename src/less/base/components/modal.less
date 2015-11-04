@@ -125,6 +125,10 @@
       width: 900px;
     }
   }
+
+  &--registration {
+    padding-top: 0;
+  }
 }
 
 .form-section {
@@ -248,5 +252,105 @@
 
   input[type="checkbox"]:checked + label {
     color: #656565;
+  }
+}
+
+.modal-block {
+  padding-left: 58px;
+  padding-right: 58px;
+  padding-top: 35px;
+  padding-bottom: 60px;
+  text-align: center;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 40px;
+    text-align: left;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 44px;
+    border-bottom: 1px solid #eee;
+  }
+
+  &__btns-wrapper {
+    margin: 0 auto;
+    width: 295px;
+  }
+
+  &--wave {
+    background-image: url("../img/bg-wave-green.png");
+    background-repeat: repeat-x;
+    background-position: top left;
+  }
+
+  &--green {
+    padding-bottom: 45px;
+    background-color: @green;
+    border-radius: 2px 2px 0 0;
+
+    .modal-block__title {
+      margin-bottom: 50px;
+      color: #fff;
+      border-bottom: 1px solid #83ce9a;
+    }
+  }
+}
+
+.modal-wrapper {
+  max-height: 500px;
+  overflow-y: scroll;
+}
+
+.registration-form {
+  margin-bottom: 40px;
+  text-align: left;
+
+  &__input-label {
+    float: left;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    width: 180px;
+    font-size: 12px;
+    line-height: 16px;
+    color: #bfbfbf;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    float: right;
+    margin-bottom: 14px;
+    padding: 10px;
+    width: 295px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  &__checkbox-label {
+    position: relative;
+    float: right;
+    margin-top: 8px;
+    padding-left: 35px;
+    width: 265px;
+    font-size: 12px;
+    line-height: 14px;
+    color: #bfbfbf;
+
+    &:after {
+      content: '\e816';
+      position: absolute;
+      top: 0;
+      left: 4px;
+      font-family: fontello;
+      font-size: 21px;
+      line-height: 21px;
+      color: #ddd;
+    }
+
+    &:hover {
+
+      &:after {
+        color: #989898;
+      }
+    }
   }
 }

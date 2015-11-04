@@ -118,7 +118,7 @@
     <div class="v-center">
       <div class="container">
         <p class="screen-1__description">Расскажите о своем питомце, ведите его биографию, получите доступ ко всей информации о питомцах сети!</p>
-        <a href="#" class="btn btn--white">Простая регистрация</a>
+        <a href="#registration" class="btn btn--white open-modal">Простая регистрация</a>
       </div>
     </div>
   </section>
@@ -252,6 +252,52 @@
       </nav>
     </div>
   </footer>
+
+  <!-- оверлей открывается по классу active -->
+  <div class="color-overlay"></div>
+
+  <!-- модальный контент, открывается по классу active -->
+  <div class="modal modal--registration" id="registration">
+    <div class="modal__close-btn">Закрыть</div>
+    <div class="modal-wrapper">
+      <div class="modal-block modal-block--green">
+        <h3 class="modal-block__title">Простая регистрация через</h3>
+        <div class="modal-block__btns-wrapper">
+          <a href="#" class="social-big social-big--fb">Facebook</a>
+          <a href="#" class="social-big social-big--vk">Вконтакте</a>
+          <a href="#" class="social-big social-big--ok">Одноклассники</a>
+        </div>
+      </div>
+      <div class="modal-block modal-block--wave">
+        <h3 class="modal-block__title">Обычная регистрация</h3>
+        <form action="#" method="post">
+          <div class="registration-form">
+            <div class="registration-form__field-wrapper clearfix">
+              <label for="username" class="registration-form__input-label">Имя</label>
+              <input type="text" id="username">
+            </div>
+            <div class="registration-form__field-wrapper clearfix">
+              <label for="email-02" class="registration-form__input-label">E-mail</label>
+              <input type="text" id="email-02">
+            </div>
+            <div class="registration-form__field-wrapper clearfix">
+              <label for="password-02" class="registration-form__input-label">Пароль</label>
+              <input type="password" id="password-02">
+            </div>
+            <div class="registration-form__field-wrapper clearfix">
+              <label for="password-02-repeat" class="registration-form__input-label">Повторите пароль</label>
+              <input type="password" id="password-02-repeat">
+            </div>
+            <div class="registration-form__field-wrapper clearfix">
+              <input type="checkbox" id="user-agreement">
+              <label for="user-agreement" class="registration-form__checkbox-label">Принимаю условия пользовательского соглашения</label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn--gray">Зарегистрироваться</button>
+        </form>
+      </div>
+    </div>
+  </div>
 
 
   <script src="js/vendors/jquery.js"></script>
