@@ -905,12 +905,17 @@
       }
     }
 
-    &--message {
+    &--message,
+    &--repost {
 
       .news-item {
 
         &__date-block {
           margin-right: 12px;
+        }
+
+        &__text {
+          max-width: 100%;
         }
       }
     }
@@ -923,7 +928,8 @@
     margin-left: -240px;
     width: 480px;
 
-    &--message {
+    &--message,
+    &--repost {
 
       .news-item {
 
@@ -1213,6 +1219,11 @@
   }
 
   .news-item {
+
+    &__message-text-wrapper {
+      padding-left: 13px;
+      padding-right: 13px;
+    }
 
     &__information-row {
       padding-left: 13px;

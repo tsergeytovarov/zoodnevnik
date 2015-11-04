@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="robots" content="noindex, nofollow">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+  <title>Модальные окна</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+  <!-- основной хедер. по классу logged-in переключается на состояние для залогиненного пользователя, по классу nested - состояние для незалогиненного пользователя с разделителями -->
+  <header class="page-header logged-in type-3">
+    <div class="page-header__inner clearfix">
+      <div class="logo">
+        <a href="index.html" class="logo__link">
+          <img src="img/logo.png" alt="" class="logo__image">
+          <img src="img/logo-small.png" alt="" class="logo__image logo__image--small">
+        </a>
+      </div>
+      <nav class="header-navigation">
+        <ul class="header-navigation__list">
+          <li class="header-navigation__list-item">
+            <a href="type-2-news.html" class="header-navigation__link header-navigation__link--news">Новости</a>
+          </li>
+          <li class="header-navigation__list-item">
+            <a href="#pets" class="header-navigation__link header-navigation__link--pets">Питомцы</a>
+          </li>
+          <li class="header-navigation__list-item">
+            <a href="type-2-groups.html" class="header-navigation__link header-navigation__link--groups">Группы</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="tooltip-container">
+        <a href="#" class="log-in-btn js-tooltip-toggle">Вход</a>
+        <div class="tooltip-content">
+          <div class="tooltip-content__social">
+            <div class="tooltip-content__social-title">Войти через:</div>
+            <div class="tooltip-content__social-wrapper">
+              <a href="#" class="btn btn--social btn--fb">Facebook</a>
+              <a href="#" class="btn btn--social btn--vk">Вконтакте</a>
+              <a href="#" class="btn btn--social btn--ok">Одноклассники</a>
+            </div>
+          </div>
+          <div class="tooltip-content__form-wrapper">
+            <form action="#" method="post">
+              <input type="text" id="email" name="email" placeholder="Email">
+              <input type="password" id="password" name="password" placeholder="Пароль">
+              <button type="submit" class="btn btn--green btn--login">Зарегистрироваться</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="user-options">
+        <div class="user-options__search clearfix">
+          <button type="button" class="user-options__search-button js-search-open-2">Искать</button>
+          <form action="#" method="post">
+            <button type="button" class="user-options__search-close js-search-close-2">Скрыть</button>
+            <input type="text" id="useroptions-search" class="useroptions-search-input" placeholder="Напишите">
+          </form>
+        </div>
+        <div class="user-options__btn">
+          <!-- класс has-new-items показывает метку с новыми сообщениями -->
+          <a href="#" class="user-options__messages">Сообщения</a>
+          <span class="user-options__new-items">5</span>
+        </div>
+        <div class="user-options__btn">
+          <!-- класс has-new-items показывает метку с новыми сообщениями -->
+          <a href="#" class="user-options__notifications">Уведомления</a>
+          <span class="user-options__new-items">5</span>
+        </div>
+        <div class="menu-container">
+          <a href="#" class="avatar-wrapper">
+            <img src="img/avatar.jpg" alt="" class="avatar">
+          </a>
+          <a href="#" class="menu-toggle">Меню</a>
+          <nav class="menu-tooltip">
+            <ul class="menu-tooltip__mobile-list">
+              <li class="menu-tooltip__mobile-item">
+                <a href="#" class="menu-tooltip__mobile-link">Новости</a>
+              </li>
+              <li class="menu-tooltip__mobile-item">
+                <a href="#" class="menu-tooltip__mobile-link">Питомцы</a>
+              </li>
+              <li class="menu-tooltip__mobile-item">
+                <a href="#" class="menu-tooltip__mobile-link">Группы</a>
+              </li>
+            </ul>
+            <ul class="menu-tooltip__list">
+              <li class="menu-tooltip__list-item">
+                <a href="#" class="menu-tooltip__link">Моя страница</a>
+              </li>
+              <li class="menu-tooltip__list-item">
+                <a href="#" class="menu-tooltip__link">Мои Питомцы</a>
+              </li>
+              <li class="menu-tooltip__list-item">
+                <a href="#" class="menu-tooltip__link">Мои группы</a>
+              </li>
+              <li class="menu-tooltip__list-item">
+                <a href="#" class="menu-tooltip__link">Избранное</a>
+              </li>
+              <li class="menu-tooltip__list-item">
+                <a href="#" class="menu-tooltip__link">Друзья</a>
+              </li>
+              <li class="menu-tooltip__list-item">
+                <a href="#" class="menu-tooltip__link">Настройки</a>
+              </li>
+              <li class="menu-tooltip__list-item">
+                <a href="#" class="menu-tooltip__link">Выход</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- основной контент -->
+  <div class="main type-1 owner-page">
+    <div class="container clearfix">
+      <ul>
+        <li>
+          <a href="#registration" class="open-modal">Окно регистрации</a>
+        </li>
+        <li>
+          <a href="#settings-owner" class="open-modal">Настройки (для владельца)</a>
+        </li>
+        <li>
+          <a href="#settings-pet" class="open-modal">Настройки (для питомца)</a>
+        </li>
+        <li>
+          <a href="#settings-group" class="open-modal">Настройки (для группы)</a>
+        </li>
+        <li>
+          <a href="#father-table" class="open-modal">Развернутая таблица родословной</a>
+        </li>
+        <li>
+          <a href="#message" class="open-modal">Модуль сообщения</a>
+        </li>
+        <li>
+          <a href="#repost" class="open-modal">Репост</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <footer class="page-footer">
+    <div class="container">
+      <nav class="footer-navigation">
+        <ul class="footer-navigation__list">
+          <li class="footer-navigation__list-item">
+            <a href="#" class="footer-navigation__link">о сайте</a>
+          </li>
+          <li class="footer-navigation__list-item">
+            <a href="#" class="footer-navigation__link">помощь</a>
+          </li>
+          <li class="footer-navigation__list-item">
+            <a href="#" class="footer-navigation__link">правила</a>
+          </li>
+          <li class="footer-navigation__list-item">
+            <a href="#" class="footer-navigation__link">вакансии</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+
+  <!-- оверлей открывается по классу active -->
+  <div class="color-overlay"></div>
+
+  <!-- модальный контент, открывается по классу active -->
+  <div class="modal modal--registration" id="registration">
+    <div class="modal__close-btn">Закрыть</div>
+    <div class="modal-wrapper">
+      <div class="modal-block modal-block--green">
+        <h3 class="modal-block__title">Простая регистрация через</h3>
+        <div class="modal-block__btns-wrapper">
+          <a href="#" class="social-big social-big--fb">Facebook</a>
+          <a href="#" class="social-big social-big--vk">Вконтакте</a>
+          <a href="#" class="social-big social-big--ok">Одноклассники</a>
+        </div>
+      </div>
+      <div class="modal-block modal-block--wave">
+        <h3 class="modal-block__title">Обычная регистрация</h3>
+        <form action="#" method="post">
+          <div class="registration-form">
+            <div class="registration-form__field-wrapper clearfix">
+              <label for="username" class="registration-form__input-label">Имя</label>
+              <input type="text" id="username">
+            </div>
+            <div class="registration-form__field-wrapper clearfix">
+              <label for="email-02" class="registration-form__input-label">E-mail</label>
+              <input type="text" id="email-02">
+            </div>
+            <div class="registration-form__field-wrapper clearfix">
+              <label for="password-02" class="registration-form__input-label">Пароль</label>
+              <input type="password" id="password-02">
+            </div>
+            <div class="registration-form__field-wrapper clearfix">
+              <label for="password-02-repeat" class="registration-form__input-label">Повторите пароль</label>
+              <input type="password" id="password-02-repeat">
+            </div>
+            <div class="registration-form__field-wrapper clearfix">
+              <input type="checkbox" id="user-agreement">
+              <label for="user-agreement" class="registration-form__checkbox-label">Принимаю условия пользовательского соглашения</label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn--gray">Зарегистрироваться</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal--message" id="message">
+    <div class="modal__close-btn">Закрыть</div>
+    <article class="news-item">
+      <div class="news-item__information-row clearfix">
+        <a href="#" class="news-item__avatar-wrapper">
+          <img src="img/pet-avatar.jpg" alt="" class="news-item__avatar">
+        </a>
+        <div class="news-item__text-wrapper">
+          <div class="news-item__title">ШАРИК</div>
+          <div class="news-item__info">Dundarroch premium quality</div>
+        </div>
+        <div class="news-item__date-block">
+          <div class="news-item__date">22.12.11 / 12:30</div>
+          <a href="#" class="news-item__tag">Потомство</a>
+        </div>
+      </div>
+      <div class="news-item__image-container">
+        <img src="img/article-img-news.jpg" alt="" class="news-item__image">
+      </div>
+      <p class="news-item__text">Текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения,</p>
+      <div class="news-item__social-row">
+        <a href="#" class="news-item__social-link news-item__social-link--like">Нравится</a>
+        <a href="#" class="news-item__social-link news-item__social-link--comment">Комментарий</a>
+        <a href="#" class="news-item__social-link news-item__social-link--share">Поделиться</a>
+        <div class="news-item__social-container">
+          <a href="#" class="news-item__social-link news-item__social-link--public">Опубликовать</a>
+          <div class="news-item-tooltip">
+            <ul class="news-item-tooltip__list">
+              <li class="news-item-tooltip__list-item">
+                <a href="#" class="news-item-tooltip__public-link news-item-tooltip__public-link--vk">Вконтакте</a>
+              </li>
+              <li class="news-item-tooltip__list-item">
+                <a href="#" class="news-item-tooltip__public-link news-item-tooltip__public-link--fb">Facebook</a>
+              </li>
+              <li class="news-item-tooltip__list-item">
+                <a href="#" class="news-item-tooltip__public-link news-item-tooltip__public-link--ok">Однокласники</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="comment-block">
+        <div class="comment-block__show-prev">Показать предыдущие записи (<span class="previous-comments">12</span>)</div>
+        <div class="comment-block__item">
+          <a href="#" class="comment-block__avatar-wrapper">
+            <img src="img/avatar-01.jpg" alt="" class="comment-block__avatar">
+          </a>
+          <div class="comment-block__comment"><a href="#" class="comment-block__comment--name">Евгения Кукушкина,</a> лдавопдлоавпдовадповадпо ваопдваопдовап оваопдваопд оваопд дваоп овадопд овадповаопд дваоп овадопд овадповаопд дваоп овадопд овадповаопд дваоп овадопд овадповаопд дваоп овадопд овадп <span class="comment-block__comment--date">22.12.11 / 12:30</span></div>
+        </div>
+        <div class="comment-block__item">
+          <a href="#" class="comment-block__avatar-wrapper">
+            <img src="img/avatar-02.jpg" alt="" class="comment-block__avatar">
+          </a>
+          <div class="comment-block__comment"><a href="#" class="comment-block__comment--name">Игорь Кудрин,</a> лдавопдлоавпдовадповадпо ваопдваопдовап оваопдваопд оваопд дваоп овадопд овадповаопд дваоп овадопд овадповаопд дваоп овадопд овадповаопд дваоп овадопд овадповаопд дваоп овадопд овадп <span class="comment-block__comment--date">22.12.11 / 12:30</span></div>
+        </div>
+        <div class="comment-block__comment-form">
+          <a href="#" class="comment-block__avatar-wrapper">
+            <img src="img/owner-avatar.jpg" alt="" class="comment-block__avatar">
+          </a>
+          <form action="#" method="post">
+            <textarea name="new-comment" id="new-comment" class="comment-block__textarea" placeholder="Написать комментарий ..."></textarea>
+          </form>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <div class="modal" id="settings-owner">
+    <div class="modal__close-btn">Закрыть</div>
+    <div class="modal__wrapper tabs">
+      <h2 class="modal__title">Настройки</h2>
+      <div class="tab-toggles tab-toggles--modal">
+        <ul class="tab-toggles__list">
+          <li class="tab-toggle active">
+            <div class="tab-toggle__text">Общие</div>
+          </li>
+          <li class="tab-toggle">
+            <div class="tab-toggle__text">Приватность</div>
+          </li>
+          <li class="tab-toggle">
+            <div class="tab-toggle__text">Оповещение</div>
+          </li>
+        </ul>
+      </div>
+      <div class="tabs-container">
+        <div class="tab-content active">
+          <div class="modal-form">
+            <div class="form-section">
+              <form action="#" method="post">
+                <h3 class="form-section__title">Изменить пароль</h3>
+                <div class="modal-form__field-wrapper clearfix">
+                  <label for="old-password" class="modal-form__label">Старый пароль</label>
+                  <input type="password" id="old-password" class="modal-form__input">
+                </div>
+                <div class="modal-form__field-wrapper clearfix">
+                  <label for="new-password" class="modal-form__label">Новый пароль</label>
+                  <input type="password" id="new-password" class="modal-form__input">
+                </div>
+                <div class="modal-form__field-wrapper clearfix">
+                  <label for="repeat-password" class="modal-form__label">Повторите пароль</label>
+                  <input type="password" id="repeat-password" class="modal-form__input">
+                </div>
+                <button type="submit" class="btn btn--gray">Изменить</button>
+              </form>
+            </div>
+            <div class="form-section">
+              <form action="#" method="post">
+                <h3 class="form-section__title">Адрес вашей электронной почты</h3>
+                <div class="modal-form__field-wrapper clearfix">
+                  <label for="current-email" class="modal-form__label">Текущий адрес</label>
+                  <input type="text" id="current-email" class="modal-form__input" value="fedor@gmail.com" disabled>
+                </div>
+                <div class="modal-form__field-wrapper clearfix">
+                  <label for="new-email" class="modal-form__label">Новый адрес</label>
+                  <input type="text" id="new-email" class="modal-form__input">
+                </div>
+                <button type="submit" class="btn btn--gray">Изменить</button>
+              </form>
+            </div>
+            <div class="form-section">
+              <form action="#" method="post">
+                <h3 class="form-section__title">Номер вашего телефона</h3>
+                <div class="modal-form__field-wrapper clearfix">
+                  <label for="current-email" class="modal-form__label">Текущий номер</label>
+                  <input type="text" id="current-phone" class="modal-form__input" value="+7 *** *** ** 58" disabled>
+                </div>
+                <div class="modal-form__field-wrapper clearfix">
+                  <label for="new-email" class="modal-form__label">Новый номер</label>
+                  <input type="text" id="new-phone" class="modal-form__input" placeholder="+7 ХХХ ХХХ ХХ ХХ">
+                </div>
+                <button type="submit" class="btn btn--gray">Изменить</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="tab-content">
+          <div class="form-table">
+            <form action="#" method="post">
+              <h3 class="form-table__title">Общая</h3>
+              <div class="form-table__select-row clearfix">
+                <label for="page-visibility" class="form-table__select-label">Кто может видеть эту страницу</label>
+                <div class="form-table__select-wrapper">
+                  <select name="page-visibility" id="page-visibility" class="form-table__select chosen-select" data-placeholder="Все">
+                    <option value="0"></option>
+                    <option value="1">Все</option>
+                    <option value="2">Только я</option>
+                    <option value="3">Только я и мои друзья</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-table__select-row clearfix">
+                <label for="friends" class="form-table__select-label">Кто может добавлять меня в друзья</label>
+                <div class="form-table__select-wrapper">
+                  <select name="friends" id="friends" class="form-table__select chosen-select" data-placeholder="Все">
+                    <option value="0"></option>
+                    <option value="1">Все</option>
+                    <option value="2">Только я</option>
+                    <option value="3">Только я и мои друзья</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-table__select-row clearfix">
+                <label for="diary-visibility" class="form-table__select-label">Кто видит дневник</label>
+                <div class="form-table__select-wrapper">
+                  <select name="diary-visibility" id="diary-visibility" class="form-table__select chosen-select" data-placeholder="Все">
+                    <option value="0"></option>
+                    <option value="1">Все</option>
+                    <option value="2">Только я</option>
+                    <option value="3">Только я и мои друзья</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-table__select-row clearfix">
+                <label for="photos-visibility" class="form-table__select-label">Кто может смотреть фотографии</label>
+                <div class="form-table__select-wrapper">
+                  <select name="photos-visibility" id="photos-visibility" class="form-table__select chosen-select" data-placeholder="Все">
+                    <option value="0"></option>
+                    <option value="1">Все</option>
+                    <option value="2">Только я</option>
+                    <option value="3">Только я и мои друзья</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-table__select-row clearfix">
+                <label for="friends-visibility" class="form-table__select-label">Кто может смотреть список моих друзей</label>
+                <div class="form-table__select-wrapper">
+                  <select name="friends-visibility" id="friends-visibility" class="form-table__select chosen-select" data-placeholder="Все">
+                    <option value="0"></option>
+                    <option value="1">Все</option>
+                    <option value="2">Только я</option>
+                    <option value="3">Только я и мои друзья</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-table__select-row clearfix">
+                <label for="info-visibility" class="form-table__select-label">Кто может смотреть информацию</label>
+                <div class="form-table__select-wrapper">
+                  <select name="info-visibility" id="info-visibility" class="form-table__select chosen-select" data-placeholder="Все">
+                    <option value="0"></option>
+                    <option value="1">Все</option>
+                    <option value="2">Только я</option>
+                    <option value="3">Только я и мои друзья</option>
+                  </select>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="form-table">
+            <form action="#" method="post">
+              <h3 class="form-table__title">Дневник</h3>
+              <div class="form-table__select-row clearfix">
+                <label for="page-visibility-02" class="form-table__select-label">Кто может видеть эту страницу</label>
+                <div class="form-table__select-wrapper">
+                  <select name="page-visibility-02" id="page-visibility-02" class="form-table__select chosen-select" data-placeholder="Все">
+                    <option value="0"></option>
+                    <option value="1">Все</option>
+                    <option value="2">Только я</option>
+                    <option value="3">Только я и мои друзья</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-table__select-row clearfix">
+                <label for="friends-02" class="form-table__select-label">Кто может добавлять меня в друзья</label>
+                <div class="form-table__select-wrapper">
+                  <select name="friends-02" id="friends-02" class="form-table__select chosen-select" data-placeholder="Все">
+                    <option value="0"></option>
+                    <option value="1">Все</option>
+                    <option value="2">Только я</option>
+                    <option value="3">Только я и мои друзья</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-table__select-row clearfix">
+                <label for="diary-visibility-02" class="form-table__select-label">Кто видит дневник</label>
+                <div class="form-table__select-wrapper">
+                  <select name="diary-visibility-02" id="diary-visibility-02" class="form-table__select chosen-select" data-placeholder="Все">
+                    <option value="0"></option>
+                    <option value="1">Все</option>
+                    <option value="2">Только я</option>
+                    <option value="3">Только я и мои друзья</option>
+                  </select>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="tab-content">
+          <div class="form-table">
+            <form action="#" method="post">
+              <h3 class="form-table__title">Оповещения по электронной почте</h3>
+              <input type="checkbox" id="friend-requests" class="form-table__checkbox-input" checked>
+              <label for="friend-requests" class="form-table__checkbox-label">Заявки в друзья</label>
+              <input type="checkbox" id="friend-recommendations" class="form-table__checkbox-input">
+              <label for="friend-recommendations" class="form-table__checkbox-label">Возможные друзья</label>
+              <input type="checkbox" id="personal-messages" class="form-table__checkbox-input">
+              <label for="personal-messages" class="form-table__checkbox-label">Личные сообщения</label>
+              <input type="checkbox" id="photo-tags" class="form-table__checkbox-input">
+              <label for="photo-tags" class="form-table__checkbox-label">Отметки на фотографиях</label>
+              <input type="checkbox" id="timeline-messages" class="form-table__checkbox-input" checked>
+              <label for="timeline-messages" class="form-table__checkbox-label">Сообщения на стене</label>
+              <input type="checkbox" id="timeline-comments" class="form-table__checkbox-input">
+              <label for="timeline-comments" class="form-table__checkbox-label">Комментарии на стене</label>
+              <input type="checkbox" id="photo-comments" class="form-table__checkbox-input">
+              <label for="photo-comments" class="form-table__checkbox-label">Комментарии к фотографиям</label>
+              <input type="checkbox" id="video-comments" class="form-table__checkbox-input">
+              <label for="video-comments" class="form-table__checkbox-label">Комментарии к видеозаписям</label>
+              <input type="checkbox" id="comment-answers" class="form-table__checkbox-input">
+              <label for="comment-answers" class="form-table__checkbox-label">Ответы в комментариях</label>
+              <input type="checkbox" id="group-invitations" class="form-table__checkbox-input">
+              <label for="group-invitations" class="form-table__checkbox-label">Приглашения в группы</label>
+              <input type="checkbox" id="birthdays" class="form-table__checkbox-input">
+              <label for="birthdays" class="form-table__checkbox-label">Дни рождения</label>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal--pets" id="settings-pet">
+    <div class="modal__close-btn">Закрыть</div>
+    <div class="modal__wrapper tabs">
+      <h2 class="modal__title">Настройки</h2>
+      <div class="tab-toggles tab-toggles--modal">
+        <ul class="tab-toggles__list tab-toggles__list--single">
+          <li class="tab-toggle active">
+            <div class="tab-toggle__text">Приватность</div>
+          </li>
+        </ul>
+      </div>
+      <div class="tabs-container">
+        <div class="tab-content active">
+          <div class="form-table">
+            <form action="#" method="post">
+              <h3 class="form-table__title">Общая</h3>
+              <div class="form-table__select-row clearfix">
+                <label for="page-visibility-03" class="form-table__select-label">Кто может видеть эту страницу</label>
+                <div class="form-table__select-wrapper">
+                  <select name="page-visibility-03" id="page-visibility-03" class="form-table__select chosen-select" data-placeholder="Все">
+                    <option value="0"></option>
+                    <option value="1">Все</option>
+                    <option value="2">Только я</option>
+                    <option value="3">Только я и мои друзья</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-table__select-row clearfix">
+                <label for="diary-visibility-03" class="form-table__select-label">Кто видит дневник</label>
+                <div class="form-table__select-wrapper">
+                  <select name="diary-visibility-03" id="diary-visibility-03" class="form-table__select chosen-select" data-placeholder="Все">
+                    <option value="0"></option>
+                    <option value="1">Все</option>
+                    <option value="2">Только я</option>
+                    <option value="3">Только я и мои друзья</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-table__select-row clearfix">
+                <label for="diary-subscribers" class="form-table__select-label">Кто может подписаться на дневник</label>
+                <div class="form-table__select-wrapper">
+                  <select name="diary-subscribers" id="diary-subscribers" class="form-table__select chosen-select" data-placeholder="Все">
+                    <option value="0"></option>
+                    <option value="1">Все</option>
+                    <option value="2">Только я</option>
+                    <option value="3">Только я и мои друзья</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-table__select-row clearfix">
+                <label for="photos-visibility-03" class="form-table__select-label">Кто может смотреть фотографии</label>
+                <div class="form-table__select-wrapper">
+                  <select name="photos-visibility-03" id="photos-visibility-03" class="form-table__select chosen-select" data-placeholder="Все">
+                    <option value="0"></option>
+                    <option value="1">Все</option>
+                    <option value="2">Только я</option>
+                    <option value="3">Только я и мои друзья</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-table__select-row clearfix">
+                <label for="info-visibility-02" class="form-table__select-label">Кто может смотреть информацию</label>
+                <div class="form-table__select-wrapper">
+                  <select name="info-visibility-02" id="info-visibility-02" class="form-table__select chosen-select" data-placeholder="Все">
+                    <option value="0"></option>
+                    <option value="1">Все</option>
+                    <option value="2">Только я</option>
+                    <option value="3">Только я и мои друзья</option>
+                  </select>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal--group" id="settings-group">
+    <div class="modal__close-btn">Закрыть</div>
+    <div class="modal__wrapper tabs">
+      <h2 class="modal__title">Настройки</h2>
+      <div class="tab-toggles tab-toggles--modal">
+        <ul class="tab-toggles__list tab-toggles__list--single">
+          <li class="tab-toggle active">
+            <div class="tab-toggle__text">Приватность</div>
+          </li>
+        </ul>
+      </div>
+      <div class="tabs-container">
+        <div class="tab-content active">
+          <div class="form-table">
+            <form action="#" method="post">
+              <h3 class="form-table__title">Общая</h3>
+              <div class="form-table__select-row clearfix">
+                <label for="diary-write" class="form-table__select-label">Кто может писать в дневник группы</label>
+                <div class="form-table__select-wrapper">
+                  <select name="diary-write" id="diary-write" class="form-table__select chosen-select" data-placeholder="Все">
+                    <option value="0"></option>
+                    <option value="1">Все</option>
+                    <option value="2">Только я</option>
+                    <option value="3">Только я и мои друзья</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-table__select-row clearfix">
+                <label for="diary-read" class="form-table__select-label">Кто может читать дневник</label>
+                <div class="form-table__select-wrapper">
+                  <select name="diary-read" id="diary-read" class="form-table__select chosen-select" data-placeholder="Все">
+                    <option value="0"></option>
+                    <option value="1">Все</option>
+                    <option value="2">Только я</option>
+                    <option value="3">Только я и мои друзья</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-table__select-row clearfix">
+                <label for="confirm-subscription" class="form-table__select-label">Подтверждение руководства при подписке на дневник</label>
+                <div class="form-table__select-wrapper">
+                  <select name="confirm-subscription" id="confirm-subscription" class="form-table__select chosen-select" data-placeholder="Нет">
+                    <option value="0"></option>
+                    <option value="1">Нет</option>
+                    <option value="2">Да</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-table__select-row clearfix">
+                <label for="group-visibility" class="form-table__select-label">Кто может видеть группу</label>
+                <div class="form-table__select-wrapper">
+                  <select name="group-visibility" id="group-visibility" class="form-table__select chosen-select" data-placeholder="Все">
+                    <option value="0"></option>
+                    <option value="1">Все</option>
+                    <option value="2">Только я</option>
+                    <option value="3">Только я и мои друзья</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-table__select-row clearfix">
+                <label for="group-subscribers" class="form-table__select-label">Кто может подписаться на группу</label>
+                <div class="form-table__select-wrapper">
+                  <select name="group-subscribers" id="group-subscribers" class="form-table__select chosen-select" data-placeholder="Все">
+                    <option value="0"></option>
+                    <option value="1">Все</option>
+                    <option value="2">Только я</option>
+                    <option value="3">Только я и мои друзья</option>
+                  </select>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal--ancestors" id="father-table">
+    <div class="modal__close-btn">Закрыть</div>
+    <h3 class="modal__title">Родословная</h3>
+    <div class="ancestor-table-wrapper">
+      <table class="ancestor-table">
+        <tr>
+          <td rowspan="8">
+            <div class="ancestor-table__inner">
+              <div class="ancestor-table__avatar-wrapper">
+                <img src="img/pet-avatar-01.jpg" alt="" class="ancestor-table__avatar">
+              </div>
+              <div class="ancestor-table__name">БИМ</div>
+              <div class="ancestor-table__details">Maryvics IBM Think</div>
+              <div class="ancestor-table__details">RKF 21009933</div>
+              <div class="ancestor-table__details">23.09.2005</div>
+              <div class="ancestor-table__details">Россия</div>
+              <div class="ancestor-table__details">Ch RUS, FIN</div>
+            </div>
+          </td>
+          <td rowspan="4">
+            <div class="ancestor-table__inner">
+              <div class="ancestor-table__name">МУХТАР</div>
+              <div class="ancestor-table__details">Maryvics IBM Think</div>
+              <div class="ancestor-table__details">RKF 21009933</div>
+              <div class="ancestor-table__details">Ch RUS, FIN</div>
+            </div>
+          </td>
+          <td rowspan="2">
+            <div class="ancestor-table__inner">
+              <div class="ancestor-table__name">Maryvics IBM Think</div>
+              <div class="ancestor-table__details">RKF 21009933</div>
+              <div class="ancestor-table__details">Ch RUS, FIN</div>
+            </div>
+          </td>
+          <td>
+            <div class="ancestor-table__inner">
+              <div class="ancestor-table__name">Maryvics IBM Think</div>
+              <div class="ancestor-table__details">RKF 21009933</div>
+              <div class="ancestor-table__details">Ch RUS, FIN</div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="ancestor-table__inner">
+              <div class="ancestor-table__name">Maryvics IBM Think</div>
+              <div class="ancestor-table__details">RKF 21009933</div>
+              <div class="ancestor-table__details">Ch RUS, FIN</div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="2">
+            <div class="ancestor-table__inner">
+              <div class="ancestor-table__name">Maryvics IBM Think</div>
+              <div class="ancestor-table__details">RKF 21009933</div>
+              <div class="ancestor-table__details">Ch RUS, FIN</div>
+            </div>
+          </td>
+          <td>
+            <div class="ancestor-table__inner">
+              <div class="ancestor-table__name">Maryvics IBM Think</div>
+              <div class="ancestor-table__details">RKF 21009933</div>
+              <div class="ancestor-table__details">Ch RUS, FIN</div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="ancestor-table__inner">
+              <div class="ancestor-table__name">Maryvics IBM Think</div>
+              <div class="ancestor-table__details">RKF 21009933</div>
+              <div class="ancestor-table__details">Ch RUS, FIN</div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="4">
+            <div class="ancestor-table__inner">
+              <div class="ancestor-table__name">МУХТАР</div>
+              <div class="ancestor-table__details">Maryvics IBM Think</div>
+              <div class="ancestor-table__details">RKF 21009933</div>
+              <div class="ancestor-table__details">Ch RUS, FIN</div>
+            </div>
+          </td>
+          <td rowspan="2">
+            <div class="ancestor-table__inner">
+              <div class="ancestor-table__name">Maryvics IBM Think</div>
+              <div class="ancestor-table__details">RKF 21009933</div>
+              <div class="ancestor-table__details">Ch RUS, FIN</div>
+            </div>
+          </td>
+          <td>
+            <div class="ancestor-table__inner">
+              <div class="ancestor-table__name">Maryvics IBM Think</div>
+              <div class="ancestor-table__details">RKF 21009933</div>
+              <div class="ancestor-table__details">Ch RUS, FIN</div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="ancestor-table__inner">
+              <div class="ancestor-table__name">Maryvics IBM Think</div>
+              <div class="ancestor-table__details">RKF 21009933</div>
+              <div class="ancestor-table__details">Ch RUS, FIN</div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="2">
+            <div class="ancestor-table__inner">
+              <div class="ancestor-table__name">Maryvics IBM Think</div>
+              <div class="ancestor-table__details">RKF 21009933</div>
+              <div class="ancestor-table__details">Ch RUS, FIN</div>
+            </div>
+          </td>
+          <td>
+            <div class="ancestor-table__inner">
+              <div class="ancestor-table__name">Maryvics IBM Think</div>
+              <div class="ancestor-table__details">RKF 21009933</div>
+              <div class="ancestor-table__details">Ch RUS, FIN</div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="ancestor-table__inner">
+              <div class="ancestor-table__name">Maryvics IBM Think</div>
+              <div class="ancestor-table__details">RKF 21009933</div>
+              <div class="ancestor-table__details">Ch RUS, FIN</div>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="modal modal--repost" id="repost">
+    <div class="modal__close-btn">Закрыть</div>
+    <article class="news-item">
+      <div class="news-item__information-row clearfix">
+        <a href="#" class="news-item__avatar-wrapper">
+          <img src="img/owner-avatar.jpg" alt="" class="news-item__avatar">
+        </a>
+        <div class="news-item__text-wrapper">
+          <div class="news-item__title">Дядя Федор</div>
+          <div class="news-item__info">д. Простоквашино</div>
+        </div>
+        <div class="news-item__date-block">
+          <div class="news-item__date">22.12.11 / 12:30</div>
+        </div>
+      </div>
+      <div class="news-item__image-container">
+        <img src="img/article-img-news.jpg" alt="" class="news-item__image">
+      </div>
+      <div class="news-item__message-text-wrapper">
+        <div class="news-item__text">
+          <div>Текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения,</div>
+          <div class="news-item__message-author">@Бобик-бобик</div>
+        </div>
+      </div>
+      <div class="news-item__social-row">
+        <a href="#" class="news-item__social-link news-item__social-link--like">Нравится</a>
+        <a href="#" class="news-item__social-link news-item__social-link--comment">Комментарий</a>
+        <a href="#" class="news-item__social-link news-item__social-link--share">Поделиться</a>
+        <div class="news-item__social-container">
+          <a href="#" class="news-item__social-link news-item__social-link--public">Опубликовать</a>
+          <div class="news-item-tooltip">
+            <ul class="news-item-tooltip__list">
+              <li class="news-item-tooltip__list-item">
+                <a href="#" class="news-item-tooltip__public-link news-item-tooltip__public-link--vk">Вконтакте</a>
+              </li>
+              <li class="news-item-tooltip__list-item">
+                <a href="#" class="news-item-tooltip__public-link news-item-tooltip__public-link--fb">Facebook</a>
+              </li>
+              <li class="news-item-tooltip__list-item">
+                <a href="#" class="news-item-tooltip__public-link news-item-tooltip__public-link--ok">Однокласники</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="comment-block">
+        <div class="comment-block__show-prev">Показать предыдущие записи (<span class="previous-comments">12</span>)</div>
+        <div class="comment-block__item">
+          <a href="#" class="comment-block__avatar-wrapper">
+            <img src="img/avatar-01.jpg" alt="" class="comment-block__avatar">
+          </a>
+          <div class="comment-block__comment"><a href="#" class="comment-block__comment--name">Евгения Кукушкина,</a> лдавопдлоавпдовадповадпо ваопдваопдовап оваопдваопд оваопд дваоп овадопд овадповаопд дваоп овадопд овадповаопд дваоп овадопд овадповаопд дваоп овадопд овадповаопд дваоп овадопд овадп <span class="comment-block__comment--date">22.12.11 / 12:30</span></div>
+        </div>
+        <div class="comment-block__item">
+          <a href="#" class="comment-block__avatar-wrapper">
+            <img src="img/avatar-02.jpg" alt="" class="comment-block__avatar">
+          </a>
+          <div class="comment-block__comment"><a href="#" class="comment-block__comment--name">Игорь Кудрин,</a> лдавопдлоавпдовадповадпо ваопдваопдовап оваопдваопд оваопд дваоп овадопд овадповаопд дваоп овадопд овадповаопд дваоп овадопд овадповаопд дваоп овадопд овадповаопд дваоп овадопд овадп <span class="comment-block__comment--date">22.12.11 / 12:30</span></div>
+        </div>
+        <div class="comment-block__comment-form">
+          <a href="#" class="comment-block__avatar-wrapper">
+            <img src="img/owner-avatar.jpg" alt="" class="comment-block__avatar">
+          </a>
+          <form action="#" method="post">
+            <textarea name="new-comment" id="new-comment-02" class="comment-block__textarea" placeholder="Написать комментарий ..."></textarea>
+          </form>
+        </div>
+      </div>
+    </article>
+  </div>
+
+
+  <script src="js/vendors/jquery.js"></script>
+  <script src="js/vendors/chosen.jquery.min.js"></script>
+  <script src="js/script.js"></script>
+
+  <script>
+    $(".chosen-select").chosen({disable_search_threshold: 10});
+  </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
