@@ -204,17 +204,28 @@ $(function() {
     $(this).prev("input").focus();
   })
 
-  //
-  $(".tab-toggles__gear-btn").click(function() {
-    $(".color-overlay").addClass("active");
-    $(".modal").addClass("active");
-  })
+  // модальные окна
+  $(document).ready(function() {
+    var overlay = $('.color-overlay');
+    var open_modal = $('.open-modal');
+    var close = $('.modal__close-btn, .color-overlay');
+    var modal = $('.modal');
 
-  //
-  $(".modal__close-btn").click(function() {
-    $(".color-overlay").removeClass("active");
-    $(".modal").removeClass("active");
-  })
+    open_modal.click( function(event){
+      event.preventDefault();
+      var div = $(this).attr('href');
+      overlay.fadeIn(400, function(){
+        $(div).css('display', 'block').animate({opacity: 1,}, 200);
+      });
+    });
+
+    close.click( function(){
+      modal.animate({opacity: 0}, 200, function(){
+        $(this).css('display', 'none');
+        overlay.fadeOut(400);
+      });
+    });
+  });
 
   // скролл до якоря
   $(document).ready(function(){
