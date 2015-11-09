@@ -204,7 +204,7 @@ $(function() {
     $(this).prev("input").focus();
   })
 
-  // модальные окна
+  /*// модальные окна
   $(document).ready(function() {
     var overlay = $('.color-overlay');
     var open_modal = $('.open-modal');
@@ -225,7 +225,7 @@ $(function() {
         overlay.fadeOut(400);
       });
     });
-  });
+  });*/
 
   // скролл до якоря
   $(document).ready(function(){

@@ -231,7 +231,7 @@
       </div>
       <div class="main-content tabs">
         <div class="tab-toggles tab-toggles--horizontal">
-          <a href="#settings" class="tab-toggles__gear-btn open-modal">Настроить</a>
+          <a href="#settings" class="tab-toggles__gear-btn open-modal" data-toggle="modal" data-target="#settings">Настроить</a>
           <a href="#" class="tab-toggles__toggle tab-toggles__toggle--pet-page">Дневник</a>
           <ul class="tab-toggles__list hidden">
             <li class="tab-toggle active">
@@ -618,216 +618,217 @@
     </div>
   </footer>
 
-  <!-- оверлей открывается по классу active -->
-  <div class="color-overlay"></div>
 
-  <!-- модальный контент, открывается по классу active -->
-  <div class="modal" id="settings">
-    <div class="modal__close-btn">Закрыть</div>
-    <div class="modal__wrapper tabs">
-      <h2 class="modal__title">Настройки</h2>
-      <div class="tab-toggles tab-toggles--modal">
-        <ul class="tab-toggles__list">
-          <li class="tab-toggle active">
-            <div class="tab-toggle__text">Общие</div>
-          </li>
-          <li class="tab-toggle">
-            <div class="tab-toggle__text">Приватность</div>
-          </li>
-          <li class="tab-toggle">
-            <div class="tab-toggle__text">Оповещение</div>
-          </li>
-        </ul>
-      </div>
-      <div class="tabs-container">
-        <div class="tab-content active">
-          <div class="modal-form">
-            <div class="form-section">
-              <form action="#" method="post">
-                <h3 class="form-section__title">Изменить пароль</h3>
-                <div class="modal-form__field-wrapper clearfix">
-                  <label for="old-password" class="modal-form__label">Старый пароль</label>
-                  <input type="password" id="old-password" class="modal-form__input">
-                </div>
-                <div class="modal-form__field-wrapper clearfix">
-                  <label for="new-password" class="modal-form__label">Новый пароль</label>
-                  <input type="password" id="new-password" class="modal-form__input">
-                </div>
-                <div class="modal-form__field-wrapper clearfix">
-                  <label for="repeat-password" class="modal-form__label">Повторите пароль</label>
-                  <input type="password" id="repeat-password" class="modal-form__input">
-                </div>
-                <button type="submit" class="btn btn--gray">Изменить</button>
-              </form>
-            </div>
-            <div class="form-section">
-              <form action="#" method="post">
-                <h3 class="form-section__title">Адрес вашей электронной почты</h3>
-                <div class="modal-form__field-wrapper clearfix">
-                  <label for="current-email" class="modal-form__label">Текущий адрес</label>
-                  <input type="text" id="current-email" class="modal-form__input" value="fedor@gmail.com" disabled>
-                </div>
-                <div class="modal-form__field-wrapper clearfix">
-                  <label for="new-email" class="modal-form__label">Новый адрес</label>
-                  <input type="text" id="new-email" class="modal-form__input">
-                </div>
-                <button type="submit" class="btn btn--gray">Изменить</button>
-              </form>
-            </div>
-            <div class="form-section">
-              <form action="#" method="post">
-                <h3 class="form-section__title">Номер вашего телефона</h3>
-                <div class="modal-form__field-wrapper clearfix">
-                  <label for="current-email" class="modal-form__label">Текущий номер</label>
-                  <input type="text" id="current-phone" class="modal-form__input" value="+7 *** *** ** 58" disabled>
-                </div>
-                <div class="modal-form__field-wrapper clearfix">
-                  <label for="new-email" class="modal-form__label">Новый номер</label>
-                  <input type="text" id="new-phone" class="modal-form__input" placeholder="+7 ХХХ ХХХ ХХ ХХ">
-                </div>
-                <button type="submit" class="btn btn--gray">Изменить</button>
-              </form>
-            </div>
+  <div class="modal fade" id="settings" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal__close-btn close" data-dismiss="modal">Закрыть</div>
+        <div class="modal__wrapper tabs">
+          <h2 class="modal__title">Настройки</h2>
+          <div class="tab-toggles tab-toggles--modal">
+            <ul class="tab-toggles__list">
+              <li class="tab-toggle active">
+                <div class="tab-toggle__text">Общие</div>
+              </li>
+              <li class="tab-toggle">
+                <div class="tab-toggle__text">Приватность</div>
+              </li>
+              <li class="tab-toggle">
+                <div class="tab-toggle__text">Оповещение</div>
+              </li>
+            </ul>
           </div>
-        </div>
-        <div class="tab-content">
-          <div class="form-table">
-            <form action="#" method="post">
-              <h3 class="form-table__title">Общая</h3>
-              <div class="form-table__select-row clearfix">
-                <label for="page-visibility" class="form-table__select-label">Кто может видеть эту страницу</label>
-                <div class="form-table__select-wrapper">
-                  <select name="page-visibility" id="page-visibility" class="form-table__select chosen-select" data-placeholder="Все">
-                    <option value="0"></option>
-                    <option value="1">Все</option>
-                    <option value="2">Только я</option>
-                    <option value="3">Только я и мои друзья</option>
-                  </select>
+          <div class="tabs-container">
+            <div class="tab-content active">
+              <div class="modal-form">
+                <div class="form-section">
+                  <form action="#" method="post">
+                    <h3 class="form-section__title">Изменить пароль</h3>
+                    <div class="modal-form__field-wrapper clearfix">
+                      <label for="old-password" class="modal-form__label">Старый пароль</label>
+                      <input type="password" id="old-password" class="modal-form__input">
+                    </div>
+                    <div class="modal-form__field-wrapper clearfix">
+                      <label for="new-password" class="modal-form__label">Новый пароль</label>
+                      <input type="password" id="new-password" class="modal-form__input">
+                    </div>
+                    <div class="modal-form__field-wrapper clearfix">
+                      <label for="repeat-password" class="modal-form__label">Повторите пароль</label>
+                      <input type="password" id="repeat-password" class="modal-form__input">
+                    </div>
+                    <button type="submit" class="btn btn--gray">Изменить</button>
+                  </form>
+                </div>
+                <div class="form-section">
+                  <form action="#" method="post">
+                    <h3 class="form-section__title">Адрес вашей электронной почты</h3>
+                    <div class="modal-form__field-wrapper clearfix">
+                      <label for="current-email" class="modal-form__label">Текущий адрес</label>
+                      <input type="text" id="current-email" class="modal-form__input" value="fedor@gmail.com" disabled>
+                    </div>
+                    <div class="modal-form__field-wrapper clearfix">
+                      <label for="new-email" class="modal-form__label">Новый адрес</label>
+                      <input type="text" id="new-email" class="modal-form__input">
+                    </div>
+                    <button type="submit" class="btn btn--gray">Изменить</button>
+                  </form>
+                </div>
+                <div class="form-section">
+                  <form action="#" method="post">
+                    <h3 class="form-section__title">Номер вашего телефона</h3>
+                    <div class="modal-form__field-wrapper clearfix">
+                      <label for="current-email" class="modal-form__label">Текущий номер</label>
+                      <input type="text" id="current-phone" class="modal-form__input" value="+7 *** *** ** 58" disabled>
+                    </div>
+                    <div class="modal-form__field-wrapper clearfix">
+                      <label for="new-email" class="modal-form__label">Новый номер</label>
+                      <input type="text" id="new-phone" class="modal-form__input" placeholder="+7 ХХХ ХХХ ХХ ХХ">
+                    </div>
+                    <button type="submit" class="btn btn--gray">Изменить</button>
+                  </form>
                 </div>
               </div>
-              <div class="form-table__select-row clearfix">
-                <label for="friends" class="form-table__select-label">Кто может добавлять меня в друзья</label>
-                <div class="form-table__select-wrapper">
-                  <select name="friends" id="friends" class="form-table__select chosen-select" data-placeholder="Все">
-                    <option value="0"></option>
-                    <option value="1">Все</option>
-                    <option value="2">Только я</option>
-                    <option value="3">Только я и мои друзья</option>
-                  </select>
-                </div>
+            </div>
+            <div class="tab-content">
+              <div class="form-table">
+                <form action="#" method="post">
+                  <h3 class="form-table__title">Общая</h3>
+                  <div class="form-table__select-row clearfix">
+                    <label for="page-visibility" class="form-table__select-label">Кто может видеть эту страницу</label>
+                    <div class="form-table__select-wrapper">
+                      <select name="page-visibility" id="page-visibility" class="form-table__select chosen-select" data-placeholder="Все">
+                        <option value="0"></option>
+                        <option value="1">Все</option>
+                        <option value="2">Только я</option>
+                        <option value="3">Только я и мои друзья</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-table__select-row clearfix">
+                    <label for="friends" class="form-table__select-label">Кто может добавлять меня в друзья</label>
+                    <div class="form-table__select-wrapper">
+                      <select name="friends" id="friends" class="form-table__select chosen-select" data-placeholder="Все">
+                        <option value="0"></option>
+                        <option value="1">Все</option>
+                        <option value="2">Только я</option>
+                        <option value="3">Только я и мои друзья</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-table__select-row clearfix">
+                    <label for="diary-visibility" class="form-table__select-label">Кто видит дневник</label>
+                    <div class="form-table__select-wrapper">
+                      <select name="diary-visibility" id="diary-visibility" class="form-table__select chosen-select" data-placeholder="Все">
+                        <option value="0"></option>
+                        <option value="1">Все</option>
+                        <option value="2">Только я</option>
+                        <option value="3">Только я и мои друзья</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-table__select-row clearfix">
+                    <label for="photos-visibility" class="form-table__select-label">Кто может смотреть фотографии</label>
+                    <div class="form-table__select-wrapper">
+                      <select name="photos-visibility" id="photos-visibility" class="form-table__select chosen-select" data-placeholder="Все">
+                        <option value="0"></option>
+                        <option value="1">Все</option>
+                        <option value="2">Только я</option>
+                        <option value="3">Только я и мои друзья</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-table__select-row clearfix">
+                    <label for="friends-visibility" class="form-table__select-label">Кто может смотреть список моих друзей</label>
+                    <div class="form-table__select-wrapper">
+                      <select name="friends-visibility" id="friends-visibility" class="form-table__select chosen-select" data-placeholder="Все">
+                        <option value="0"></option>
+                        <option value="1">Все</option>
+                        <option value="2">Только я</option>
+                        <option value="3">Только я и мои друзья</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-table__select-row clearfix">
+                    <label for="info-visibility" class="form-table__select-label">Кто может смотреть информацию</label>
+                    <div class="form-table__select-wrapper">
+                      <select name="info-visibility" id="info-visibility" class="form-table__select chosen-select" data-placeholder="Все">
+                        <option value="0"></option>
+                        <option value="1">Все</option>
+                        <option value="2">Только я</option>
+                        <option value="3">Только я и мои друзья</option>
+                      </select>
+                    </div>
+                  </div>
+                </form>
               </div>
-              <div class="form-table__select-row clearfix">
-                <label for="diary-visibility" class="form-table__select-label">Кто видит дневник</label>
-                <div class="form-table__select-wrapper">
-                  <select name="diary-visibility" id="diary-visibility" class="form-table__select chosen-select" data-placeholder="Все">
-                    <option value="0"></option>
-                    <option value="1">Все</option>
-                    <option value="2">Только я</option>
-                    <option value="3">Только я и мои друзья</option>
-                  </select>
-                </div>
+              <div class="form-table">
+                <form action="#" method="post">
+                  <h3 class="form-table__title">Дневник</h3>
+                  <div class="form-table__select-row clearfix">
+                    <label for="page-visibility" class="form-table__select-label">Кто может видеть эту страницу</label>
+                    <div class="form-table__select-wrapper">
+                      <select name="page-visibility" id="page-visibility" class="form-table__select chosen-select" data-placeholder="Все">
+                        <option value="0"></option>
+                        <option value="1">Все</option>
+                        <option value="2">Только я</option>
+                        <option value="3">Только я и мои друзья</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-table__select-row clearfix">
+                    <label for="friends" class="form-table__select-label">Кто может добавлять меня в друзья</label>
+                    <div class="form-table__select-wrapper">
+                      <select name="friends" id="friends" class="form-table__select chosen-select" data-placeholder="Все">
+                        <option value="0"></option>
+                        <option value="1">Все</option>
+                        <option value="2">Только я</option>
+                        <option value="3">Только я и мои друзья</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-table__select-row clearfix">
+                    <label for="diary-visibility" class="form-table__select-label">Кто видит дневник</label>
+                    <div class="form-table__select-wrapper">
+                      <select name="diary-visibility" id="diary-visibility" class="form-table__select chosen-select" data-placeholder="Все">
+                        <option value="0"></option>
+                        <option value="1">Все</option>
+                        <option value="2">Только я</option>
+                        <option value="3">Только я и мои друзья</option>
+                      </select>
+                    </div>
+                  </div>
+                </form>
               </div>
-              <div class="form-table__select-row clearfix">
-                <label for="photos-visibility" class="form-table__select-label">Кто может смотреть фотографии</label>
-                <div class="form-table__select-wrapper">
-                  <select name="photos-visibility" id="photos-visibility" class="form-table__select chosen-select" data-placeholder="Все">
-                    <option value="0"></option>
-                    <option value="1">Все</option>
-                    <option value="2">Только я</option>
-                    <option value="3">Только я и мои друзья</option>
-                  </select>
-                </div>
+            </div>
+            <div class="tab-content">
+              <div class="form-table">
+                <form action="#" method="post">
+                  <h3 class="form-table__title">Оповещения по электронной почте</h3>
+                  <input type="checkbox" id="friend-requests" class="form-table__checkbox-input" checked>
+                  <label for="friend-requests" class="form-table__checkbox-label">Заявки в друзья</label>
+                  <input type="checkbox" id="friend-recommendations" class="form-table__checkbox-input">
+                  <label for="friend-recommendations" class="form-table__checkbox-label">Возможные друзья</label>
+                  <input type="checkbox" id="personal-messages" class="form-table__checkbox-input">
+                  <label for="personal-messages" class="form-table__checkbox-label">Личные сообщения</label>
+                  <input type="checkbox" id="photo-tags" class="form-table__checkbox-input">
+                  <label for="photo-tags" class="form-table__checkbox-label">Отметки на фотографиях</label>
+                  <input type="checkbox" id="timeline-messages" class="form-table__checkbox-input" checked>
+                  <label for="timeline-messages" class="form-table__checkbox-label">Сообщения на стене</label>
+                  <input type="checkbox" id="timeline-comments" class="form-table__checkbox-input">
+                  <label for="timeline-comments" class="form-table__checkbox-label">Комментарии на стене</label>
+                  <input type="checkbox" id="photo-comments" class="form-table__checkbox-input">
+                  <label for="photo-comments" class="form-table__checkbox-label">Комментарии к фотографиям</label>
+                  <input type="checkbox" id="video-comments" class="form-table__checkbox-input">
+                  <label for="video-comments" class="form-table__checkbox-label">Комментарии к видеозаписям</label>
+                  <input type="checkbox" id="comment-answers" class="form-table__checkbox-input">
+                  <label for="comment-answers" class="form-table__checkbox-label">Ответы в комментариях</label>
+                  <input type="checkbox" id="group-invitations" class="form-table__checkbox-input">
+                  <label for="group-invitations" class="form-table__checkbox-label">Приглашения в группы</label>
+                  <input type="checkbox" id="birthdays" class="form-table__checkbox-input">
+                  <label for="birthdays" class="form-table__checkbox-label">Дни рождения</label>
+                </form>
               </div>
-              <div class="form-table__select-row clearfix">
-                <label for="friends-visibility" class="form-table__select-label">Кто может смотреть список моих друзей</label>
-                <div class="form-table__select-wrapper">
-                  <select name="friends-visibility" id="friends-visibility" class="form-table__select chosen-select" data-placeholder="Все">
-                    <option value="0"></option>
-                    <option value="1">Все</option>
-                    <option value="2">Только я</option>
-                    <option value="3">Только я и мои друзья</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-table__select-row clearfix">
-                <label for="info-visibility" class="form-table__select-label">Кто может смотреть информацию</label>
-                <div class="form-table__select-wrapper">
-                  <select name="info-visibility" id="info-visibility" class="form-table__select chosen-select" data-placeholder="Все">
-                    <option value="0"></option>
-                    <option value="1">Все</option>
-                    <option value="2">Только я</option>
-                    <option value="3">Только я и мои друзья</option>
-                  </select>
-                </div>
-              </div>
-            </form>
-          </div>
-          <div class="form-table">
-            <form action="#" method="post">
-              <h3 class="form-table__title">Дневник</h3>
-              <div class="form-table__select-row clearfix">
-                <label for="page-visibility" class="form-table__select-label">Кто может видеть эту страницу</label>
-                <div class="form-table__select-wrapper">
-                  <select name="page-visibility" id="page-visibility" class="form-table__select chosen-select" data-placeholder="Все">
-                    <option value="0"></option>
-                    <option value="1">Все</option>
-                    <option value="2">Только я</option>
-                    <option value="3">Только я и мои друзья</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-table__select-row clearfix">
-                <label for="friends" class="form-table__select-label">Кто может добавлять меня в друзья</label>
-                <div class="form-table__select-wrapper">
-                  <select name="friends" id="friends" class="form-table__select chosen-select" data-placeholder="Все">
-                    <option value="0"></option>
-                    <option value="1">Все</option>
-                    <option value="2">Только я</option>
-                    <option value="3">Только я и мои друзья</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-table__select-row clearfix">
-                <label for="diary-visibility" class="form-table__select-label">Кто видит дневник</label>
-                <div class="form-table__select-wrapper">
-                  <select name="diary-visibility" id="diary-visibility" class="form-table__select chosen-select" data-placeholder="Все">
-                    <option value="0"></option>
-                    <option value="1">Все</option>
-                    <option value="2">Только я</option>
-                    <option value="3">Только я и мои друзья</option>
-                  </select>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-        <div class="tab-content">
-          <div class="form-table">
-            <form action="#" method="post">
-              <h3 class="form-table__title">Оповещения по электронной почте</h3>
-              <input type="checkbox" id="friend-requests" class="form-table__checkbox-input" checked>
-              <label for="friend-requests" class="form-table__checkbox-label">Заявки в друзья</label>
-              <input type="checkbox" id="friend-recommendations" class="form-table__checkbox-input">
-              <label for="friend-recommendations" class="form-table__checkbox-label">Возможные друзья</label>
-              <input type="checkbox" id="personal-messages" class="form-table__checkbox-input">
-              <label for="personal-messages" class="form-table__checkbox-label">Личные сообщения</label>
-              <input type="checkbox" id="photo-tags" class="form-table__checkbox-input">
-              <label for="photo-tags" class="form-table__checkbox-label">Отметки на фотографиях</label>
-              <input type="checkbox" id="timeline-messages" class="form-table__checkbox-input" checked>
-              <label for="timeline-messages" class="form-table__checkbox-label">Сообщения на стене</label>
-              <input type="checkbox" id="timeline-comments" class="form-table__checkbox-input">
-              <label for="timeline-comments" class="form-table__checkbox-label">Комментарии на стене</label>
-              <input type="checkbox" id="photo-comments" class="form-table__checkbox-input">
-              <label for="photo-comments" class="form-table__checkbox-label">Комментарии к фотографиям</label>
-              <input type="checkbox" id="video-comments" class="form-table__checkbox-input">
-              <label for="video-comments" class="form-table__checkbox-label">Комментарии к видеозаписям</label>
-              <input type="checkbox" id="comment-answers" class="form-table__checkbox-input">
-              <label for="comment-answers" class="form-table__checkbox-label">Ответы в комментариях</label>
-              <input type="checkbox" id="group-invitations" class="form-table__checkbox-input">
-              <label for="group-invitations" class="form-table__checkbox-label">Приглашения в группы</label>
-              <input type="checkbox" id="birthdays" class="form-table__checkbox-input">
-              <label for="birthdays" class="form-table__checkbox-label">Дни рождения</label>
-            </form>
+            </div>
           </div>
         </div>
       </div>
@@ -836,6 +837,7 @@
 
 
   <script src="js/vendors/jquery.js"></script>
+  <script src="js/vendors/bootstrap.min.js"></script>
   <script src="js/vendors/chosen.jquery.min.js"></script>
   <script src="js/script.js"></script>
 

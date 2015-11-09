@@ -202,20 +202,20 @@
   height: 100%;
   width: 5px;
   z-index: 1003;
-  background-color: #eee;
+  background-color: transparent;
   border-radius: 3px;
   z-index: 1003;
 
   .thumb {
     background-color: @green;
-    opacity: 1;
+    opacity: 0;
   }
 }
 
 
 .scroller {
-  width: 610px;
-  height: 500px;
+  width: 600px;
+  height: 650px;
 
   @media (max-width: 610px) {
     width: 480px;
@@ -228,13 +228,5 @@
   .overview {
     width: 950px;
     height: 650px;
-  }
-}
-
-.scroller-vertical {
-  height: 500px;
-
-  .overview {
-    height: auto;
   }
 }

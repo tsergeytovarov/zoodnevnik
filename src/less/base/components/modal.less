@@ -1,32 +1,4 @@
-.color-overlay {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: none;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,.8);
-  z-index: 1000;
-
-  &.active {
-    display: block;
-  }
-}
-
 .modal {
-  position: fixed;
-  top: 25px;
-  left: 50%;
-  display: none;
-  margin-left: -305px;
-  padding-top: 12px;
-  width: 610px;
-  background-color: #fff;
-  border-radius: 2px;
-  box-shadow: 0 1px 2px rgba(25,26,25,.1);
-  z-index: 1001;
 
   &__title {
     margin: 0;
@@ -49,19 +21,6 @@
   .tab-toggle {
     padding-left: 22px;
     padding-right: 22px;
-  }
-
-  .tabs-container {
-    max-height: 500px;
-    overflow-y: scroll;
-  }
-
-  &--pets,
-  &--group {
-
-    .tabs-container {
-      overflow-y: auto;
-    }
   }
 
   &__close-btn {
@@ -116,11 +75,6 @@
 
   &--ancestors {
 
-    .ancestor-table-wrapper {
-      /*max-height: 500px;
-      overflow: scroll;*/
-    }
-
     .ancestor-table {
       width: 900px;
     }
@@ -143,9 +97,7 @@
 
     .news-item {
       margin-bottom: 0;
-      max-height: 520px;
       box-shadow: none;
-      overflow-y: scroll;
     }
 
     .comment-block {
@@ -161,9 +113,7 @@
 
     .news-item {
       margin-bottom: 0;
-      max-height: 520px;
       box-shadow: none;
-      overflow-y: scroll;
 
       &__social-row {
         border-top: none;
@@ -355,11 +305,6 @@
   }
 }
 
-.modal-wrapper {
-  max-height: 500px;
-  overflow-y: scroll;
-}
-
 .registration-form {
   margin-bottom: 40px;
   text-align: left;
@@ -411,5 +356,174 @@
         color: #989898;
       }
     }
+  }
+}
+
+
+/*!
+ * Bootstrap v3.3.5 (http://getbootstrap.com)
+ * Copyright 2011-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.img-rounded {
+  border-radius: 6px;
+}
+.img-thumbnail {
+  padding: 4px;
+  line-height: 1.42857143;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+.img-circle {
+  border-radius: 50%;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}
+[role="button"] {
+  cursor: pointer;
+}
+.embed-responsive {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.embed-responsive .embed-responsive-item,
+.embed-responsive iframe,
+.embed-responsive embed,
+.embed-responsive object,
+.embed-responsive video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  border: 0;
+}
+.embed-responsive-16by9 {
+  padding-bottom: 56.25%;
+}
+.embed-responsive-4by3 {
+  padding-bottom: 75%;
+}
+.modal-open {
+  overflow: hidden;
+}
+.modal {
+  display: none;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+}
+.modal.fade .modal-dialog {
+  -webkit-transform: translate(0, -25%);
+  -ms-transform: translate(0, -25%);
+  -o-transform: translate(0, -25%);
+  transform: translate(0, -25%);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  -o-transition: -o-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+}
+.modal.in .modal-dialog {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.modal-dialog {
+  position: relative;
+  margin: 0 auto;
+  width: 600px;
+  margin-top: 10px;
+}
+.modal-content {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  -webkit-background-clip: padding-box;
+          background-clip: padding-box;
+  outline: 0;
+}
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #000000;
+}
+.modal-backdrop.fade {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.modal-backdrop.in {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+@media (min-width: 620px) {
+  .modal-dialog {
+    width: 600px;
+    margin: 30px auto;
+  }
+
+  .modal-sm {
+    width: 300px;
+  }
+}
+@media (min-width: 992px) {
+  .modal-lg {
+    width: 900px;
   }
 }

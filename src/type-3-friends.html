@@ -154,7 +154,7 @@
             </div>
           </div>
           <div class="owner-card__message-box">
-            <a href="#message" class="owner-card__link open-modal">Написать сообщение</a>
+            <button class="owner-card__link open-modal" data-toggle="modal" data-target="#message">Написать сообщение</button>
           </div>
         </div>
         <div class="owner-card owner-card--message">
@@ -171,7 +171,7 @@
             </div>
           </div>
           <div class="owner-card__message-box">
-            <a href="#message" class="owner-card__link open-modal">Написать сообщение</a>
+            <button class="owner-card__link open-modal" data-toggle="modal" data-target="#message">Написать сообщение</button>
           </div>
         </div>
         <div class="owner-card owner-card--message">
@@ -188,7 +188,7 @@
             </div>
           </div>
           <div class="owner-card__message-box">
-            <a href="#message" class="owner-card__link open-modal">Написать сообщение</a>
+            <button class="owner-card__link open-modal" data-toggle="modal" data-target="#message">Написать сообщение</button>
           </div>
         </div>
         <div class="owner-card owner-card--message">
@@ -205,7 +205,7 @@
             </div>
           </div>
           <div class="owner-card__message-box">
-            <a href="#message" class="owner-card__link open-modal">Написать сообщение</a>
+            <button class="owner-card__link open-modal" data-toggle="modal" data-target="#message">Написать сообщение</button>
           </div>
         </div>
         <div class="owner-card owner-card--message">
@@ -222,7 +222,7 @@
             </div>
           </div>
           <div class="owner-card__message-box">
-            <a href="#message" class="owner-card__link open-modal">Написать сообщение</a>
+            <button class="owner-card__link open-modal" data-toggle="modal" data-target="#message">Написать сообщение</button>
           </div>
         </div>
         <div class="owner-card owner-card--message">
@@ -239,7 +239,7 @@
             </div>
           </div>
           <div class="owner-card__message-box">
-            <a href="#message" class="owner-card__link open-modal">Написать сообщение</a>
+            <button class="owner-card__link open-modal" data-toggle="modal" data-target="#message">Написать сообщение</button>
           </div>
         </div>
       </div>
@@ -266,80 +266,80 @@
     </div>
   </footer>
 
-
-  <!-- оверлей открывается по классу active -->
-  <div class="color-overlay"></div>
-
-  <!-- модальный контент, открывается по классу active -->
-  <div class="modal modal--message" id="message">
-    <div class="modal__close-btn">Закрыть</div>
-    <article class="news-item">
-      <div class="news-item__information-row clearfix">
-        <a href="#" class="news-item__avatar-wrapper">
-          <img src="img/pet-avatar.jpg" alt="" class="news-item__avatar">
-        </a>
-        <div class="news-item__text-wrapper">
-          <div class="news-item__title">ШАРИК</div>
-          <div class="news-item__info">Dundarroch premium quality</div>
-        </div>
-        <div class="news-item__date-block">
-          <div class="news-item__date">22.12.11 / 12:30</div>
-          <a href="#" class="news-item__tag">Потомство</a>
-        </div>
-      </div>
-      <div class="news-item__image-container">
-        <img src="img/article-img-news.jpg" alt="" class="news-item__image">
-      </div>
-      <p class="news-item__text">Текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения,</p>
-      <div class="news-item__social-row">
-        <a href="#" class="news-item__social-link news-item__social-link--like">Нравится</a>
-        <a href="#" class="news-item__social-link news-item__social-link--comment">Комментарий</a>
-        <a href="#" class="news-item__social-link news-item__social-link--share">Поделиться</a>
-        <div class="news-item__social-container">
-          <a href="#" class="news-item__social-link news-item__social-link--public">Опубликовать</a>
-          <div class="news-item-tooltip">
-            <ul class="news-item-tooltip__list">
-              <li class="news-item-tooltip__list-item">
-                <a href="#" class="news-item-tooltip__public-link news-item-tooltip__public-link--vk">Вконтакте</a>
-              </li>
-              <li class="news-item-tooltip__list-item">
-                <a href="#" class="news-item-tooltip__public-link news-item-tooltip__public-link--fb">Facebook</a>
-              </li>
-              <li class="news-item-tooltip__list-item">
-                <a href="#" class="news-item-tooltip__public-link news-item-tooltip__public-link--ok">Однокласники</a>
-              </li>
-            </ul>
+  <div class="modal modal--message fade" id="message" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal__close-btn close">Закрыть</div>
+        <article class="news-item">
+          <div class="news-item__information-row clearfix">
+            <a href="#" class="news-item__avatar-wrapper">
+              <img src="img/pet-avatar.jpg" alt="" class="news-item__avatar">
+            </a>
+            <div class="news-item__text-wrapper">
+              <div class="news-item__title">ШАРИК</div>
+              <div class="news-item__info">Dundarroch premium quality</div>
+            </div>
+            <div class="news-item__date-block">
+              <div class="news-item__date">22.12.11 / 12:30</div>
+              <a href="#" class="news-item__tag">Потомство</a>
+            </div>
           </div>
-        </div>
+          <div class="news-item__image-container">
+            <img src="img/article-img-news.jpg" alt="" class="news-item__image">
+          </div>
+          <p class="news-item__text">Текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения, текст сообщения,</p>
+          <div class="news-item__social-row">
+            <a href="#" class="news-item__social-link news-item__social-link--like">Нравится</a>
+            <a href="#" class="news-item__social-link news-item__social-link--comment">Комментарий</a>
+            <a href="#" class="news-item__social-link news-item__social-link--share">Поделиться</a>
+            <div class="news-item__social-container">
+              <a href="#" class="news-item__social-link news-item__social-link--public">Опубликовать</a>
+              <div class="news-item-tooltip">
+                <ul class="news-item-tooltip__list">
+                  <li class="news-item-tooltip__list-item">
+                    <a href="#" class="news-item-tooltip__public-link news-item-tooltip__public-link--vk">Вконтакте</a>
+                  </li>
+                  <li class="news-item-tooltip__list-item">
+                    <a href="#" class="news-item-tooltip__public-link news-item-tooltip__public-link--fb">Facebook</a>
+                  </li>
+                  <li class="news-item-tooltip__list-item">
+                    <a href="#" class="news-item-tooltip__public-link news-item-tooltip__public-link--ok">Однокласники</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="comment-block">
+            <div class="comment-block__show-prev">Показать предыдущие записи (<span class="previous-comments">12</span>)</div>
+            <div class="comment-block__item">
+              <a href="#" class="comment-block__avatar-wrapper">
+                <img src="img/avatar-01.jpg" alt="" class="comment-block__avatar">
+              </a>
+              <div class="comment-block__comment"><a href="#" class="comment-block__comment--name">Евгения Кукушкина,</a> лдавопдлоавпдовадповадпо ваопдваопдовап оваопдваопд оваопд дваоп овадопд овадповаопд дваоп овадопд овадповаопд дваоп овадопд овадповаопд дваоп овадопд овадповаопд дваоп овадопд овадп <span class="comment-block__comment--date">22.12.11 / 12:30</span></div>
+            </div>
+            <div class="comment-block__item">
+              <a href="#" class="comment-block__avatar-wrapper">
+                <img src="img/avatar-02.jpg" alt="" class="comment-block__avatar">
+              </a>
+              <div class="comment-block__comment"><a href="#" class="comment-block__comment--name">Игорь Кудрин,</a> лдавопдлоавпдовадповадпо ваопдваопдовап оваопдваопд оваопд дваоп овадопд овадповаопд дваоп овадопд овадповаопд дваоп овадопд овадповаопд дваоп овадопд овадповаопд дваоп овадопд овадп <span class="comment-block__comment--date">22.12.11 / 12:30</span></div>
+            </div>
+            <div class="comment-block__comment-form">
+              <a href="#" class="comment-block__avatar-wrapper">
+                <img src="img/owner-avatar.jpg" alt="" class="comment-block__avatar">
+              </a>
+              <form action="#" method="post">
+                <textarea name="new-comment" id="new-comment" class="comment-block__textarea" placeholder="Написать комментарий ..."></textarea>
+              </form>
+            </div>
+          </div>
+        </article>
       </div>
-      <div class="comment-block">
-        <div class="comment-block__show-prev">Показать предыдущие записи (<span class="previous-comments">12</span>)</div>
-        <div class="comment-block__item">
-          <a href="#" class="comment-block__avatar-wrapper">
-            <img src="img/avatar-01.jpg" alt="" class="comment-block__avatar">
-          </a>
-          <div class="comment-block__comment"><a href="#" class="comment-block__comment--name">Евгения Кукушкина,</a> лдавопдлоавпдовадповадпо ваопдваопдовап оваопдваопд оваопд дваоп овадопд овадповаопд дваоп овадопд овадповаопд дваоп овадопд овадповаопд дваоп овадопд овадповаопд дваоп овадопд овадп <span class="comment-block__comment--date">22.12.11 / 12:30</span></div>
-        </div>
-        <div class="comment-block__item">
-          <a href="#" class="comment-block__avatar-wrapper">
-            <img src="img/avatar-02.jpg" alt="" class="comment-block__avatar">
-          </a>
-          <div class="comment-block__comment"><a href="#" class="comment-block__comment--name">Игорь Кудрин,</a> лдавопдлоавпдовадповадпо ваопдваопдовап оваопдваопд оваопд дваоп овадопд овадповаопд дваоп овадопд овадповаопд дваоп овадопд овадповаопд дваоп овадопд овадповаопд дваоп овадопд овадп <span class="comment-block__comment--date">22.12.11 / 12:30</span></div>
-        </div>
-        <div class="comment-block__comment-form">
-          <a href="#" class="comment-block__avatar-wrapper">
-            <img src="img/owner-avatar.jpg" alt="" class="comment-block__avatar">
-          </a>
-          <form action="#" method="post">
-            <textarea name="new-comment" id="new-comment" class="comment-block__textarea" placeholder="Написать комментарий ..."></textarea>
-          </form>
-        </div>
-      </div>
-    </article>
+    </div>
   </div>
 
 
   <script src="js/vendors/jquery.js"></script>
+  <script src="js/vendors/bootstrap.min.js"></script>
   <script src="js/script.js"></script>
 
 </body>
