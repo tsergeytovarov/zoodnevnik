@@ -275,6 +275,23 @@ $(function() {
     });
   })(jQuery);
 
+  // переключение внутренних табов (тип 1)
+  (function($) {
+    $(function() {
+      $('ul.inner-tabs__list').on('click', 'li:not(.active)', function() {
+        $(this)
+          .addClass('active').siblings().removeClass('active')
+          .closest('div.inner-tabs-container').find('div.sorted-content').removeClass('active').eq($(this).index()).addClass('active');
+      });
+    });
+  })(jQuery);
+
+  // открытие выпадающего списка на странице поиска
+  $(".inner-tabs__list-item").click(function(event){
+    $(this).parents(".inner-tabs").removeClass('opened');
+    $(this).parents(".inner-tabs").children(".inner-tabs__toggle").text($(this).text());
+  });
+
   // закрытие элементов
   $(".close-btn").click(function(){
     $(this).parents(".element").addClass("hidden");
