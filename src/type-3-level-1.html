@@ -114,29 +114,28 @@
   </header>
   <!-- основной контент -->
   <div class="main type-3">
-    <div class="container">
-      <!-- плашка с навигацией и хлебными крошками -->
-      <div class="navigation-block nested">
-        <!-- основная навигация -->
-        <nav class="page-navigation">
-          <ul class="page-navigation__list">
-            <li class="page-navigation__list-item">
-              <a href="#" class="page-navigation__link page-navigation__link--dog active">Собаки</a>
-            </li>
-            <li class="page-navigation__list-item">
-              <a href="#" class="page-navigation__link page-navigation__link--cat">Кошки</a>
-            </li>
-            <li class="page-navigation__list-item">
-              <a href="#" class="page-navigation__link page-navigation__link--bird">Птицы</a>
-            </li>
-            <li class="page-navigation__list-item">
-              <a href="#" class="page-navigation__link page-navigation__link--fish">Рыбы</a>
-            </li>
-            <li class="page-navigation__list-item">
-              <a href="#" class="page-navigation__link page-navigation__link--mouse">Грызуны</a>
-            </li>
-          </ul>
-        </nav>
+    <div class="container tabs">
+      <!-- основная навигация -->
+      <nav class="page-navigation">
+        <ul class="page-navigation__list">
+          <li class="page-navigation__list-item active">
+            <div class="page-navigation__link page-navigation__link--dog">Собаки</div>
+          </li>
+          <li class="page-navigation__list-item">
+            <div class="page-navigation__link page-navigation__link--cat">Кошки</div>
+          </li>
+          <li class="page-navigation__list-item">
+            <div class="page-navigation__link page-navigation__link--bird">Птицы</div>
+          </li>
+          <li class="page-navigation__list-item">
+            <div class="page-navigation__link page-navigation__link--fish">Рыбы</div>
+          </li>
+          <li class="page-navigation__list-item">
+            <div class="page-navigation__link page-navigation__link--mouse">Грызуны</div>
+          </li>
+        </ul>
+      </nav>
+      <div class="page-content active">
         <nav class="breadcrumbs-navigation clearfix" id="groups">
           <ul class="breadcrumbs-navigation__list">
             <li class="breadcrumbs-navigation__list-item">
@@ -151,75 +150,79 @@
             </form>
           </div>
         </nav>
+        <div class="groups-container">
+          <div class="group-item">
+            <a href="#" class="group-item__link">
+              <span class="group-item__overlay">Пинчеры</span>
+              <img src="img/pinscher.jpg" alt="" class="group-item__image">
+            </a>
+          </div>
+          <div class="group-item">
+            <a href="#" class="group-item__link">
+              <span class="group-item__overlay">Шнауцеры</span>
+              <img src="img/schnauzer.jpg" alt="" class="group-item__image">
+            </a>
+          </div>
+          <div class="group-item">
+            <a href="#" class="group-item__link">
+              <span class="group-item__overlay">Терьеры</span>
+              <img src="img/terrier.jpg" alt="" class="group-item__image">
+            </a>
+          </div>
+          <div class="group-item">
+            <a href="#" class="group-item__link">
+              <span class="group-item__overlay">Таксы</span>
+              <img src="img/badger-dog.jpg" alt="" class="group-item__image">
+            </a>
+          </div>
+          <div class="group-item">
+            <a href="#" class="group-item__link">
+              <span class="group-item__overlay">Шпицы</span>
+              <img src="img/spitz.jpg" alt="" class="group-item__image">
+            </a>
+          </div>
+          <div class="group-item">
+            <a href="#" class="group-item__link">
+              <span class="group-item__overlay">Гончие</span>
+              <img src="img/harrier.jpg" alt="" class="group-item__image">
+            </a>
+          </div>
+          <div class="group-item">
+            <a href="#" class="group-item__link">
+              <span class="group-item__overlay">Легавые</span>
+              <img src="img/pointing-dog.jpg" alt="" class="group-item__image">
+            </a>
+          </div>
+          <div class="group-item">
+            <a href="#" class="group-item__link">
+              <span class="group-item__overlay">Ретриверы</span>
+              <img src="img/retriever.jpg" alt="" class="group-item__image">
+            </a>
+          </div>
+          <div class="group-item">
+            <a href="#" class="group-item__link">
+              <span class="group-item__overlay">Декоративные</span>
+              <img src="img/decorative-dog.jpg" alt="" class="group-item__image">
+            </a>
+          </div>
+          <div class="group-item">
+            <a href="#" class="group-item__link">
+              <span class="group-item__overlay">Борзые</span>
+              <img src="img/greyhound.jpg" alt="" class="group-item__image">
+            </a>
+          </div>
+          <div class="group-item">
+            <a href="#" class="group-item__link">
+              <span class="group-item__overlay">Другое</span>
+              <img src="img/misc.jpg" alt="" class="group-item__image">
+            </a>
+          </div>
+        </div>
       </div>
-      <div class="groups-container">
-        <div class="group-item">
-          <a href="#" class="group-item__link">
-            <span class="group-item__overlay">Пинчеры</span>
-            <img src="img/pinscher.jpg" alt="" class="group-item__image">
-          </a>
-        </div>
-        <div class="group-item">
-          <a href="#" class="group-item__link">
-            <span class="group-item__overlay">Шнауцеры</span>
-            <img src="img/schnauzer.jpg" alt="" class="group-item__image">
-          </a>
-        </div>
-        <div class="group-item">
-          <a href="#" class="group-item__link">
-            <span class="group-item__overlay">Терьеры</span>
-            <img src="img/terrier.jpg" alt="" class="group-item__image">
-          </a>
-        </div>
-        <div class="group-item">
-          <a href="#" class="group-item__link">
-            <span class="group-item__overlay">Таксы</span>
-            <img src="img/badger-dog.jpg" alt="" class="group-item__image">
-          </a>
-        </div>
-        <div class="group-item">
-          <a href="#" class="group-item__link">
-            <span class="group-item__overlay">Шпицы</span>
-            <img src="img/spitz.jpg" alt="" class="group-item__image">
-          </a>
-        </div>
-        <div class="group-item">
-          <a href="#" class="group-item__link">
-            <span class="group-item__overlay">Гончие</span>
-            <img src="img/harrier.jpg" alt="" class="group-item__image">
-          </a>
-        </div>
-        <div class="group-item">
-          <a href="#" class="group-item__link">
-            <span class="group-item__overlay">Легавые</span>
-            <img src="img/pointing-dog.jpg" alt="" class="group-item__image">
-          </a>
-        </div>
-        <div class="group-item">
-          <a href="#" class="group-item__link">
-            <span class="group-item__overlay">Ретриверы</span>
-            <img src="img/retriever.jpg" alt="" class="group-item__image">
-          </a>
-        </div>
-        <div class="group-item">
-          <a href="#" class="group-item__link">
-            <span class="group-item__overlay">Декоративные</span>
-            <img src="img/decorative-dog.jpg" alt="" class="group-item__image">
-          </a>
-        </div>
-        <div class="group-item">
-          <a href="#" class="group-item__link">
-            <span class="group-item__overlay">Борзые</span>
-            <img src="img/greyhound.jpg" alt="" class="group-item__image">
-          </a>
-        </div>
-        <div class="group-item">
-          <a href="#" class="group-item__link">
-            <span class="group-item__overlay">Другое</span>
-            <img src="img/misc.jpg" alt="" class="group-item__image">
-          </a>
-        </div>
-      </div>
+      <div class="page-content"></div>
+      <div class="page-content"></div>
+      <div class="page-content"></div>
+      <div class="page-content"></div>
     </div>
   </div>
   <footer class="page-footer">

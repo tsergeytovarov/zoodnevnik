@@ -114,30 +114,29 @@
   </header>
   <!-- основной контент -->
   <div class="main type-3">
-    <div class="container">
-      <!-- плашка с навигацией и хлебными крошками -->
-      <div class="navigation-block nested">
-        <!-- основная навигация -->
-        <nav class="page-navigation">
-          <ul class="page-navigation__list">
-            <li class="page-navigation__list-item">
-              <a href="#" class="page-navigation__link page-navigation__link--dog active">Собаки</a>
-            </li>
-            <li class="page-navigation__list-item">
-              <a href="#" class="page-navigation__link page-navigation__link--cat">Кошки</a>
-            </li>
-            <li class="page-navigation__list-item">
-              <a href="#" class="page-navigation__link page-navigation__link--bird">Птицы</a>
-            </li>
-            <li class="page-navigation__list-item">
-              <a href="#" class="page-navigation__link page-navigation__link--fish">Рыбы</a>
-            </li>
-            <li class="page-navigation__list-item">
-              <a href="#" class="page-navigation__link page-navigation__link--mouse">Грызуны</a>
-            </li>
-          </ul>
-        </nav>
-        <nav class="breadcrumbs-navigation clearfix" id="groups">
+    <div class="container tabs">
+      <!-- основная навигация -->
+      <nav class="page-navigation">
+        <ul class="page-navigation__list">
+          <li class="page-navigation__list-item active">
+            <div class="page-navigation__link page-navigation__link--dog">Собаки</div>
+          </li>
+          <li class="page-navigation__list-item">
+            <div class="page-navigation__link page-navigation__link--cat">Кошки</div>
+          </li>
+          <li class="page-navigation__list-item">
+            <div class="page-navigation__link page-navigation__link--bird">Птицы</div>
+          </li>
+          <li class="page-navigation__list-item">
+            <div class="page-navigation__link page-navigation__link--fish">Рыбы</div>
+          </li>
+          <li class="page-navigation__list-item">
+            <div class="page-navigation__link page-navigation__link--mouse">Грызуны</div>
+          </li>
+        </ul>
+      </nav>
+      <div class="page-content active">
+        <nav class="breadcrumbs-navigation clearfix">
           <ul class="breadcrumbs-navigation__list">
             <li class="breadcrumbs-navigation__list-item">
               <a href="#" class="breadcrumbs-navigation__link">Группы</a>
@@ -154,33 +153,37 @@
             </form>
           </div>
         </nav>
+        <div class="groups-container">
+          <div class="group-item">
+            <a href="#" class="group-item__link">
+              <span class="group-item__overlay">Крупные и средние</span>
+              <img src="img/terriers-big.jpg" alt="" class="group-item__image">
+            </a>
+          </div>
+          <div class="group-item">
+            <a href="#" class="group-item__link">
+              <span class="group-item__overlay">Мелкие</span>
+              <img src="img/terriers-small.jpg" alt="" class="group-item__image">
+            </a>
+          </div>
+          <div class="group-item">
+            <a href="#" class="group-item__link">
+              <span class="group-item__overlay">Бультерьеры</span>
+              <img src="img/terriers-pitbull.jpg" alt="" class="group-item__image">
+            </a>
+          </div>
+          <div class="group-item">
+            <a href="#" class="group-item__link">
+              <span class="group-item__overlay">Той-терьеры</span>
+              <img src="img/terriers-toy.jpg" alt="" class="group-item__image">
+            </a>
+          </div>
+        </div>
       </div>
-      <div class="groups-container">
-        <div class="group-item">
-          <a href="#" class="group-item__link">
-            <span class="group-item__overlay">Крупные и средние</span>
-            <img src="img/terriers-big.jpg" alt="" class="group-item__image">
-          </a>
-        </div>
-        <div class="group-item">
-          <a href="#" class="group-item__link">
-            <span class="group-item__overlay">Мелкие</span>
-            <img src="img/terriers-small.jpg" alt="" class="group-item__image">
-          </a>
-        </div>
-        <div class="group-item">
-          <a href="#" class="group-item__link">
-            <span class="group-item__overlay">Бультерьеры</span>
-            <img src="img/terriers-pitbull.jpg" alt="" class="group-item__image">
-          </a>
-        </div>
-        <div class="group-item">
-          <a href="#" class="group-item__link">
-            <span class="group-item__overlay">Той-терьеры</span>
-            <img src="img/terriers-toy.jpg" alt="" class="group-item__image">
-          </a>
-        </div>
-      </div>
+      <div class="page-content"></div>
+      <div class="page-content"></div>
+      <div class="page-content"></div>
+      <div class="page-content"></div>
     </div>
   </div>
   <footer class="page-footer">

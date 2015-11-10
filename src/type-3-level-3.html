@@ -114,30 +114,29 @@
   </header>
   <!-- основной контент -->
   <div class="main type-3">
-    <div class="container">
-      <!-- плашка с навигацией и хлебными крошками -->
-      <div class="navigation-block nested">
-        <!-- основная навигация -->
-        <nav class="page-navigation">
-          <ul class="page-navigation__list">
-            <li class="page-navigation__list-item">
-              <a href="#" class="page-navigation__link page-navigation__link--dog active">Собаки</a>
-            </li>
-            <li class="page-navigation__list-item">
-              <a href="#" class="page-navigation__link page-navigation__link--cat">Кошки</a>
-            </li>
-            <li class="page-navigation__list-item">
-              <a href="#" class="page-navigation__link page-navigation__link--bird">Птицы</a>
-            </li>
-            <li class="page-navigation__list-item">
-              <a href="#" class="page-navigation__link page-navigation__link--fish">Рыбы</a>
-            </li>
-            <li class="page-navigation__list-item">
-              <a href="#" class="page-navigation__link page-navigation__link--mouse">Грызуны</a>
-            </li>
-          </ul>
-        </nav>
-        <nav class="breadcrumbs-navigation clearfix" id="groups">
+    <div class="container tabs">
+      <!-- основная навигация -->
+      <nav class="page-navigation">
+        <ul class="page-navigation__list">
+          <li class="page-navigation__list-item active">
+            <div class="page-navigation__link page-navigation__link--dog">Собаки</div>
+          </li>
+          <li class="page-navigation__list-item">
+            <div class="page-navigation__link page-navigation__link--cat">Кошки</div>
+          </li>
+          <li class="page-navigation__list-item">
+            <div class="page-navigation__link page-navigation__link--bird">Птицы</div>
+          </li>
+          <li class="page-navigation__list-item">
+            <div class="page-navigation__link page-navigation__link--fish">Рыбы</div>
+          </li>
+          <li class="page-navigation__list-item">
+            <div class="page-navigation__link page-navigation__link--mouse">Грызуны</div>
+          </li>
+        </ul>
+      </nav>
+      <div class="page-content active">
+        <nav class="breadcrumbs-navigation clearfix">
           <ul class="breadcrumbs-navigation__list">
             <li class="breadcrumbs-navigation__list-item">
               <a href="#" class="breadcrumbs-navigation__link">Группы</a>
@@ -157,109 +156,113 @@
             </form>
           </div>
         </nav>
+        <div class="groups-container groups-container--breeds">
+          <div class="breed-item clearfix">
+            <div class="breed-item__image-wrapper">
+              <img src="img/terrier-bedlington.jpg" alt="" class="breed-item__image">
+            </div>
+            <div class="breed-item__info-wrapper star-wrapper">
+              <span class="breed-item__rating icon-star"></span>
+              <a href="#" class="breed-item__breed">Бедлингтон Терьер</a>
+              <div class="breed-item__pets"><span class="breed-item__pets--amount">456</span> питомцев</div>
+            </div>
+          </div>
+          <div class="breed-item clearfix">
+            <div class="breed-item__image-wrapper">
+              <img src="img/terrier-border.jpg" alt="" class="breed-item__image">
+            </div>
+            <div class="breed-item__info-wrapper star-wrapper">
+              <span class="breed-item__rating icon-star"></span>
+              <a href="#" class="breed-item__breed">Бордер Терьер</a>
+              <div class="breed-item__pets"><span class="breed-item__pets--amount">800</span> питомцев</div>
+            </div>
+          </div>
+          <div class="breed-item clearfix">
+            <div class="breed-item__image-wrapper">
+              <img src="img/terrier-brazilian.jpg" alt="" class="breed-item__image">
+            </div>
+            <div class="breed-item__info-wrapper star-wrapper">
+              <span class="breed-item__rating icon-star"></span>
+              <a href="#" class="breed-item__breed">Бразильский Терьер</a>
+              <div class="breed-item__pets"><span class="breed-item__pets--amount">86</span> питомцев</div>
+            </div>
+          </div>
+          <div class="breed-item clearfix">
+            <div class="breed-item__image-wrapper">
+              <img src="img/terrier-welsh.jpg" alt="" class="breed-item__image">
+            </div>
+            <div class="breed-item__info-wrapper star-wrapper">
+              <span class="breed-item__rating icon-star"></span>
+              <a href="#" class="breed-item__breed">Вельштерьер</a>
+              <div class="breed-item__pets"><span class="breed-item__pets--amount">456</span> питомцев</div>
+            </div>
+          </div>
+          <div class="breed-item clearfix">
+            <div class="breed-item__image-wrapper">
+              <img src="img/terrier-glen-of-imaal.jpg" alt="" class="breed-item__image">
+            </div>
+            <div class="breed-item__info-wrapper star-wrapper">
+              <span class="breed-item__rating icon-star"></span>
+              <a href="#" class="breed-item__breed">Глен Оф Имаал Терьер</a>
+              <div class="breed-item__pets"><span class="breed-item__pets--amount">800</span> питомцев</div>
+            </div>
+          </div>
+          <div class="breed-item clearfix">
+            <div class="breed-item__image-wrapper">
+              <img src="img/terrier-irish.jpg" alt="" class="breed-item__image">
+            </div>
+            <div class="breed-item__info-wrapper star-wrapper">
+              <span class="breed-item__rating icon-star"></span>
+              <a href="#" class="breed-item__breed">Ирландский Терьер</a>
+              <div class="breed-item__pets"><span class="breed-item__pets--amount">86</span> питомцев</div>
+            </div>
+          </div>
+          <div class="breed-item clearfix">
+            <div class="breed-item__image-wrapper">
+              <img src="img/terrier-kerry-blue.jpg" alt="" class="breed-item__image">
+            </div>
+            <div class="breed-item__info-wrapper star-wrapper">
+              <span class="breed-item__rating icon-star"></span>
+              <a href="#" class="breed-item__breed">Керри Блю Терьер</a>
+              <div class="breed-item__pets"><span class="breed-item__pets--amount">456</span> питомцев</div>
+            </div>
+          </div>
+          <div class="breed-item clearfix">
+            <div class="breed-item__image-wrapper">
+              <img src="img/terrier-lakeland.jpg" alt="" class="breed-item__image">
+            </div>
+            <div class="breed-item__info-wrapper star-wrapper">
+              <span class="breed-item__rating icon-star"></span>
+              <a href="#" class="breed-item__breed">Лейкленд Терьер</a>
+              <div class="breed-item__pets"><span class="breed-item__pets--amount">800</span> питомцев</div>
+            </div>
+          </div>
+          <div class="breed-item clearfix">
+            <div class="breed-item__image-wrapper">
+              <img src="img/terrier-manchester.jpg" alt="" class="breed-item__image">
+            </div>
+            <div class="breed-item__info-wrapper star-wrapper">
+              <span class="breed-item__rating icon-star"></span>
+              <a href="#" class="breed-item__breed">Манчестер Терьер</a>
+              <div class="breed-item__pets"><span class="breed-item__pets--amount">86</span> питомцев</div>
+            </div>
+          </div>
+          <div class="breed-item clearfix">
+            <div class="breed-item__image-wrapper">
+              <img src="img/terrier-soft-coated.jpg" alt="" class="breed-item__image">
+            </div>
+            <div class="breed-item__info-wrapper star-wrapper">
+              <span class="breed-item__rating icon-star"></span>
+              <a href="#" class="breed-item__breed">Мягкошерстный Пшеничный Терьер</a>
+              <div class="breed-item__pets"><span class="breed-item__pets--amount">456</span> питомцев</div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="groups-container groups-container--breeds">
-        <div class="breed-item clearfix">
-          <div class="breed-item__image-wrapper">
-            <img src="img/terrier-bedlington.jpg" alt="" class="breed-item__image">
-          </div>
-          <div class="breed-item__info-wrapper star-wrapper">
-            <span class="breed-item__rating icon-star"></span>
-            <a href="#" class="breed-item__breed">Бедлингтон Терьер</a>
-            <div class="breed-item__pets"><span class="breed-item__pets--amount">456</span> питомцев</div>
-          </div>
-        </div>
-        <div class="breed-item clearfix">
-          <div class="breed-item__image-wrapper">
-            <img src="img/terrier-border.jpg" alt="" class="breed-item__image">
-          </div>
-          <div class="breed-item__info-wrapper star-wrapper">
-            <span class="breed-item__rating icon-star"></span>
-            <a href="#" class="breed-item__breed">Бордер Терьер</a>
-            <div class="breed-item__pets"><span class="breed-item__pets--amount">800</span> питомцев</div>
-          </div>
-        </div>
-        <div class="breed-item clearfix">
-          <div class="breed-item__image-wrapper">
-            <img src="img/terrier-brazilian.jpg" alt="" class="breed-item__image">
-          </div>
-          <div class="breed-item__info-wrapper star-wrapper">
-            <span class="breed-item__rating icon-star"></span>
-            <a href="#" class="breed-item__breed">Бразильский Терьер</a>
-            <div class="breed-item__pets"><span class="breed-item__pets--amount">86</span> питомцев</div>
-          </div>
-        </div>
-        <div class="breed-item clearfix">
-          <div class="breed-item__image-wrapper">
-            <img src="img/terrier-welsh.jpg" alt="" class="breed-item__image">
-          </div>
-          <div class="breed-item__info-wrapper star-wrapper">
-            <span class="breed-item__rating icon-star"></span>
-            <a href="#" class="breed-item__breed">Вельштерьер</a>
-            <div class="breed-item__pets"><span class="breed-item__pets--amount">456</span> питомцев</div>
-          </div>
-        </div>
-        <div class="breed-item clearfix">
-          <div class="breed-item__image-wrapper">
-            <img src="img/terrier-glen-of-imaal.jpg" alt="" class="breed-item__image">
-          </div>
-          <div class="breed-item__info-wrapper star-wrapper">
-            <span class="breed-item__rating icon-star"></span>
-            <a href="#" class="breed-item__breed">Глен Оф Имаал Терьер</a>
-            <div class="breed-item__pets"><span class="breed-item__pets--amount">800</span> питомцев</div>
-          </div>
-        </div>
-        <div class="breed-item clearfix">
-          <div class="breed-item__image-wrapper">
-            <img src="img/terrier-irish.jpg" alt="" class="breed-item__image">
-          </div>
-          <div class="breed-item__info-wrapper star-wrapper">
-            <span class="breed-item__rating icon-star"></span>
-            <a href="#" class="breed-item__breed">Ирландский Терьер</a>
-            <div class="breed-item__pets"><span class="breed-item__pets--amount">86</span> питомцев</div>
-          </div>
-        </div>
-        <div class="breed-item clearfix">
-          <div class="breed-item__image-wrapper">
-            <img src="img/terrier-kerry-blue.jpg" alt="" class="breed-item__image">
-          </div>
-          <div class="breed-item__info-wrapper star-wrapper">
-            <span class="breed-item__rating icon-star"></span>
-            <a href="#" class="breed-item__breed">Керри Блю Терьер</a>
-            <div class="breed-item__pets"><span class="breed-item__pets--amount">456</span> питомцев</div>
-          </div>
-        </div>
-        <div class="breed-item clearfix">
-          <div class="breed-item__image-wrapper">
-            <img src="img/terrier-lakeland.jpg" alt="" class="breed-item__image">
-          </div>
-          <div class="breed-item__info-wrapper star-wrapper">
-            <span class="breed-item__rating icon-star"></span>
-            <a href="#" class="breed-item__breed">Лейкленд Терьер</a>
-            <div class="breed-item__pets"><span class="breed-item__pets--amount">800</span> питомцев</div>
-          </div>
-        </div>
-        <div class="breed-item clearfix">
-          <div class="breed-item__image-wrapper">
-            <img src="img/terrier-manchester.jpg" alt="" class="breed-item__image">
-          </div>
-          <div class="breed-item__info-wrapper star-wrapper">
-            <span class="breed-item__rating icon-star"></span>
-            <a href="#" class="breed-item__breed">Манчестер Терьер</a>
-            <div class="breed-item__pets"><span class="breed-item__pets--amount">86</span> питомцев</div>
-          </div>
-        </div>
-        <div class="breed-item clearfix">
-          <div class="breed-item__image-wrapper">
-            <img src="img/terrier-soft-coated.jpg" alt="" class="breed-item__image">
-          </div>
-          <div class="breed-item__info-wrapper star-wrapper">
-            <span class="breed-item__rating icon-star"></span>
-            <a href="#" class="breed-item__breed">Мягкошерстный Пшеничный Терьер</a>
-            <div class="breed-item__pets"><span class="breed-item__pets--amount">456</span> питомцев</div>
-          </div>
-        </div>
-      </div>
+      <div class="page-content"></div>
+      <div class="page-content"></div>
+      <div class="page-content"></div>
+      <div class="page-content"></div>
     </div>
   </div>
   <footer class="page-footer">

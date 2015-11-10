@@ -63,7 +63,8 @@ $(function() {
   $(".pets-button").on("click", function(event){
     $(".header-navigation__link--pets").addClass("current");
     $(".page-header").addClass("nested");
-    $(".navigation-block").addClass("nested");
+    $(".page-navigation").addClass("nested");
+    $(".breadcrumbs-navigation").addClass("nested");
     $(".main").addClass("nested");
   })
 
@@ -258,6 +259,18 @@ $(function() {
         $(this)
           .addClass('active').siblings().removeClass('active')
           .closest('div.sorting').find('div.sorted-items').removeClass('active').eq($(this).index()).addClass('active');
+      });
+    });
+  })(jQuery);
+
+  // переключение табов навигации
+  (function($) {
+    $(function() {
+      $('ul.page-navigation__list').on('click', 'li:not(.active)', function() {
+        $(this)
+          .addClass('active').siblings().removeClass('active')
+          .closest('div.tabs').find('div.page-content').removeClass('active').eq($(this).index()).addClass('active');
+          $('ul.page-navigation__list').addClass('hidden');
       });
     });
   })(jQuery);

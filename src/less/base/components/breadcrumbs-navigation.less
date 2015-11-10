@@ -1,5 +1,22 @@
 .breadcrumbs-navigation {
+  margin-bottom: 26px;
   padding-left: 22px;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  border-radius: 0 0 2px 2px;
+  box-shadow: 0 1px 2px rgba(25,26,25,.1);
+  overflow: hidden;
+
+  &--main-page {
+    position: relative;
+    top: -50px;
+    margin-bottom: 0;
+
+    &.nested {
+      position: static;
+      margin-bottom: 26px;
+    }
+  }
 
   &__list {
     float: left;
