@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
   <title>Модальные окна</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 </head>
 <body>
   <!-- основной хедер. по классу logged-in переключается на состояние для залогиненного пользователя, по классу nested - состояние для незалогиненного пользователя с разделителями -->
@@ -138,6 +139,9 @@
         </li>
         <li>
           <a href="#repost" data-toggle="modal" data-target="#repost">Репост</a>
+        </li>
+        <li>
+          <a href="#personal-message" data-toggle="modal" data-target="#personal-message">Форма личных сообщений</a>
         </li>
       </ul>
     </div>
@@ -871,6 +875,34 @@
             </div>
           </div>
         </article>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="personal-message" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal__close-btn close" data-dismiss="modal">Закрыть</div>
+        <div class="new-message-container">
+          <div class="new-message-container__receiver-field clearfix">
+            <label for="receiver" class="new-message-container__label">Кому:</label>
+            <div class="new-message-container__input-wrapper">
+              <input type="text" id="receiver">
+            </div>
+          </div>
+          <div class="new-message-block">
+            <form action="#" method="post">
+              <textarea class="new-message-block__textarea" name="new-message" rows="4">Написать сообщение ...</textarea>
+              <div class="new-message-block__btns-row clearfix">
+                <div class="new-message-block__upload-container">
+                  <input type="file" id="upload-photo-2">
+                  <div class="new-message-block__select-link">Загрузить фотографию</div>
+                </div>
+                <button type="submit" class="btn btn--green">Отправить</button>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
   </div>

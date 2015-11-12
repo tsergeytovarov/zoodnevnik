@@ -25,7 +25,7 @@ $(function() {
   // закрытие поля поиска в хлебных крошках
   $(".js-search-close").on("click", function(event){
     event.preventDefault();
-    $(".breadcrumbs-navigation__left").removeClass("opened");
+    $(this).next(".breadcrumbs-search-input").val("");
   })
 
   // открытие поля поиска в хедере
@@ -42,21 +42,28 @@ $(function() {
 
   // открытие поля поиска тип 2
   $(".js-search-open-3").on("click", function(event){
-    event.preventDefault();
-    $(".search-container").toggleClass("opened");
+    if ($(this).parents(".search-container").hasClass("opened")) {
+      $(this).parents(".search-container").removeClass("opened");
+    } else {
+      $(this).parents(".search-container").addClass("opened");
+    }
+  })
+
+  $(".search-input").on("focus", function() {
+    $(this).parents(".search-container").addClass("opened");
   })
 
   // закрытие поля поиска тип 2
   $(".js-search-close-3").on("click", function(event){
     event.preventDefault();
-    $(".search-container").removeClass("opened");
+    $(this).prev(".search-input").val("");
   })
 
   // открытие выпадающего списка на странице поиска
   $(".tab-toggle__text").click(function(event){
     event.preventDefault();
     $(this).parents(".list-toggle").toggleClass("unfolded");
-    $(".tab-toggles__toggle").text($(this).text());
+    $(this).parents(".tab-toggle").parents(".tab-toggles__list").prev(".tab-toggles__toggle").text($(this).text());
   });
 
   // переключение состояний элементов по скроллу к питомцам (главная)
@@ -160,10 +167,10 @@ $(function() {
   });
 
   //разворачивание блока редактирования комментариев на странице питомца (редактирование)
-  $(".inner-tabs__write-btn").click(function(event) {
+  $(".inner-tabs__textarea-wrapper").click(function(event) {
     event.preventDefault();
-    $(this).prev("textarea").removeAttr("disabled");
-    $(this).prev("textarea").focus();
+    $(this).children("textarea").removeAttr("disabled");
+    $(this).children("textarea").focus();
     $(this).parents(".inner-tabs__message-block").addClass("unfolded");
   })
 
@@ -202,6 +209,25 @@ $(function() {
 
   //
   $(".info-table__edit-btn").click(function() {
+    $(this).prev("input").focus();
+  })
+
+  //
+  $(".new-message-block__textarea").on("focus", function() {
+    $(this).empty();
+  })
+
+  //
+  $(".owner-message__input").focus(function() {
+    $(".owner-message__write-btn").addClass("hidden");
+    $(".owner-message__cancel-btn").addClass("show");
+  })
+
+  $(".owner-message__cancel-btn").click(function() {
+    $(".owner-message__input").val("");
+  })
+
+  $(".ancestor-table__edit-btn").click(function() {
     $(this).prev("input").focus();
   })
 

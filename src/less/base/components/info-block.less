@@ -489,6 +489,43 @@
         opacity: .8;
       }
     }
+
+    &.show {
+      display: block;
+    }
+  }
+
+  &__cancel-btn {
+    position: absolute;
+    top: 4px;
+    right: 10px;
+    display: none;
+    width: 13px;
+    height: 13px;
+    font-size: 0;
+    cursor: pointer;
+
+    &:after {
+      content: '\e808';
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-family: @icon;
+      font-size: 14px;
+      line-height: 28px;
+      color: #e6df87;
+    }
+
+    &:hover {
+
+      &:after {
+        opacity: .8;
+      }
+    }
+
+    &.show {
+      display: block;
+    }
   }
 
   &__textarea {
@@ -516,6 +553,10 @@
 
       &__write-btn {
         display: block;
+
+        &.hidden {
+          display: none;
+        }
       }
     }
 

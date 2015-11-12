@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
   <title>News</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 </head>
 <body сlass="news">
   <!-- основной хедер. по классу logged-in переключается на состояние для залогиненного пользователя, по классу nested - состояние для незалогиненного пользователя с разделителями -->
@@ -177,6 +178,22 @@
                 <a href="#" class="news-item__social-link news-item__social-link--like">Нравится</a>
                 <a href="#" class="news-item__social-link news-item__social-link--comment">Комментарий</a>
                 <a href="#" class="news-item__social-link news-item__social-link--share">Поделиться</a>
+                <div class="news-item__social-container">
+                  <a href="#" class="news-item__social-link news-item__social-link--public">Опубликовать</a>
+                  <div class="news-item-tooltip">
+                    <ul class="news-item-tooltip__list">
+                      <li class="news-item-tooltip__list-item">
+                        <a href="#" class="news-item-tooltip__public-link news-item-tooltip__public-link--vk">Вконтакте</a>
+                      </li>
+                      <li class="news-item-tooltip__list-item">
+                        <a href="#" class="news-item-tooltip__public-link news-item-tooltip__public-link--fb">Facebook</a>
+                      </li>
+                      <li class="news-item-tooltip__list-item">
+                        <a href="#" class="news-item-tooltip__public-link news-item-tooltip__public-link--ok">Однокласники</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
               <div class="comment-block">
                 <div class="comment-block__show-prev">Показать предыдущие записи (<span class="previous-comments">12</span>)</div>

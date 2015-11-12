@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
   <title>Zoodnevnik</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 </head>
 <body>
   <!-- основной хедер. по классу logged-in переключается на состояние для залогиненного пользователя, по классу nested - состояние для незалогиненного пользователя с разделителями -->
@@ -168,6 +169,7 @@
             <div class="owner-message__input-wrapper">
               <input type="text" id="owner-message" class="owner-message__input" placeholder="Напишите сообщение">
               <div class="owner-message__write-btn">Написать</div>
+              <div class="owner-message__cancel-btn">Удалить</div>
             </div>
           </form>
         </div>
@@ -667,14 +669,9 @@
                   </tr>
                 </table>
               </form>
-              <div class="info-table__inner">
+              <div class="info-table__inner info-table__inner--ancestor">
                 <form action="#" method="post">
                   <table class="ancestor-table ancestor-table--edit">
-                    <tr>
-                      <th><div class="ancestor-table__title">Отец</div></th>
-                      <th></th>
-                      <th><a href="#" class="ancestor-table__show-more">Больше</a></th>
-                    </tr>
                     <tr>
                       <td rowspan="4">
                         <div class="ancestor-table__inner">
@@ -760,10 +757,6 @@
                     </tr>
                   </table>
                   <table class="ancestor-table-mobile ancestor-table-mobile--edit">
-                    <tr>
-                      <th><div class="ancestor-table__title">Отец</div></th>
-                      <th><a href="#" class="ancestor-table__show-more">Больше</a></th>
-                    </tr>
                     <tr>
                       <td colspan="2">
                         <div class="ancestor-table__inner">
@@ -811,14 +804,9 @@
                   </table>
                 </form>
               </div>
-              <div class="info-table__inner">
+              <div class="info-table__inner info-table__inner--ancestor">
                 <form action="#" method="post">
-                  <table class="ancestor-table ancestor-table--edit">
-                    <tr>
-                      <th><div class="ancestor-table__title">Мать</div></th>
-                      <th></th>
-                      <th><a href="#" class="ancestor-table__show-more">Больше</a></th>
-                    </tr>
+                  <table class="ancestor-table ancestor-table--second ancestor-table--edit">
                     <tr>
                       <td rowspan="4">
                         <div class="ancestor-table__inner">
@@ -904,10 +892,6 @@
                     </tr>
                   </table>
                   <table class="ancestor-table-mobile ancestor-table-mobile--edit">
-                    <tr>
-                      <th><div class="ancestor-table__title">Мать</div></th>
-                      <th><a href="#" class="ancestor-table__show-more">Больше</a></th>
-                    </tr>
                     <tr>
                       <td colspan="2">
                         <div class="ancestor-table__inner">
@@ -1087,91 +1071,7 @@
   </footer>
 
 
-  <div class="modal modal--pets fade" id="settings" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal__close-btn close" data-dismiss="modal">Закрыть</div>
-        <div class="modal__wrapper tabs">
-          <h2 class="modal__title">Настройки</h2>
-          <div class="tab-toggles tab-toggles--modal">
-            <ul class="tab-toggles__list tab-toggles__list--single">
-              <li class="tab-toggle active">
-                <div class="tab-toggle__text">Приватность</div>
-              </li>
-            </ul>
-          </div>
-          <div class="tabs-container">
-            <div class="tab-content active">
-              <div class="form-table">
-                <form action="#" method="post">
-                  <h3 class="form-table__title">Общая</h3>
-                  <div class="form-table__select-row clearfix">
-                    <label for="page-visibility" class="form-table__select-label">Кто может видеть эту страницу</label>
-                    <div class="form-table__select-wrapper">
-                      <select name="page-visibility" id="page-visibility" class="form-table__select chosen-select" data-placeholder="Все">
-                        <option value="0"></option>
-                        <option value="1">Все</option>
-                        <option value="2">Только я</option>
-                        <option value="3">Только я и мои друзья</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="form-table__select-row clearfix">
-                    <label for="diary-visibility" class="form-table__select-label">Кто видит дневник</label>
-                    <div class="form-table__select-wrapper">
-                      <select name="diary-visibility" id="diary-visibility" class="form-table__select chosen-select" data-placeholder="Все">
-                        <option value="0"></option>
-                        <option value="1">Все</option>
-                        <option value="2">Только я</option>
-                        <option value="3">Только я и мои друзья</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="form-table__select-row clearfix">
-                    <label for="diary-subscribers" class="form-table__select-label">Кто может подписаться на дневник</label>
-                    <div class="form-table__select-wrapper">
-                      <select name="diary-subscribers" id="diary-subscribers" class="form-table__select chosen-select" data-placeholder="Все">
-                        <option value="0"></option>
-                        <option value="1">Все</option>
-                        <option value="2">Только я</option>
-                        <option value="3">Только я и мои друзья</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="form-table__select-row clearfix">
-                    <label for="photos-visibility" class="form-table__select-label">Кто может смотреть фотографии</label>
-                    <div class="form-table__select-wrapper">
-                      <select name="photos-visibility" id="photos-visibility" class="form-table__select chosen-select" data-placeholder="Все">
-                        <option value="0"></option>
-                        <option value="1">Все</option>
-                        <option value="2">Только я</option>
-                        <option value="3">Только я и мои друзья</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="form-table__select-row clearfix">
-                    <label for="info-visibility" class="form-table__select-label">Кто может смотреть информацию</label>
-                    <div class="form-table__select-wrapper">
-                      <select name="info-visibility" id="info-visibility" class="form-table__select chosen-select" data-placeholder="Все">
-                        <option value="0"></option>
-                        <option value="1">Все</option>
-                        <option value="2">Только я</option>
-                        <option value="3">Только я и мои друзья</option>
-                      </select>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
   <script src="js/vendors/jquery.js"></script>
-  <script src="js/vendors/bootstrap.min.js"></script>
   <script src="js/vendors/chosen.jquery.min.js"></script>
   <script src="js/script.js"></script>
 

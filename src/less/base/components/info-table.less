@@ -58,6 +58,17 @@
 
   &__inner {
     padding: 12px 19px;
+
+    &--ancestor {
+
+      &:nth-child(2) {
+        padding-bottom: 0;
+      }
+
+      &:nth-child(3) {
+        padding-top: 0;
+      }
+    }
   }
 
   &__input-wrapper {
@@ -198,6 +209,10 @@
 .ancestor-table {
   margin-bottom: 7px;
   width: 100%;
+
+  &--second {
+    margin-top: -1px;
+  }
 
   th {
     text-align: left;
@@ -343,6 +358,7 @@
   }
 
   &--edit {
+    margin-bottom: 0;
 
     td {
       width: 33%;
