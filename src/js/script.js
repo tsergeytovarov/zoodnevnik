@@ -180,11 +180,11 @@ $(function() {
     $(this).parents(".inner-tabs__message-block").removeClass("unfolded");
   })
 
-  //скрытие новости
+  /*//скрытие новости
   $(".news-item__close-btn").click(function(event) {
     event.preventDefault();
     $(this).parents(".news-item").addClass("hidden");
-  })
+  })*/
 
   //скрытие карочки владельца
   $(".owner-card__close-btn").click(function(event) {
@@ -223,13 +223,30 @@ $(function() {
     $(".owner-message__cancel-btn").addClass("show");
   })
 
+  $(".owner-message__textarea").focus(function() {
+    $(".owner-message__write-btn").addClass("hidden");
+    $(".owner-message__cancel-btn").addClass("show");
+  })
+
   $(".owner-message__cancel-btn").click(function() {
     $(".owner-message__input").val("");
+    $(".owner-message__textarea").text("");
+    $(".owner-message__textarea").val("");
   })
 
   $(".ancestor-table__edit-btn").click(function() {
     $(this).prev("input").focus();
   })
+
+  $(".registration-form input").on("focus", function(){
+    var username = $("#username");
+    var email = $("#email-02");
+    var password = $("#password-02");
+    var passwordRepeat = $("#password-02-repeat");
+    if (username && email && password && passwordRepeat) {
+      $(".register-btn").addClass("fields-ok");
+    }
+  });
 
   /*// модальные окна
   $(document).ready(function() {

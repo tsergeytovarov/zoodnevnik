@@ -164,15 +164,16 @@
               <a href="#" class="inner-tabs__toggle">Все записи</a>
               <ul class="inner-tabs__list">
                 <li class="inner-tabs__list-item active">Все записи</li>
-                <li class="inner-tabs__list-item">Встречи</li>
                 <li class="inner-tabs__list-item">Выставка</li>
                 <li class="inner-tabs__list-item">Состязание</li>
+                <li class="inner-tabs__list-item">Потомство</li>
                 <li class="inner-tabs__list-item">Фотосессия</li>
               </ul>
             </div>
             <div class="sorted-content active">
               <article class="news-item news-item--edit">
-                <div class="news-item__close-btn">Скрыть</div>
+                <div class="news-item__edit-btn">Редактировать</div>
+                <div class="news-item__close-btn" data-toggle="modal" data-target="#confirm">Скрыть</div>
                 <div class="news-item__information-row">
                   <a href="#" class="news-item__avatar-wrapper">
                     <img src="img/community-avatar.jpg" alt="" class="news-item__avatar">
@@ -599,6 +600,19 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal--confirm fade" id="confirm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal__close-btn close" data-dismiss="modal">Закрыть</div>
+        <div class="modal__confirm-message">Удалить сообщение?</div>
+        <input type="radio" name="confirm" id="yes">
+        <label for="yes" class="confirm-btn btn btn--green">Да</label>
+        <input type="radio" name="confirm" id="no">
+        <label for="yes" class="confirm-btn btn btn--green">Нет</label>
       </div>
     </div>
   </div>

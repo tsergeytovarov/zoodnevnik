@@ -207,7 +207,6 @@
 }
 
 .ancestor-table {
-  margin-bottom: 7px;
   width: 100%;
 
   &--second {
@@ -401,9 +400,16 @@
   }
 
   &__children {
+    display: block;
+    text-decoration: none;
     font-weight: 600;
     font-size: 12px;
     line-height: 18px;
+    color: #656565;
+
+    &:hover {
+      opacity: .8;
+    }
   }
 
   &__date {
@@ -413,14 +419,23 @@
   }
 
   &__name {
+    text-decoration: none;
     font-weight: 600;
     font-size: 12px;
     line-height: 18px;
+    color: #656565;
+
+    &:hover {
+      opacity: .8;
+    }
   }
 
   &__detail {
+    display: block;
+    text-decoration: none;
     font-size: 12px;
     line-height: 18px;
+    color: #656565;
   }
 
   &__input-wrapper {

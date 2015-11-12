@@ -137,6 +137,7 @@
             <div class="owner-message__input-wrapper">
               <textarea id="owner-message" class="owner-message__textarea" placeholder="Напишите сообщение">Предлагается для племенного размножения Шарик. Звоните: +7 (945) 345-45-56, Федор</textarea>
               <div class="owner-message__write-btn">Написать</div>
+              <div class="owner-message__cancel-btn">Удалить</div>
             </div>
           </form>
         </div>
@@ -269,7 +270,8 @@
             </div>
             <div class="sorted-content active">
               <article class="news-item news-item--edit">
-                <div class="news-item__close-btn">Скрыть</div>
+                <div class="news-item__edit-btn">Редактировать</div>
+                <div class="news-item__close-btn" data-toggle="modal" data-target="#confirm">Скрыть</div>
                 <div class="news-item__information-row">
                   <a href="#" class="news-item__avatar-wrapper">
                     <img src="img/owner-avatar.jpg" alt="" class="news-item__avatar">
@@ -844,6 +846,19 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal--confirm fade" id="confirm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal__close-btn close" data-dismiss="modal">Закрыть</div>
+        <div class="modal__confirm-message">Удалить сообщение?</div>
+        <input type="radio" name="confirm" id="yes">
+        <label for="yes" class="confirm-btn btn btn--green">Да</label>
+        <input type="radio" name="confirm" id="no">
+        <label for="yes" class="confirm-btn btn btn--green">Нет</label>
       </div>
     </div>
   </div>

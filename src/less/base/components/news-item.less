@@ -227,11 +227,41 @@
     }
   }
 
+  &__edit-btn {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    display: none;
+    width: 11px;
+    height: 11px;
+    font-size: 0;
+    cursor: pointer;
+
+    &:after {
+      content: '\e80a';
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-family: @icon;
+      font-size: 14px;
+      line-height: 11px;
+      color: #e5e5e5;
+    }
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+
   &--edit {
 
     .news-item {
 
       &__close-btn {
+        display: block;
+      }
+
+      &__edit-btn {
         display: block;
       }
 
