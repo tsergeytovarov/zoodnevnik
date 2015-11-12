@@ -176,8 +176,9 @@
                 <input type="text" id="start-day" class="date-picker__input date-picker__input--day" placeholder="01">
                 <input type="text" id="start-month" class="date-picker__input date-picker__input--day" placeholder="12">
                 <input type="text" id="start-year" class="date-picker__input date-picker__input--year" placeholder="2015">
+                <input type="text" id="from" name="from" class="date-picker__input date-picker__input--date">
               </div>
-              <div class="calendar-container">
+              <!-- <div class="calendar-container">
                 <button type="button" class="calendar-toggle"></button>
                 <div class="calendar-tooltip">
                   <div class="calendar-tooltip__month-row">
@@ -220,7 +221,7 @@
                     <span class="calendar-tooltip__day">31</span>
                   </div>
                 </div>
-              </div>
+              </div> -->
             </div>
             <div class="date-picker__row">
               <label for="end-day" class="date-picker__label"><span class="date-picker__label--desktop">Заканчивая</span><span class="date-picker__label--mobile">По</span></label>
@@ -228,8 +229,9 @@
                 <input type="text"  id="end-day" class="date-picker__input date-picker__input--day" placeholder="10">
                 <input type="text" id="end-month" class="date-picker__input date-picker__input--day" placeholder="02">
                 <input type="text" id="end-year" class="date-picker__input date-picker__input--year" placeholder="2016">
+                <input type="text" id="to" name="to" class="date-picker__input date-picker__input--date">
               </div>
-              <div class="calendar-container">
+              <!-- <div class="calendar-container">
                 <button type="button" class="calendar-toggle"></button>
                 <div class="calendar-tooltip">
                   <div class="calendar-tooltip__month-row">
@@ -270,7 +272,7 @@
                     <span class="calendar-tooltip__day">29</span>
                   </div>
                 </div>
-              </div>
+              </div> -->
             </div>
           </form>
         </div>
@@ -583,7 +585,37 @@
 
 
   <script src="js/vendors/jquery.js"></script>
+  <script src="js/vendors/jquery-ui.js"></script>
   <script src="js/script.js"></script>
+
+  <script>
+  $(function() {
+    $( "#from" ).datepicker({
+      showOn: "button",
+      buttonImage: "img/icons/calendar.png",
+      buttonImageOnly: true,
+      buttonText: "Select date",
+      defaultDate: "+1w",
+      changeMonth: true,
+      numberOfMonths: 1,
+      onClose: function( selectedDate ) {
+        $( "#to" ).datepicker( "option", "minDate", selectedDate );
+      }
+    });
+    $( "#to" ).datepicker({
+      showOn: "button",
+      buttonImage: "img/icons/calendar.png",
+      buttonImageOnly: true,
+      buttonText: "Select date",
+      defaultDate: "+1w",
+      changeMonth: true,
+      numberOfMonths: 1,
+      onClose: function( selectedDate ) {
+        $( "#from" ).datepicker( "option", "maxDate", selectedDate );
+      }
+    });
+  });
+  </script>
 
 </body>
 </html>
