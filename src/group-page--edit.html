@@ -492,13 +492,13 @@
             <div class="files-container files-container--edit">
               <div class="files-container__btns-wrapper">
                 <a href="#" class="download-link">Данные.pdf</a>
-                <button class="eye-btn">Скрыть</button>
-                <button class="trash-btn">Удалить</button>
+                <button class="eye-btn" data-toggle="modal" data-target="#privacy-settings">Скрыть</button>
+                <button class="trash-btn" data-toggle="modal" data-target="#confirm-removal">Удалить</button>
               </div>
               <div class="files-container__btns-wrapper">
                 <a href="#" class="download-link">Данные.pdf</a>
-                <button class="eye-btn">Скрыть</button>
-                <button class="trash-btn">Удалить</button>
+                <button class="eye-btn" data-toggle="modal" data-target="#privacy-settings">Скрыть</button>
+                <button class="trash-btn" data-toggle="modal" data-target="#confirm-removal">Удалить</button>
               </div>
             </div>
           </div>
@@ -617,6 +617,43 @@
         <label for="yes" class="confirm-btn btn btn--green">Да</label>
         <input type="radio" name="confirm" id="no">
         <label for="yes" class="confirm-btn btn btn--green">Нет</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal--confirm fade" id="confirm-removal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal__close-btn close" data-dismiss="modal">Закрыть</div>
+        <div class="modal__confirm-message">Удалить файл?</div>
+        <input type="radio" name="confirm" id="yes">
+        <label for="yes" class="confirm-btn btn btn--green">Да</label>
+        <input type="radio" name="confirm" id="no">
+        <label for="yes" class="confirm-btn btn btn--green">Нет</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="privacy-settings" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal__close-btn close" data-dismiss="modal">Закрыть</div>
+        <div class="form-table">
+          <form action="#" method="post">
+            <h3 class="form-table__title">Настройки приватности</h3>
+            <div class="form-table__select-row clearfix">
+              <label for="page-visibility" class="form-table__select-label">Кто может видеть этот файл?</label>
+              <div class="form-table__select-wrapper">
+                <select name="page-visibility" id="page-visibility" class="form-table__select chosen-select" data-placeholder="Все">
+                  <option value="0"></option>
+                  <option value="1">Все</option>
+                  <option value="2">Только я</option>
+                  <option value="3">Только я и мои друзья</option>
+                </select>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>
