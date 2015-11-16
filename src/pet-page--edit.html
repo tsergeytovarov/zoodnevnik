@@ -1026,7 +1026,7 @@
                     <a href="#" class="control-tools__link control-tools__link--give-away">Передать питомца</a>
                   </li>
                   <li class="control-tools__list-item">
-                    <a href="#" class="control-tools__link control-tools__link--hide">Скрыть страницу</a>
+                    <a href="#confirm-action" class="control-tools__link control-tools__link--hide" data-toggle="modal" data-target="#confirm-action">Скрыть страницу</a>
                   </li>
                 </ul>
               </div>
@@ -1071,11 +1071,106 @@
     </div>
   </footer>
 
+  <div class="modal modal--pets fade" id="settings" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal__close-btn close" data-dismiss="modal">Закрыть</div>
+        <div class="modal__wrapper tabs">
+          <h2 class="modal__title">Настройки</h2>
+          <div class="tab-toggles tab-toggles--modal">
+            <ul class="tab-toggles__list tab-toggles__list--single">
+              <li class="tab-toggle active">
+                <div class="tab-toggle__text">Приватность</div>
+              </li>
+            </ul>
+          </div>
+          <div class="tabs-container">
+            <div class="tab-content active">
+              <div class="form-table">
+                <form action="#" method="post">
+                  <h3 class="form-table__title">Общая</h3>
+                  <div class="form-table__select-row clearfix">
+                    <label for="page-visibility" class="form-table__select-label">Кто может видеть эту страницу</label>
+                    <div class="form-table__select-wrapper">
+                      <select name="page-visibility" id="page-visibility" class="form-table__select chosen-select" data-placeholder="Все">
+                        <option value="0"></option>
+                        <option value="1">Все</option>
+                        <option value="2">Только я</option>
+                        <option value="3">Только я и мои друзья</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-table__select-row clearfix">
+                    <label for="diary-visibility" class="form-table__select-label">Кто видит дневник</label>
+                    <div class="form-table__select-wrapper">
+                      <select name="diary-visibility" id="diary-visibility" class="form-table__select chosen-select" data-placeholder="Все">
+                        <option value="0"></option>
+                        <option value="1">Все</option>
+                        <option value="2">Только я</option>
+                        <option value="3">Только я и мои друзья</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-table__select-row clearfix">
+                    <label for="diary-subscribers" class="form-table__select-label">Кто может подписаться на дневник</label>
+                    <div class="form-table__select-wrapper">
+                      <select name="diary-subscribers" id="diary-subscribers" class="form-table__select chosen-select" data-placeholder="Все">
+                        <option value="0"></option>
+                        <option value="1">Все</option>
+                        <option value="2">Только я</option>
+                        <option value="3">Только я и мои друзья</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-table__select-row clearfix">
+                    <label for="photos-visibility" class="form-table__select-label">Кто может смотреть фотографии</label>
+                    <div class="form-table__select-wrapper">
+                      <select name="photos-visibility" id="photos-visibility" class="form-table__select chosen-select" data-placeholder="Все">
+                        <option value="0"></option>
+                        <option value="1">Все</option>
+                        <option value="2">Только я</option>
+                        <option value="3">Только я и мои друзья</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-table__select-row clearfix">
+                    <label for="info-visibility" class="form-table__select-label">Кто может смотреть информацию</label>
+                    <div class="form-table__select-wrapper">
+                      <select name="info-visibility" id="info-visibility" class="form-table__select chosen-select" data-placeholder="Все">
+                        <option value="0"></option>
+                        <option value="1">Все</option>
+                        <option value="2">Только я</option>
+                        <option value="3">Только я и мои друзья</option>
+                      </select>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="modal modal--confirm fade" id="confirm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal__close-btn close" data-dismiss="modal">Закрыть</div>
         <div class="modal__confirm-message">Удалить сообщение?</div>
+        <input type="radio" name="confirm" id="yes">
+        <label for="yes" class="confirm-btn btn btn--green">Да</label>
+        <input type="radio" name="confirm" id="no">
+        <label for="yes" class="confirm-btn btn btn--green">Нет</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal--confirm fade" id="confirm-action" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal__close-btn close" data-dismiss="modal">Закрыть</div>
+        <div class="modal__confirm-message">Скрыть страницу?</div>
         <input type="radio" name="confirm" id="yes">
         <label for="yes" class="confirm-btn btn btn--green">Да</label>
         <input type="radio" name="confirm" id="no">

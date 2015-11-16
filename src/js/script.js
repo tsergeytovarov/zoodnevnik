@@ -180,12 +180,6 @@ $(function() {
     $(this).parents(".inner-tabs__message-block").removeClass("unfolded");
   })
 
-  /*//скрытие новости
-  $(".news-item__close-btn").click(function(event) {
-    event.preventDefault();
-    $(this).parents(".news-item").addClass("hidden");
-  })*/
-
   //скрытие карочки владельца
   $(".owner-card__close-btn").click(function(event) {
     event.preventDefault();
@@ -248,28 +242,15 @@ $(function() {
     }
   });
 
-  /*// модальные окна
-  $(document).ready(function() {
-    var overlay = $('.color-overlay');
-    var open_modal = $('.open-modal');
-    var close = $('.modal__close-btn, .color-overlay');
-    var modal = $('.modal');
-
-    open_modal.click( function(event){
-      event.preventDefault();
-      var div = $(this).attr('href');
-      overlay.fadeIn(400, function(){
-        $(div).css('display', 'block').animate({opacity: 1,}, 200);
-      });
-    });
-
-    close.click( function(){
-      modal.animate({opacity: 0}, 200, function(){
-        $(this).css('display', 'none');
-        overlay.fadeOut(400);
-      });
-    });
-  });*/
+  $(".ui-datepicker-div").click(function() {
+    console.log("it works");
+    var date = $("#from");
+    var val = date.val();
+    var dateArr = val.split("/");
+    $("#start-day").val(dateArr[0]);
+    $("#start-month").val(dateArr[1]);
+    $("#start-year").val(dateArr[2]);
+  })
 
   // скролл до якоря
   $(document).ready(function(){
