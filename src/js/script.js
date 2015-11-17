@@ -252,6 +252,11 @@ $(function() {
     $("#start-year").val(dateArr[2]);
   })
 
+  $(".eye-btn").click(function() {
+    $(this).toggleClass("visible");
+    $(this).next("div").toggleClass("active");
+  })
+
   // скролл до якоря
   $(document).ready(function(){
     $("a[href*=#]").bind("click", function(e){

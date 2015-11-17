@@ -9,6 +9,13 @@
     line-height: 40px;
   }
 
+  &__subtitle {
+    margin-bottom: 35px;
+    text-align: left;
+    line-height: 40px;
+    border-bottom: 1px solid #eee;
+  }
+
   .tab-toggles {
 
     &__list {
@@ -296,6 +303,10 @@
   padding-bottom: 60px;
   text-align: center;
 
+  .modal--give-away & {
+    padding-bottom: 40px;
+  }
+
   &__title {
     margin: 0;
     margin-bottom: 40px;
@@ -334,6 +345,10 @@
   margin-bottom: 40px;
   text-align: left;
 
+  .modal--give-away & {
+    margin-bottom: 30px;
+  }
+
   &__input-label {
     float: left;
     padding-top: 12px;
@@ -342,6 +357,22 @@
     font-size: 12px;
     line-height: 16px;
     color: #bfbfbf;
+  }
+
+  &__input-wrapper {
+    position: relative;
+    float: right;
+
+    &:after {
+      content: '\e801';
+      position: absolute;
+      top: 0;
+      right: 10px;
+      font-family: @icon;
+      font-size: 18px;
+      line-height: 41px;
+      color: #e5e5e5;
+    }
   }
 
   input[type="text"],

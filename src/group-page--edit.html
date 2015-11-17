@@ -492,12 +492,26 @@
             <div class="files-container files-container--edit">
               <div class="files-container__btns-wrapper">
                 <a href="#" class="download-link">Данные.pdf</a>
-                <button class="eye-btn" data-toggle="modal" data-target="#privacy-settings">Скрыть</button>
+                <button class="eye-btn">Скрыть</button>
+                <div class="files-container__privacy-tooltip">
+                  <ul class="privacy-settings-list">
+                    <li class="privacy-settings-list__item privacy-settings-list__item--everybody">Видят все</li>
+                    <li class="privacy-settings-list__item privacy-settings-list__item--friends-only">Только друзья</li>
+                    <li class="privacy-settings-list__item privacy-settings-list__item--only-me">Только я</li>
+                  </ul>
+                </div>
                 <button class="trash-btn" data-toggle="modal" data-target="#confirm-removal">Удалить</button>
               </div>
               <div class="files-container__btns-wrapper">
                 <a href="#" class="download-link">Данные.pdf</a>
-                <button class="eye-btn" data-toggle="modal" data-target="#privacy-settings">Скрыть</button>
+                <button class="eye-btn">Скрыть</button>
+                <div class="files-container__privacy-tooltip">
+                  <ul class="privacy-settings-list">
+                    <li class="privacy-settings-list__item privacy-settings-list__item--everybody">Видят все</li>
+                    <li class="privacy-settings-list__item privacy-settings-list__item--friends-only">Только друзья</li>
+                    <li class="privacy-settings-list__item privacy-settings-list__item--only-me">Только я</li>
+                  </ul>
+                </div>
                 <button class="trash-btn" data-toggle="modal" data-target="#confirm-removal">Удалить</button>
               </div>
             </div>
@@ -633,31 +647,6 @@
       </div>
     </div>
   </div>
-
-  <div class="modal fade" id="privacy-settings" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal__close-btn close" data-dismiss="modal">Закрыть</div>
-        <div class="form-table">
-          <form action="#" method="post">
-            <h3 class="form-table__title">Настройки приватности</h3>
-            <div class="form-table__select-row clearfix">
-              <label for="page-visibility" class="form-table__select-label">Кто может видеть этот файл?</label>
-              <div class="form-table__select-wrapper">
-                <select name="page-visibility" id="page-visibility" class="form-table__select chosen-select" data-placeholder="Все">
-                  <option value="0"></option>
-                  <option value="1">Все</option>
-                  <option value="2">Только я</option>
-                  <option value="3">Только я и мои друзья</option>
-                </select>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-
 
   <script src="js/vendors/jquery.js"></script>
   <script src="js/vendors/bootstrap.min.js"></script>
