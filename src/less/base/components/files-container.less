@@ -138,7 +138,7 @@
 
 .eye-btn {
   position: absolute;
-  display: none;
+  display: block;
   font-size: 0;
   top: 0;
   right: 0;
@@ -154,11 +154,19 @@
     font-family: @icon;
     font-size: 14px;
     line-height: 18px;
-    color: #dcdcdc;
+    color: @green;
   }
 
   &.visible {
     display: block;
+  }
+
+  &.friends-only {
+    opacity: .5;
+  }
+
+  &.only-me {
+    opacity: .14;
   }
 }
 
