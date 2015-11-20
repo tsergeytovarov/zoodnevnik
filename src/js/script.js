@@ -69,10 +69,18 @@ $(function() {
   // переключение состояний элементов по скроллу к питомцам (главная)
   $(".pets-button").on("click", function(event){
     $(".header-navigation__link--pets").addClass("current");
-    $(".page-header").addClass("nested");
-    $(".page-navigation").addClass("nested");
-    $(".breadcrumbs-navigation").addClass("nested");
-    $(".main").addClass("nested");
+    $(".page-header-main").addClass("nested");
+    $(".page-navigation--main-page").addClass("nested");
+    $(".breadcrumbs-navigation--main-page").addClass("nested");
+    $(".main-page-content").addClass("nested");
+  })
+
+  $(".js-logo-link").click(function() {
+    $(".header-navigation__link--pets").removeClass("current");
+    $(".page-header-main").removeClass("nested");
+    $(".page-navigation--main-page").removeClass("nested");
+    $(".breadcrumbs-navigation--main-page").removeClass("nested");
+    $(".main-page-content").removeClass("nested");
   })
 
   //переключение выпадающего меню
