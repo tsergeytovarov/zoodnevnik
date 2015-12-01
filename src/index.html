@@ -52,6 +52,7 @@
               <input type="password" id="password" name="password" placeholder="Пароль">
               <button type="submit" class="btn btn--green btn--login">Вход</button>
               <a href="#" class="tooltip-content__registration-link">Зарегистрироваться</a>
+              <a href="#password-recovery" class="tooltip-content__registration-link" data-toggle="modal" data-target="#password-recovery">Забыл пароль</a>
             </form>
           </div>
         </div>
@@ -303,6 +304,21 @@
               </div>
             </div>
             <button type="submit" class="btn register-btn btn--gray">Зарегистрироваться</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="password-recovery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal__close-btn close" data-dismiss="modal">Закрыть</div>
+        <div class="modal__inner-wrapper">
+          <form action="#" method="post">
+            <label for="recovery" class="modal__textarea-label">Введите ваш email</label>
+            <input type="text" id="recovery">
+            <button type="button" class="btn btn--send-report">Восстановить</button>
           </form>
         </div>
       </div>

@@ -222,27 +222,29 @@
     }
 
     &:before {
-      content: '\e80f';
+      content: "";
       position: absolute;
-      top: 0;
+      top: 7px;
       left: 10px;
-      font-family: @icon;
-      font-size: 14px;
-      line-height: 26px;
-      color: @green;
+      width: 17px;
+      height: 12px;
+      background-image: url("../img/icons/icon-eye.png");
+      background-repeat: no-repeat;
+      background-size: contain;
     }
 
     &--friends-only {
 
       &:before {
-        opacity: .5;
+        opacity: .2;
       }
     }
 
     &--only-me {
 
       &:before {
-        opacity: .14;
+        opacity: .2;
+        background-image: url("../img/icons/icon-eye-half.png");
       }
     }
   }
