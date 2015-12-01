@@ -455,6 +455,14 @@
         }
       }
     }
+
+    &__share-container {
+      margin-left: 10px;
+    }
+
+    &__share-text {
+      display: none;
+    }
   }
 
   .info-table {
@@ -493,6 +501,15 @@
 
     .container {
       background-position: top 10px right 0;
+    }
+  }
+
+  .report-button {
+    z-index: 1;
+    right: 40px;
+
+    &.bottom-line {
+      right: 15px;
     }
   }
 }
@@ -1015,6 +1032,20 @@
     position: static;
   }
 
+  .page-header {
+
+    &__language-toggle {
+      right: 65px;
+    }
+
+    &.nested {
+
+      .page-header__language-toggle {
+        display: none;
+      }
+    }
+  }
+
   .menu-tooltip {
     z-index: 300;
   }
@@ -1488,6 +1519,31 @@
       left: -14px;
       top: -9px;
     }
+
+    &__upload-container,
+    &__add-user-container {
+      float: none;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    &__share-container {
+      float: none;
+      display: block;
+      margin-left: 0;
+    }
+
+    &__share-btns {
+      margin-left: 0;
+    }
+
+    &__buttons-wrapper {
+      top: -42px;
+    }
+
+    &__message-edit-row {
+      padding-bottom: 0;
+    }
   }
 
   .modal {
@@ -1505,6 +1561,13 @@
 
       .ancestor-table-wrapper {
         max-height: 400px;
+      }
+    }
+
+    &--confirm {
+
+      .modal-dialog {
+        width: 320px;
       }
     }
   }

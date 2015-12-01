@@ -235,6 +235,7 @@
       </div>
       <div class="main-content tabs">
         <div class="tab-toggles tab-toggles--horizontal">
+          <a href="#report-user" class="report-button" data-toggle="modal" data-target="#report-user"></a>
           <a href="#" class="tab-toggles__toggle tab-toggles__toggle--pet-page">Дневник</a>
           <ul class="tab-toggles__list hidden">
             <li class="tab-toggle active">
@@ -303,6 +304,7 @@
                       </ul>
                     </div>
                   </div>
+                  <a href="#report-post" class="report-button bottom-line" data-toggle="modal" data-target="#report-post"></a>
                 </div>
                 <div class="comment-block">
                   <div class="comment-block__show-prev">Показать предыдущие записи (<span class="previous-comments">12</span>)</div>
@@ -550,6 +552,9 @@
           <li class="footer-navigation__list-item">
             <a href="#" class="footer-navigation__link">вакансии</a>
           </li>
+          <li class="footer-navigation__list-item">
+            <a href="#" class="footer-navigation__link">english version</a>
+          </li>
         </ul>
       </nav>
     </div>
@@ -579,6 +584,36 @@
               </div>
             </form>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="report-user" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal__close-btn close" data-dismiss="modal">Закрыть</div>
+        <div class="modal__inner-wrapper">
+          <form action="#" method="post">
+            <label for="report" class="modal__textarea-label">Пожаловаться на пользователя</label>
+            <textarea name="report" id="report" class="modal__textarea"></textarea>
+            <button type="button" class="btn btn--send-report">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="report-post" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal__close-btn close" data-dismiss="modal">Закрыть</div>
+        <div class="modal__inner-wrapper">
+          <form action="#" method="post">
+            <label for="report" class="modal__textarea-label">Пожаловаться на пост</label>
+            <textarea name="report" id="report" class="modal__textarea"></textarea>
+            <button type="button" class="btn btn--send-report">Отправить</button>
+          </form>
         </div>
       </div>
     </div>

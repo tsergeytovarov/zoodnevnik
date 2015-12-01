@@ -268,6 +268,78 @@
     font-size: 0;
   }
 
+  &__share-container {
+    position: relative;
+    float: left;
+    margin-left: 45px;
+    font-size: 0;
+  }
+
+  &__share-text {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 12px;
+    line-height: 22px;
+    color: #bfbfbf;
+  }
+
+  &__share-btns {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 12px;
+  }
+
+  &__share-btn {
+    position: relative;
+    margin-right: 15px;
+    padding: 0;
+    width: 16px;
+    height: 16px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-family: @icon;
+      font-size: 14px;
+      line-height: 22px;
+      color: #bfbfbf;
+    }
+
+    &--vk {
+
+      &:before {
+        content: '\e803';
+      }
+    }
+
+    &--ok {
+      width: 10px;
+
+      &:before {
+        content: '\e804';
+      }
+    }
+
+    &--fb {
+      width: 10px;
+
+      &:before {
+        content: '\e802';
+      }
+    }
+
+    &.active {
+
+      &:before {
+        color: @green;
+      }
+    }
+  }
+
   &__add-user-button {
     position: relative;
     width: 20px;

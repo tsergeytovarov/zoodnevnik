@@ -3,18 +3,23 @@ $(function() {
   $(".js-tooltip-toggle").on("click", function(event){
     event.preventDefault();
     $(this).parents(".tooltip-container").toggleClass("active");
-  })
+  });
 
   // открытие списка сортировки
   $(".sorting-toggle").on("click", function(event){
     event.preventDefault();
     $(this).parents(".sorting-container").toggleClass("active");
-  })
+  });
 
   // открытие поля поиска в хлебных крошках
   $(".js-search-open").on("click", function(event){
     event.preventDefault();
     $(".breadcrumbs-navigation__left").toggleClass("opened");
+  });
+
+  $(".js-search-open").on("click", function(event){
+    event.preventDefault();
+    $(".sorting-container__left").toggleClass("opened");
   })
 
   // звездочка
@@ -333,4 +338,8 @@ $(function() {
   $(".close-btn").click(function(){
     $(this).parents(".element").addClass("hidden");
   });
+
+  $(".inner-tabs__share-btn").on("click", function() {
+    $(this).toggleClass("active");
+  })
 });

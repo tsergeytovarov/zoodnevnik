@@ -6,6 +6,25 @@
   width: 100%;
   background-color: @green;
 
+  &__language-toggle {
+    position: absolute;
+    top: 5px;
+    right: 130px;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  &__language-toggle-link {
+    font-size: 14px;
+    line-height: 55px;
+    color: #fff;
+    opacity: .8;
+
+    &:hover {
+      opacity: .6;
+    }
+  }
+
   &.type-3 {
     position: static;
     padding-top: 0;
@@ -45,6 +64,13 @@
 
     .log-in-btn {
       border-left: 1px solid #4da667;
+    }
+
+    .page-header {
+
+      &__language-toggle {
+        top: 0;
+      }
     }
   }
 
